@@ -1,0 +1,2295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover, minimal-ui"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="theme-color" content="#fef6e8"/>
+<title>La Cocina Porteña</title>
+<link rel="manifest" href="data:application/manifest+json,{%22name%22:%22La%20Cocina%20Porteña%22,%22short_name%22:%22Cocina%22,%22start_url%22:%22/%22,%22display%22:%22fullscreen%22,%22orientation%22:%22portrait%22,%22background_color%22:%22%23fef6e8%22,%22theme_color%22:%22%23c96a20%22}">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 180 180%22><text x=%2290%22 y=%22120%22 font-size=%22140%22 text-anchor=%22middle%22>👨‍🍳</text></svg>">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+:root{
+  --bg:#fef6e8;--surface:#fffdf5;--border:#e2c088;--accent:#c96a20;--gold:#a04e00;
+  --text:#2d1400;--muted:#9a7050;--dim:#c4a480;--green:#2a6e2a;--red:#b82020;
+  --green-lt:#e6f4e6;--red-lt:#fce8e8;--radius:20px;--shadow:0 4px 20px rgba(160,78,0,.13);
+}
+html{height:100%;height:100vh;height:100dvh;}
+body{
+  height:100%;height:100vh;height:100dvh;
+  background:var(--bg);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  overflow:hidden;position:fixed;top:0;left:0;right:0;width:100%;
+  padding:0!important;margin:0!important;
+}
+html{height:-webkit-fill-available;}
+body{min-height:-webkit-fill-available;padding-top:0!important;padding-bottom:env(safe-area-inset-bottom,0px);}
+#ans::-webkit-contacts-auto-fill-button,#ans::-webkit-credentials-auto-fill-button,
+#ans::-webkit-caps-lock-indicator,input::-webkit-input-speech-button{display:none!important;}
+@supports(height:100dvh){#shell{height:100dvh;}}
+body::before{
+  content:'';position:fixed;inset:0;
+  background-image:linear-gradient(rgba(196,106,32,.07) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(196,106,32,.07) 1px,transparent 1px);
+  background-size:28px 28px;z-index:0;pointer-events:none;
+}
+#shell{
+  position:relative;z-index:1;display:flex;flex-direction:column;
+  height:100%;height:100vh;height:100dvh;
+  max-width:480px;margin:0 auto;padding:0 14px 0;width:100%;
+}
+header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:11px 0 7px;flex-shrink:0;
+  border-bottom:1px solid var(--border);margin-bottom:8px;
+}
+.logo{display:flex;align-items:center;gap:7px;}
+.logo-icon{font-size:20px;}
+.logo-name{font-size:15px;font-weight:800;color:var(--accent);letter-spacing:.3px;}
+.hud{display:flex;align-items:center;gap:10px;}
+.lives-bar{display:flex;align-items:center;justify-content:center;gap:4px;padding:4px 0 6px;flex-shrink:0;}
+.heart{font-size:20px;transition:transform .2s,opacity .2s;}
+.heart.lost{opacity:.2;transform:scale(.8);}
+.streak-badge{
+  display:flex;align-items:center;gap:3px;
+  background:#fff4e0;border:1px solid #f0c070;
+  border-radius:99px;padding:3px 9px;
+  font-size:12px;font-weight:700;color:#b85c00;transition:all .3s;
+}
+.streak-badge.hot{background:#ffe8d0;border-color:#e07020;}
+.score-badge{background:#fff4e0;border:1px solid #f0c070;border-radius:99px;padding:3px 10px;font-size:12px;font-weight:700;color:var(--gold);}
+.voice-toggle{background:#fff4e0;border:1px solid #f0c070;border-radius:99px;padding:2px 8px;font-size:13px;cursor:pointer;line-height:1.4;-webkit-appearance:none;}
+.speak-btn{background:none;border:none;font-size:18px;cursor:pointer;padding:0 2px;line-height:1;-webkit-appearance:none;}
+.speak-btn:active{transform:scale(.85);}
+.prog-wrap{height:5px;background:#e8d8c0;border-radius:99px;overflow:hidden;flex-shrink:0;margin-bottom:4px;}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--accent),#f0a030);border-radius:99px;transition:width .5s ease;}
+.prog-retry{height:100%;background:linear-gradient(90deg,#d4a020,#e8c040);border-radius:99px;transition:width .5s ease;}
+.prog-wrap-inner{display:flex;height:100%;}
+.retry-count{flex-shrink:0;text-align:center;font-size:10px;color:var(--muted);padding-bottom:4px;min-height:14px;}
+.word-card{
+  flex-shrink:0;background:var(--surface);border:2px solid var(--border);
+  border-radius:var(--radius);padding:18px 20px 16px;
+  box-shadow:var(--shadow);margin-bottom:10px;
+  transition:border-color .25s,box-shadow .25s,transform .1s;
+  position:relative;overflow:hidden;
+}
+.word-card::after{content:'🍽';position:absolute;bottom:8px;right:12px;font-size:28px;opacity:.07;pointer-events:none;user-select:none;}
+.word-card.ok{border-color:var(--green);box-shadow:0 0 0 3px rgba(42,110,42,.15),var(--shadow);}
+.word-card.err{border-color:var(--red);box-shadow:0 0 0 3px rgba(184,32,32,.15),var(--shadow);}
+.word-card.retry-card{border-style:dashed;}
+.cat-badge{
+  display:inline-flex;align-items:center;gap:4px;
+  font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;
+  border-radius:99px;padding:3px 10px;border:1px solid;margin-bottom:10px;
+}
+.diff-pip{display:inline-flex;gap:2px;margin-left:6px;vertical-align:middle;}
+.diff-pip span{font-size:10px;}
+.prefix-hint{
+  display:inline-flex;align-items:center;
+  font-size:11px;font-weight:800;background:#e8f0ff;color:#2244aa;
+  border:1px solid #aabcee;border-radius:99px;padding:3px 9px;margin-left:5px;
+  letter-spacing:.5px;font-family:monospace;
+}
+.retry-pill{
+  display:inline-flex;align-items:center;gap:3px;
+  font-size:10px;font-weight:700;background:#fff4e0;border:1px solid #f0c070;
+  border-radius:99px;padding:2px 8px;color:#a06000;margin-left:6px;
+}
+.pt-word{font-size:clamp(28px,9vw,46px);font-weight:800;color:var(--text);line-height:1.1;letter-spacing:-.5px;}
+.feedback-line{margin-top:10px;min-height:24px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.fb-wrong{font-size:15px;color:var(--red);text-decoration:line-through;opacity:.8;}
+.fb-arrow{color:var(--dim);font-size:13px;}
+.fb-correct-word{font-size:19px;font-weight:800;color:var(--green);}
+.fb-ok{font-size:18px;font-weight:800;color:var(--green);}
+.fb-also{font-size:11px;color:var(--muted);margin-left:2px;}
+/* Exemplo de frase após 2º erro */
+.example-line{
+  margin-top:8px;padding:8px 10px;
+  background:#fff8ed;border-left:3px solid var(--accent);
+  border-radius:0 8px 8px 0;
+  font-size:12px;color:var(--muted);line-height:1.5;
+  flex-basis:100%;
+}
+.example-line em{color:var(--accent);font-style:normal;font-weight:700;}
+.input-wrap{flex-shrink:0;display:flex;gap:8px;margin-bottom:5px;}
+.ans-div{
+  flex:1;min-height:52px;background:#fff;border:2px solid var(--border);
+  border-radius:14px;padding:14px 16px;font-size:18px;color:var(--text);
+  outline:none;font-family:inherit;transition:border-color .2s,box-shadow .2s;
+  caret-color:var(--accent);box-shadow:0 2px 8px rgba(160,78,0,.08);
+  cursor:text;line-height:1.2;white-space:nowrap;overflow:hidden;
+  -webkit-user-select:text;user-select:text;
+}
+.ans-div:empty::before{content:attr(data-placeholder);color:var(--dim);font-size:15px;font-weight:400;pointer-events:none;}
+.ans-div:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(196,106,32,.15);}
+.ans-div.ok{border-color:var(--green);box-shadow:0 0 0 3px rgba(42,110,42,.12);color:var(--green);}
+.ans-div.err{border-color:var(--red);box-shadow:0 0 0 3px rgba(184,32,32,.12);color:var(--red);}
+.ans-div[contenteditable="false"]{opacity:.7;cursor:default;}
+.btn{
+  height:52px;padding:0 20px;
+  background:linear-gradient(135deg,var(--accent),#9a4800);
+  color:#fff;border:none;border-radius:14px;
+  font-size:15px;font-weight:800;font-family:inherit;
+  cursor:pointer;white-space:nowrap;
+  box-shadow:0 4px 14px rgba(196,106,32,.35);
+  transition:transform .1s,opacity .2s;-webkit-appearance:none;letter-spacing:.3px;
+}
+.btn:active{transform:scale(.94);}
+.btn:disabled{opacity:.38;cursor:default;}
+.hint-text{flex-shrink:0;text-align:center;font-size:11px;color:var(--dim);font-style:italic;min-height:16px;}
+.enter-hint{flex-shrink:0;text-align:center;font-size:10px;color:var(--dim);min-height:13px;margin-top:-3px;}
+.spacer{flex:1;max-height:20px;}
+.counter{flex-shrink:0;text-align:center;font-size:11px;color:var(--muted);padding-top:3px;}
+#toast{
+  position:fixed;top:-64px;left:50%;transform:translateX(-50%);
+  background:#2a6e2a;color:#fff;padding:10px 22px;border-radius:99px;
+  font-weight:700;font-size:14px;box-shadow:0 4px 20px rgba(0,0,0,.2);
+  transition:top .35s cubic-bezier(.34,1.56,.64,1);z-index:999;white-space:nowrap;
+}
+#toast.show{top:14px;}
+
+/* ── Chef Level badge ── */
+.chef-level{
+  display:flex;align-items:center;gap:5px;
+  background:#fff8ed;border:1.5px solid #f0c070;
+  border-radius:12px;padding:5px 12px;
+  font-size:11px;font-weight:700;color:var(--gold);
+  margin-bottom:10px;
+}
+.chef-level-bar{flex:1;height:5px;background:#e8d8c0;border-radius:99px;overflow:hidden;}
+.chef-level-fill{height:100%;background:linear-gradient(90deg,var(--accent),#f0a030);border-radius:99px;transition:width .6s ease;}
+
+/* ── End screen ── */
+.end{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;padding:20px 0;overflow-y:auto;}
+.end-em{font-size:68px;line-height:1;}
+.end-title{font-size:26px;font-weight:800;color:var(--accent);}
+.end-sub{font-size:14px;color:var(--muted);}
+.stats{display:flex;gap:12px;}
+.stat{display:flex;flex-direction:column;align-items:center;gap:3px;background:#fff;border:1px solid var(--border);border-radius:16px;padding:10px 14px;box-shadow:var(--shadow);}
+.stat-n{font-size:24px;font-weight:800;color:var(--accent);}
+.stat-l{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;}
+.restart{background:linear-gradient(135deg,var(--accent),#9a4800);color:#fff;border:none;border-radius:14px;padding:14px 34px;font-size:16px;font-weight:800;font-family:inherit;cursor:pointer;box-shadow:0 4px 18px rgba(196,106,32,.4);letter-spacing:.3px;-webkit-appearance:none;}
+.exit-btn{background:none;border:1.5px solid var(--border);border-radius:12px;padding:9px 28px;font-size:13px;font-weight:700;color:var(--muted);font-family:inherit;cursor:pointer;-webkit-appearance:none;transition:opacity .15s;}
+.exit-btn:active{opacity:.6;}
+.achievements{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;max-width:340px;}
+.ach-pill{font-size:11px;padding:4px 10px;border-radius:99px;background:#fff4e0;border:1px solid #f0c070;color:#7a4800;font-weight:600;}
+
+/* ── Ranking ── */
+.ranking-section{width:100%;max-width:360px;background:#fff;border:1px solid var(--border);border-radius:16px;padding:14px 16px;box-shadow:var(--shadow);}
+.ranking-title{font-size:13px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;display:flex;align-items:center;justify-content:space-between;}
+.ranking-title-left{display:flex;align-items:center;gap:6px;}
+.ranking-io{display:flex;gap:6px;}
+.ranking-io button{font-size:10px;font-weight:700;padding:3px 8px;border-radius:99px;border:1px solid var(--border);background:#fff;color:var(--muted);cursor:pointer;font-family:inherit;}
+.ranking-io button:hover{border-color:var(--accent);color:var(--accent);}
+.ranking-row{display:flex;align-items:center;gap:8px;padding:6px 8px;border-radius:10px;font-size:13px;margin-bottom:3px;}
+.ranking-row.current{background:#fff4e0;border:1px solid #f0c070;}
+.ranking-row.gold{background:#fffde7;}
+.rank-pos{font-size:16px;min-width:24px;text-align:center;}
+.rank-name{flex:1;font-weight:700;color:var(--text);text-align:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.rank-score{font-weight:800;color:var(--accent);min-width:36px;text-align:right;}
+.rank-detail{font-size:10px;color:var(--muted);min-width:60px;text-align:right;}
+.save-row{display:flex;gap:8px;margin-top:10px;}
+.save-input{flex:1;border:1.5px solid var(--border);border-radius:10px;padding:0 12px;height:40px;font-size:14px;color:var(--text);font-family:inherit;outline:none;background:#fff;}
+.save-input:focus{border-color:var(--accent);}
+.save-btn{background:linear-gradient(135deg,var(--accent),#9a4800);color:#fff;border:none;border-radius:10px;padding:0 16px;height:40px;font-size:13px;font-weight:800;font-family:inherit;cursor:pointer;white-space:nowrap;}
+.saved-ok{font-size:12px;color:var(--green);font-weight:700;text-align:center;margin-top:6px;}
+
+/* ── Record banner ── */
+.record-banner{width:100%;max-width:360px;border-radius:14px;padding:12px 18px;display:flex;align-items:center;gap:12px;border:2px solid;}
+.record-banner.new-record{background:#fffbe6;border-color:#f0c040;}
+.record-banner.same-record{background:#f5f5f5;border-color:#ddd;}
+.record-banner-icon{font-size:28px;line-height:1;}
+.record-banner-body{display:flex;flex-direction:column;align-items:flex-start;gap:1px;text-align:left;}
+.record-banner-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);}
+.record-banner-name{font-size:12px;font-weight:600;color:var(--text);}
+.record-banner-pts{font-size:26px;font-weight:800;color:var(--accent);margin-left:auto;}
+
+/* ── Splash ── */
+.splash{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;gap:0;padding:16px 10px 24px;overflow-y:auto;}
+.splash-chef{font-size:64px;line-height:1;margin-bottom:10px;animation:chefFloat 3s ease-in-out infinite;}
+.splash-title{font-size:26px;font-weight:800;color:var(--accent);letter-spacing:-.3px;margin-bottom:3px;}
+.splash-sub{font-size:12px;color:var(--muted);margin-bottom:16px;line-height:1.5;}
+.splash-record{display:flex;align-items:center;gap:8px;background:#fff8ed;border:1.5px solid #f0c070;border-radius:14px;padding:8px 16px;margin-bottom:12px;}
+.splash-record-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);}
+.splash-record-name{font-size:12px;font-weight:800;color:var(--text);}
+.splash-record-pts{font-size:20px;font-weight:800;color:var(--accent);margin-left:auto;padding-left:12px;}
+
+/* Chef Level splash */
+.splash-chef-level{
+  width:100%;max-width:320px;
+  background:#fff8ed;border:1.5px solid #f0c070;
+  border-radius:14px;padding:10px 16px;margin-bottom:14px;
+  display:flex;flex-direction:column;gap:6px;
+}
+.scl-top{display:flex;align-items:center;justify-content:space-between;}
+.scl-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);}
+.scl-name{font-size:13px;font-weight:800;color:var(--accent);}
+.scl-pts{font-size:11px;color:var(--muted);}
+.scl-bar{height:6px;background:#e8d8c0;border-radius:99px;overflow:hidden;}
+.scl-fill{height:100%;background:linear-gradient(90deg,var(--accent),#f0a030);border-radius:99px;transition:width .6s ease;}
+
+/* Category selector */
+.cat-selector{width:100%;max-width:340px;margin-bottom:14px;}
+.cat-selector-title{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:7px;text-align:left;}
+.cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px;}
+.cat-toggle{
+  display:flex;align-items:center;gap:6px;
+  padding:7px 10px;border-radius:10px;border:1.5px solid var(--border);
+  background:#fff;cursor:pointer;font-size:11px;font-weight:600;color:var(--text);
+  font-family:inherit;transition:all .15s;text-align:left;
+}
+.cat-toggle.selected{border-color:var(--accent);background:#fff4e0;color:var(--accent);}
+.cat-toggle-check{font-size:12px;margin-left:auto;opacity:0;transition:opacity .15s;}
+.cat-toggle.selected .cat-toggle-check{opacity:1;}
+.cat-count{font-size:9px;color:var(--dim);margin-left:auto;}
+.select-all-row{display:flex;gap:6px;justify-content:flex-end;margin-bottom:6px;}
+.select-all-row button{font-size:10px;font-weight:700;padding:3px 10px;border-radius:99px;border:1px solid var(--border);background:#fff;color:var(--muted);cursor:pointer;font-family:inherit;}
+.select-all-row button:hover{border-color:var(--accent);color:var(--accent);}
+
+.play-btn{background:linear-gradient(135deg,var(--accent),#9a4800);color:#fff;border:none;border-radius:16px;padding:15px 44px;font-size:17px;font-weight:800;font-family:inherit;cursor:pointer;box-shadow:0 6px 22px rgba(196,106,32,.45);letter-spacing:.3px;-webkit-appearance:none;transition:transform .1s;}
+.play-btn:active{transform:scale(.95);}
+.play-btn:disabled{opacity:.45;cursor:default;transform:none;}
+.splash-info{font-size:10px;color:var(--dim);margin-top:10px;}
+
+/* ── Animations ── */
+@keyframes chefFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}40%{transform:translateX(8px)}60%{transform:translateX(-6px)}80%{transform:translateX(6px)}}
+@keyframes pop{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+@keyframes heartBeat{0%,100%{transform:scale(1)}30%{transform:scale(1.4)}60%{transform:scale(.9)}}
+@keyframes levelUp{0%{transform:scale(1)}40%{transform:scale(1.15)}100%{transform:scale(1)}}
+.shake{animation:shake .45s ease;}
+.pop{animation:pop .35s ease;}
+.beat{animation:heartBeat .5s ease;}
+.level-up{animation:levelUp .5s ease;}
+@keyframes hotPulse{0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(224,112,32,.35)}50%{transform:scale(1.06);box-shadow:0 0 0 5px rgba(224,112,32,0)}}
+.streak-badge.hot{animation:hotPulse 1.3s ease-in-out infinite;}
+@keyframes confettiFall{0%{transform:translateY(-40px) rotate(0deg);opacity:1}100%{transform:translateY(105vh) rotate(360deg);opacity:.85}}
+.confetti{position:fixed;top:-30px;z-index:998;pointer-events:none;animation:confettiFall 3s linear forwards;}
+.cat-toggle{flex-direction:column;align-items:stretch;gap:4px;}
+.cat-toggle-main{display:flex;align-items:center;gap:6px;width:100%;}
+.cat-mini-bar{display:block;height:3px;background:rgba(0,0,0,.08);border-radius:99px;overflow:hidden;}
+.cat-mini-fill{display:block;height:100%;background:var(--green);border-radius:99px;transition:width .4s;}
+.review-box{width:100%;max-width:360px;background:#fff8ed;border:1.5px solid #f0c070;border-radius:14px;padding:10px 12px;}
+.review-title{font-size:11px;font-weight:800;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:7px;text-align:left;}
+.review-chips{display:flex;flex-wrap:wrap;gap:5px;}
+.review-chip{font-size:11px;padding:5px 9px;border-radius:99px;background:#fff;border:1px solid var(--border);color:var(--text);font-family:inherit;cursor:pointer;-webkit-appearance:none;}
+.review-chip strong{color:var(--green);}
+.review-chip:active{transform:scale(.95);}
+</style>
+</head>
+<body>
+<div id="fs-gate" style="position:fixed;inset:0;z-index:9999;background:transparent;cursor:pointer;"></div>
+<div id="shell"></div>
+<div id="toast"></div>
+<div id="aria-announce" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);"></div>
+<script>
+/* ── Fullscreen gate ── */
+(function(){
+  const gate=document.getElementById('fs-gate');
+  function enterFS(){
+    const el=document.documentElement;
+    const req=el.requestFullscreen||el.webkitRequestFullscreen||el.mozRequestFullScreen||el.msRequestFullscreen;
+    if(req){const p=req.call(el);if(p)p.catch(()=>{});}
+    if(screen.orientation&&screen.orientation.lock)screen.orientation.lock('portrait').catch(()=>{});
+  }
+  function handleFirstGesture(e){
+    e.preventDefault();e.stopPropagation();
+    const touch=e.changedTouches?e.changedTouches[0]:e;
+    const x=touch.clientX,y=touch.clientY;
+    enterFS();gate.style.display='none';
+    setTimeout(()=>{
+      const target=document.elementFromPoint(x,y);
+      if(target&&target!==gate){
+        if(typeof target.focus==='function'&&(target.tagName==='INPUT'||target.isContentEditable))target.focus();
+        else target.click();
+      }
+    },40);
+  }
+  gate.addEventListener('touchend',handleFirstGesture,{once:true,passive:false});
+  gate.addEventListener('click',handleFirstGesture,{once:true});
+  document.addEventListener('fullscreenchange',()=>{
+    const isFS=document.fullscreenElement||document.webkitFullscreenElement||document.mozFullScreenElement||document.msFullscreenElement;
+    if(!isFS){
+      gate.style.display='';
+      gate.addEventListener('touchend',handleFirstGesture,{once:true,passive:false});
+      gate.addEventListener('click',handleFirstGesture,{once:true});
+    }
+  });
+  document.addEventListener('touchstart',function(e){
+    if(e.target.id!=='ans'&&e.target.tagName!=='INPUT'){
+      const inp=document.getElementById('ans');
+      if(inp&&document.activeElement===inp)inp.blur();
+    }
+  },{passive:true});
+  window.addEventListener('load',()=>{
+    if(document.fullscreenElement||document.webkitFullscreenElement){gate.style.display='none';return;}
+    const el=document.documentElement;
+    const req=el.requestFullscreen||el.webkitRequestFullscreen||el.mozRequestFullScreen;
+    if(req){const p=req.call(el);if(p)p.then(()=>{gate.style.display='none';}).catch(()=>{});}
+  });
+})();
+
+/* ── Web Audio ── */
+let _ac=null;
+function getAC(){
+  if(!_ac){try{_ac=new(window.AudioContext||window.webkitAudioContext)();}catch(e){}}
+  if(_ac&&_ac.state==='suspended')_ac.resume();
+  return _ac;
+}
+function beep(freq,dur,type='square',vol=0.18,decay=true){
+  const ac=getAC();if(!ac)return;
+  const o=ac.createOscillator(),g=ac.createGain();
+  o.connect(g);g.connect(ac.destination);
+  o.type=type;o.frequency.setValueAtTime(freq,ac.currentTime);
+  g.gain.setValueAtTime(vol,ac.currentTime);
+  if(decay)g.gain.exponentialRampToValueAtTime(0.001,ac.currentTime+dur);
+  o.start(ac.currentTime);o.stop(ac.currentTime+dur);
+}
+function soundOk(){beep(523,.08,'square',.15);setTimeout(()=>beep(784,.12,'square',.18),80);}
+function soundStreak(){beep(523,.07,'square',.16);setTimeout(()=>beep(659,.07,'square',.16),70);setTimeout(()=>beep(784,.15,'square',.20),140);}
+function soundErr(){beep(220,.06,'sawtooth',.20);setTimeout(()=>beep(180,.10,'sawtooth',.18),60);}
+function soundLife(){beep(440,.07,'sine',.14);setTimeout(()=>beep(554,.07,'sine',.14),80);setTimeout(()=>beep(659,.14,'sine',.20),160);}
+function soundGameWin(){[523,659,784,1047].forEach((f,i)=>setTimeout(()=>beep(f,.15,'square',.18),i*100));}
+function soundGameOver(){[300,260,220,180].forEach((f,i)=>setTimeout(()=>beep(f,.18,'sawtooth',.18),i*100));}
+function soundLevelUp(){[523,659,784,1047,1319].forEach((f,i)=>setTimeout(()=>beep(f,.12,'square',.22),i*80));}
+
+/* ── Pronúncia em espanhol (Web Speech API) ── */
+let voiceOn=(function(){try{return localStorage.getItem('cocina_voice')!=='off';}catch(e){return true;}})();
+let _esVoice=null;
+function pickESVoice(){
+  if(!window.speechSynthesis)return;
+  const vs=speechSynthesis.getVoices();
+  _esVoice=vs.find(v=>/^es[-_]AR/i.test(v.lang))
+    ||vs.find(v=>/^es[-_]419/i.test(v.lang))
+    ||vs.find(v=>/^es[-_](UY|CL|MX)/i.test(v.lang))
+    ||vs.find(v=>/^es/i.test(v.lang))||null;
+}
+if(window.speechSynthesis){
+  pickESVoice();
+  speechSynthesis.onvoiceschanged=pickESVoice;
+}
+function speakES(text,force){
+  if((!voiceOn&&!force)||!window.speechSynthesis||!text)return;
+  try{
+    speechSynthesis.cancel();
+    const u=new SpeechSynthesisUtterance(text);
+    if(!_esVoice)pickESVoice();
+    if(_esVoice)u.voice=_esVoice;
+    u.lang=_esVoice?_esVoice.lang:'es-AR';
+    u.rate=0.9;
+    speechSynthesis.speak(u);
+  }catch(e){}
+}
+function speakCur(){
+  const c=deck&&deck[idx];
+  if(c)speakES(c.es[0],true);
+}
+function toggleVoice(){
+  voiceOn=!voiceOn;
+  try{localStorage.setItem('cocina_voice',voiceOn?'on':'off');}catch(e){}
+  if(!voiceOn&&window.speechSynthesis)speechSynthesis.cancel();
+  const b=document.getElementById('voice-btn');
+  if(b)b.textContent=voiceOn?'🔊':'🔇';
+  toast(voiceOn?'Pronúncia ativada 🔊':'Pronúncia desativada 🔇',voiceOn?'#2a6e2a':'#9a7050');
+}
+
+/* ── Category colours & icons ── */
+const CC={
+  'alimentos':{bg:'#fff8e6',c:'#7a5c00',b:'#f0c070'},
+  'carnes':{bg:'#ffeaea',c:'#8b0000',b:'#f09090'},
+  'frutas':{bg:'#fff0fb',c:'#8b006b',b:'#e890d8'},
+  'verduras':{bg:'#efffef',c:'#1a6b1a',b:'#70c470'},
+  'padaria':{bg:'#fff4ec',c:'#7a3800',b:'#e8a060'},
+  'fast-food':{bg:'#fffae0',c:'#7a5a00',b:'#d4b030'},
+  'bebidas':{bg:'#e8f4ff',c:'#003a7a',b:'#80b8e8'},
+  'utensílios':{bg:'#f0f0f8',c:'#303068',b:'#9898c8'},
+  'mercado':{bg:'#eef8ee',c:'#1a5a1a',b:'#70b870'},
+  'expressões':{bg:'#f8eeff',c:'#5a0080',b:'#b870e8'},
+  'falsas amigas':{bg:'#fff0f0',c:'#8b0020',b:'#e89090'},
+};
+const CAT_ICON={
+  'alimentos':'🍽','carnes':'🥩','frutas':'🍎','verduras':'🥦',
+  'padaria':'🍞','fast-food':'🍔','bebidas':'🍺',
+  'utensílios':'🔪','mercado':'🛒','expressões':'💬','falsas amigas':'⚠️',
+};
+
+/* ── Chef Level system ── */
+const CHEF_LEVELS=[
+  {name:'Novato',min:0,max:30,icon:'🧑‍🍳'},
+  {name:'Ajudante',min:30,max:80,icon:'👨‍🍳'},
+  {name:'Sous-Chef',min:80,max:180,icon:'🍳'},
+  {name:'Chef',min:180,max:350,icon:'👨‍🏫'},
+  {name:'Chef Executivo',min:350,max:600,icon:'⭐'},
+  {name:'Estrela Michelin',min:600,max:Infinity,icon:'🌟'},
+];
+function getChefLevel(consolidated){
+  for(let i=CHEF_LEVELS.length-1;i>=0;i--){
+    if(consolidated>=CHEF_LEVELS[i].min)return{...CHEF_LEVELS[i],idx:i};
+  }
+  return{...CHEF_LEVELS[0],idx:0};
+}
+function chefLevelProgress(consolidated){
+  const lv=getChefLevel(consolidated);
+  if(lv.max===Infinity)return 1;
+  return Math.min((consolidated-lv.min)/(lv.max-lv.min),1);
+}
+
+/* ── SRS / Persistence helpers ── */
+const SRS_KEY='cocina_srs_v1';
+const CHEF_KEY='cocina_chef_v1';
+const RANKING_KEY='cocina_portena_ranking';
+const MAX_RANKING=5;
+const MAX_LIVES=5;
+
+function loadSRS(){
+  try{return JSON.parse(localStorage.getItem(SRS_KEY)||'{}');}catch(e){return{};}
+}
+function saveSRS(data){
+  try{localStorage.setItem(SRS_KEY,JSON.stringify(data));}catch(e){}
+}
+function loadChef(){
+  try{return JSON.parse(localStorage.getItem(CHEF_KEY)||'{"consolidated":0,"achievements":[]}');}
+  catch(e){return{consolidated:0,achievements:[]};}
+}
+function saveChef(data){
+  try{localStorage.setItem(CHEF_KEY,JSON.stringify(data));}catch(e){}
+}
+
+// SRS: record a correct answer (consolidate word if correct 3+ times total)
+function srsCorrect(pt){
+  const db=loadSRS();
+  if(!db[pt])db[pt]={correct:0,errors:0,lastSeen:Date.now(),interval:1};
+  db[pt].correct++;
+  db[pt].lastSeen=Date.now();
+  // Interval doubles each correct
+  db[pt].interval=Math.min(db[pt].interval*2,64);
+  saveSRS(db);
+  // Consolidate into chef level
+  if(db[pt].correct===3){
+    const chef=loadChef();
+    chef.consolidated=(chef.consolidated||0)+1;
+    saveChef(chef);
+    return true; // newly consolidated
+  }
+  return false;
+}
+function srsError(pt){
+  const db=loadSRS();
+  if(!db[pt])db[pt]={correct:0,errors:0,lastSeen:Date.now(),interval:1};
+  db[pt].errors++;
+  db[pt].lastSeen=Date.now();
+  db[pt].interval=1; // reset interval on error
+  saveSRS(db);
+}
+function srsErrorCount(pt){
+  const db=loadSRS();
+  return db[pt]?db[pt].errors:0;
+}
+// Returns items sorted by SRS priority (most overdue & most errors first)
+function srsPrioritize(items){
+  const db=loadSRS();
+  const now=Date.now();
+  return [...items].sort((a,b)=>{
+    const da=db[a.pt]||{errors:0,interval:1,lastSeen:0};
+    const db2=db[b.pt]||{errors:0,interval:1,lastSeen:0};
+    // Score: errors weighted + time overdue
+    const scoreA=da.errors*3+Math.max(0,(now-da.lastSeen)/(da.interval*24*3600*1000)-1)*10;
+    const scoreB=db2.errors*3+Math.max(0,(now-db2.lastSeen)/(db2.interval*24*3600*1000)-1)*10;
+    return scoreB-scoreA;
+  });
+}
+
+/* ── Ranking helpers ── */
+function loadRanking(){try{return JSON.parse(localStorage.getItem(RANKING_KEY)||'[]');}catch(e){return[];}}
+function saveRanking(list){localStorage.setItem(RANKING_KEY,JSON.stringify(list));}
+function addToRanking(name,pts,streak){
+  const list=loadRanking();
+  list.push({name,pts,streak,date:new Date().toLocaleDateString('pt-BR')});
+  list.sort((a,b)=>b.pts-a.pts);
+  const trimmed=list.slice(0,MAX_RANKING);
+  saveRanking(trimmed);
+  return trimmed;
+}
+function exportRanking(){
+  const data=JSON.stringify({ranking:loadRanking(),chef:loadChef(),srs:loadSRS()},null,2);
+  const blob=new Blob([data],{type:'application/json'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');a.href=url;a.download='cocina-porteña-dados.json';a.click();
+  URL.revokeObjectURL(url);
+}
+function importRanking(){
+  const input=document.createElement('input');input.type='file';input.accept='.json';
+  input.onchange=e=>{
+    const file=e.target.files[0];if(!file)return;
+    const reader=new FileReader();
+    reader.onload=ev=>{
+      try{
+        const data=JSON.parse(ev.target.result);
+        if(data.ranking)saveRanking(data.ranking);
+        if(data.chef)saveChef(data.chef);
+        if(data.srs)saveSRS(data.srs);
+        toast('Dados importados! ✓','#2a6e2a');
+        setTimeout(()=>start(),800);
+      }catch(err){toast('Arquivo inválido ✕','#b82020');}
+    };
+    reader.readAsText(file);
+  };
+  input.click();
+}
+
+/* ── Toast & Aria ── */
+function toast(msg,color='#2a6e2a'){
+  const t=document.getElementById('toast');
+  t.textContent=msg;t.style.background=color;
+  t.classList.remove('show');void t.offsetWidth;t.classList.add('show');
+  clearTimeout(t._tid);t._tid=setTimeout(()=>t.classList.remove('show'),2200);
+}
+function announce(msg){
+  const el=document.getElementById('aria-announce');
+  if(el){el.textContent='';setTimeout(()=>{el.textContent=msg;},50);}
+}
+
+/* ── Items ── */
+const ITEMS=[
+  // dif: 1=fácil, 2=médio, 3=difícil
+  {pt:"acompanhamento",es:["guarnición"],cat:"alimentos",dif:2},
+  {pt:"almoço",es:["almuerzo"],cat:"alimentos",dif:1},
+  {pt:"ao ponto",es:["a punto"],cat:"alimentos",dif:2},
+  {pt:"assado",es:["asado"],cat:"alimentos",dif:1},
+  {pt:"bem passado",es:["bien cocido"],cat:"alimentos",dif:2},
+  {pt:"café da manhã",es:["desayuno"],cat:"alimentos",dif:1},
+  {pt:"caldo",es:["caldo"],cat:"alimentos",dif:1},
+  {pt:"ceia",es:["cena tardía"],cat:"alimentos",dif:2},
+  {pt:"comida caseira",es:["comida casera"],cat:"alimentos",dif:1},
+  {pt:"comida leve",es:["comida liviana"],cat:"alimentos",dif:2},
+  {pt:"comida vegana",es:["comida vegana"],cat:"alimentos",dif:1},
+  {pt:"comida vegetariana",es:["comida vegetariana"],cat:"alimentos",dif:1},
+  {pt:"cozido",es:["hervido"],cat:"alimentos",dif:2},
+  {pt:"cru",es:["crudo"],cat:"alimentos",dif:1},
+  {pt:"degustação",es:["degustación"],cat:"alimentos",dif:2},
+  {pt:"grelhado",es:["a la parrilla"],cat:"alimentos",dif:2},
+  {pt:"jantar",es:["cena"],cat:"alimentos",dif:1},
+  {pt:"lanche",es:["merienda"],cat:"alimentos",dif:2},
+  {pt:"mal passado",es:["jugoso"],cat:"alimentos",dif:3},
+  {pt:"massa",es:["masa"],cat:"alimentos",dif:1},
+  {pt:"mistura",es:["mezcla"],cat:"alimentos",dif:2},
+  {pt:"molho",es:["salsa"],cat:"alimentos",dif:2},
+  {pt:"orgânico",es:["orgánico"],cat:"alimentos",dif:1},
+  {pt:"petisco",es:["picada"],cat:"alimentos",dif:3},
+  {pt:"porção",es:["porción"],cat:"alimentos",dif:1},
+  {pt:"prato do dia",es:["plato del día"],cat:"alimentos",dif:1},
+  {pt:"purê",es:["puré"],cat:"alimentos",dif:1},
+  {pt:"receita",es:["receta"],cat:"alimentos",dif:1},
+  {pt:"recheio",es:["relleno"],cat:"alimentos",dif:2},
+  {pt:"refeição",es:["comida"],cat:"alimentos",dif:2},
+  {pt:"rodízio",es:["tenedor libre"],cat:"alimentos",dif:3},
+  {pt:"sobremesa",es:["postre"],cat:"alimentos",dif:1},
+  {pt:"aperitivo",es:["aperitivo"],cat:"alimentos",dif:1},
+  {pt:"buffet",es:["buffet"],cat:"alimentos",dif:1},
+  {pt:"entrada",es:["entrada"],cat:"alimentos",dif:1},
+  {pt:"prato",es:["plato"],cat:"alimentos",dif:1},
+  {pt:"sopa",es:["sopa"],cat:"alimentos",dif:1},
+  {pt:"frito",es:["frito"],cat:"alimentos",dif:1},
+  {pt:"fresco",es:["fresco"],cat:"alimentos",dif:1},
+  {pt:"congelado",es:["congelado"],cat:"alimentos",dif:1},
+  {pt:"à milanesa",es:["a la milanesa"],cat:"alimentos",dif:1},
+  {pt:"ao forno",es:["al horno"],cat:"alimentos",dif:1},
+  {pt:"carne desfiada",es:["carne desmechada"],cat:"alimentos",dif:2},
+  {pt:"caseiro",es:["casero"],cat:"alimentos",dif:1},
+  {pt:"cozinha de fusão",es:["cocina de fusión"],cat:"alimentos",dif:2},
+  {pt:"crua",es:["cruda"],cat:"alimentos",dif:1},
+  {pt:"defumagem",es:["ahumado"],cat:"alimentos",dif:2},
+  {pt:"empanado à milanesa",es:["rebozado a la milanesa"],cat:"alimentos",dif:2},
+  {pt:"guisado",es:["guiso"],cat:"alimentos",dif:2},
+  {pt:"marinado",es:["marinado"],cat:"alimentos",dif:1},
+  {pt:"peça inteira",es:["pieza entera"],cat:"alimentos",dif:2},
+  {pt:"picado",es:["picado"],cat:"alimentos",dif:1},
+  {pt:"ponto de sal",es:["punto de sal"],cat:"alimentos",dif:2},
+  {pt:"porção individual",es:["porción individual"],cat:"alimentos",dif:1},
+  {pt:"prato principal",es:["plato principal"],cat:"alimentos",dif:1},
+  {pt:"preparação",es:["preparación"],cat:"alimentos",dif:1},
+  {pt:"temperado",es:["sazonado"],cat:"alimentos",dif:2},
+  {pt:"tira",es:["tira"],cat:"alimentos",dif:1},
+  {pt:"no vapor",es:["al vapor"],cat:"alimentos",dif:2},
+  {pt:"água",es:["agua"],cat:"bebidas",dif:1},
+  {pt:"água com gás",es:["agua con gas"],cat:"bebidas",dif:1},
+  {pt:"água mineral",es:["agua mineral"],cat:"bebidas",dif:1},
+  {pt:"água sem gás",es:["agua sin gas"],cat:"bebidas",dif:1},
+  {pt:"aroma frutado",es:["aroma frutal"],cat:"bebidas",dif:2},
+  {pt:"cerveja (gíria)",es:["birra"],cat:"bebidas",dif:1},
+  {pt:"café com leite",es:["café con leche"],cat:"bebidas",dif:1},
+  {pt:"café expresso",es:["café expreso"],cat:"bebidas",dif:1},
+  {pt:"caipirinha",es:["caipirinha"],cat:"bebidas",dif:1},
+  {pt:"canudo",es:["sorbete"],cat:"bebidas",dif:3},
+  {pt:"cerveja",es:["cerveza"],cat:"bebidas",dif:1},
+  {pt:"chá",es:["té"],cat:"bebidas",dif:1},
+  {pt:"chá gelado",es:["té helado"],cat:"bebidas",dif:1},
+  {pt:"chá preto",es:["té negro"],cat:"bebidas",dif:1},
+  {pt:"chá verde",es:["té verde"],cat:"bebidas",dif:1},
+  {pt:"chope",es:["cerveza tirada","chopp"],cat:"bebidas",dif:3},
+  {pt:"coquetel",es:["cóctel"],cat:"bebidas",dif:1},
+  {pt:"decantar",es:["decantar"],cat:"bebidas",dif:2},
+  {pt:"degustar",es:["degustar"],cat:"bebidas",dif:2},
+  {pt:"dose",es:["shot","medida"],cat:"bebidas",dif:2},
+  {pt:"drink",es:["trago"],cat:"bebidas",dif:2},
+  {pt:"energético",es:["energizante"],cat:"bebidas",dif:2},
+  {pt:"espumante",es:["espumante"],cat:"bebidas",dif:1},
+  {pt:"garrafa",es:["botella"],cat:"bebidas",dif:1},
+  {pt:"gelo",es:["hielo"],cat:"bebidas",dif:1},
+  {pt:"gin tônica",es:["gin tonic"],cat:"bebidas",dif:1},
+  {pt:"happy hour",es:["happy hour"],cat:"bebidas",dif:1},
+  {pt:"harmonização",es:["maridaje"],cat:"bebidas",dif:3},
+  {pt:"licor",es:["licor"],cat:"bebidas",dif:1},
+  {pt:"notas amadeiradas",es:["notas amaderadas"],cat:"bebidas",dif:2},
+  {pt:"refrigerante",es:["gaseosa"],cat:"bebidas",dif:2},
+  {pt:"rolha",es:["corcho"],cat:"bebidas",dif:2},
+  {pt:"rum",es:["ron"],cat:"bebidas",dif:2},
+  {pt:"safra",es:["cosecha"],cat:"bebidas",dif:3},
+  {pt:"suco",es:["jugo"],cat:"bebidas",dif:1},
+  {pt:"suco natural",es:["jugo natural"],cat:"bebidas",dif:1},
+  {pt:"taça",es:["copa"],cat:"bebidas",dif:2},
+  {pt:"taça de espumante",es:["copa flauta"],cat:"bebidas",dif:3},
+  {pt:"tequila",es:["tequila"],cat:"bebidas",dif:1},
+  {pt:"uísque",es:["whisky"],cat:"bebidas",dif:1},
+  {pt:"vinho",es:["vino"],cat:"bebidas",dif:1},
+  {pt:"vinho branco",es:["vino blanco"],cat:"bebidas",dif:1},
+  {pt:"vinho encorpado",es:["vino con cuerpo"],cat:"bebidas",dif:2},
+  {pt:"vinho rosé",es:["vino rosado"],cat:"bebidas",dif:1},
+  {pt:"vinho seco",es:["vino seco"],cat:"bebidas",dif:2},
+  {pt:"vinho suave",es:["vino dulce"],cat:"bebidas",dif:2},
+  {pt:"vinho tinto",es:["vino tinto"],cat:"bebidas",dif:1},
+  {pt:"vodca",es:["vodka"],cat:"bebidas",dif:1},
+  {pt:"aperol",es:["aperol"],cat:"bebidas",dif:1},
+  {pt:"campari",es:["campari"],cat:"bebidas",dif:1},
+  {pt:"martini",es:["martini"],cat:"bebidas",dif:1},
+  {pt:"sidra",es:["sidra"],cat:"bebidas",dif:1},
+  {pt:"café",es:["café"],cat:"bebidas",dif:1},
+  {pt:"cappuccino",es:["capuchino","cappuccino"],cat:"bebidas",dif:1},
+  {pt:"amargo",es:["amargo"],cat:"bebidas",dif:2},
+  {pt:"aguardente de cana",es:["caña"],cat:"bebidas",dif:2},
+  {pt:"cerveja artesanal",es:["cerveza artesanal"],cat:"bebidas",dif:1},
+  {pt:"cerveja gelada",es:["cerveza fría"],cat:"bebidas",dif:1},
+  {pt:"cortar o vinho",es:["cortar el vino"],cat:"bebidas",dif:3},
+  {pt:"drinks sem álcool",es:["tragos sin alcohol"],cat:"bebidas",dif:1},
+  {pt:"fernet",es:["fernet"],cat:"bebidas",dif:1},
+  {pt:"fernet com cola",es:["fernet con coca"],cat:"bebidas",dif:1},
+  {pt:"garrafão (de vinho)",es:["damajuana"],cat:"bebidas",dif:3},
+  {pt:"mate",es:["mate"],cat:"bebidas",dif:1},
+  {pt:"mate amargo",es:["mate amargo"],cat:"bebidas",dif:1},
+  {pt:"mate com açúcar",es:["mate dulce"],cat:"bebidas",dif:1},
+  {pt:"meia garrafa",es:["media botella"],cat:"bebidas",dif:1},
+  {pt:"mosto",es:["mosto"],cat:"bebidas",dif:2},
+  {pt:"pingado",es:["lágrima","cortado"],cat:"bebidas",dif:3},
+  {pt:"soda",es:["soda"],cat:"bebidas",dif:1},
+  {pt:"tônica",es:["tónica"],cat:"bebidas",dif:1},
+  {pt:"vermute",es:["vermut"],cat:"bebidas",dif:2},
+  {pt:"yerba-mate",es:["yerba mate"],cat:"bebidas",dif:1},
+  {pt:"acém (agulha)",es:["aguja","roast beef"],cat:"carnes",dif:3},
+  {pt:"alcatra",es:["cuadril"],cat:"carnes",dif:3},
+  {pt:"almôndega",es:["albóndiga"],cat:"carnes",dif:2},
+  {pt:"asas de frango",es:["alitas"],cat:"carnes",dif:2},
+  {pt:"atum",es:["atún"],cat:"carnes",dif:1},
+  {pt:"bacalhau",es:["bacalao"],cat:"carnes",dif:2},
+  {pt:"bacon",es:["panceta"],cat:"carnes",dif:2},
+  {pt:"barriga de porco",es:["matambrito de cerdo"],cat:"carnes",dif:3},
+  {pt:"bem passada",es:["cocida"],cat:"carnes",dif:2},
+  {pt:"bife",es:["bife"],cat:"carnes",dif:1},
+  {pt:"bife ancho",es:["bife ancho"],cat:"carnes",dif:1},
+  {pt:"bife de chorizo",es:["bife de chorizo"],cat:"carnes",dif:1},
+  {pt:"brasa",es:["brasas"],cat:"carnes",dif:1},
+  {pt:"cabrito",es:["cabrito"],cat:"carnes",dif:1},
+  {pt:"camarão",es:["camarón"],cat:"carnes",dif:1},
+  {pt:"carne bovina",es:["carne vacuna"],cat:"carnes",dif:2},
+  {pt:"carne moída",es:["carne picada"],cat:"carnes",dif:2},
+  {pt:"carne suína",es:["carne de cerdo"],cat:"carnes",dif:2},
+  {pt:"carpaccio",es:["carpaccio"],cat:"carnes",dif:1},
+  {pt:"carré (bisteca)",es:["costeleta de cerdo","carré"],cat:"carnes",dif:3},
+  {pt:"carvão",es:["carbón"],cat:"carnes",dif:1},
+  {pt:"churrascada",es:["parrillada"],cat:"carnes",dif:2},
+  {pt:"churrasco",es:["asado"],cat:"carnes",dif:1},
+  {pt:"churrasqueira",es:["parrilla"],cat:"carnes",dif:1},
+  {pt:"clara",es:["clara"],cat:"carnes",dif:1},
+  {pt:"contra-filé",es:["bife angosto"],cat:"carnes",dif:3},
+  {pt:"coração",es:["corazón"],cat:"carnes",dif:1},
+  {pt:"cordeiro",es:["cordero"],cat:"carnes",dif:1},
+  {pt:"costela",es:["costilla"],cat:"carnes",dif:1},
+  {pt:"coxa",es:["pata"],cat:"carnes",dif:2},
+  {pt:"coxão duro",es:["cuadrada"],cat:"carnes",dif:3},
+  {pt:"coxão mole",es:["nalga"],cat:"carnes",dif:3},
+  {pt:"defumado",es:["ahumado"],cat:"carnes",dif:2},
+  {pt:"empanado",es:["rebozado"],cat:"carnes",dif:2},
+  {pt:"entranha",es:["entraña"],cat:"carnes",dif:2},
+  {pt:"espetinho",es:["pincho"],cat:"carnes",dif:2},
+  {pt:"espeto",es:["brochette"],cat:"carnes",dif:2},
+  {pt:"fígado",es:["hígado"],cat:"carnes",dif:2},
+  {pt:"filé mignon",es:["lomo"],cat:"carnes",dif:2},
+  {pt:"fraldinha",es:["vacío"],cat:"carnes",dif:3},
+  {pt:"frango",es:["pollo"],cat:"carnes",dif:1},
+  {pt:"frutos do mar",es:["mariscos"],cat:"carnes",dif:1},
+  {pt:"gema",es:["yema"],cat:"carnes",dif:1},
+  {pt:"hambúrguer",es:["hamburguesa"],cat:"carnes",dif:1},
+  {pt:"intestino delgado",es:["chinchulines"],cat:"carnes",dif:3},
+  {pt:"lagarto",es:["peceto"],cat:"carnes",dif:3},
+  {pt:"linguiça",es:["chorizo"],cat:"carnes",dif:2},
+  {pt:"lombo",es:["carré"],cat:"carnes",dif:3},
+  {pt:"mal passada",es:["jugosa"],cat:"carnes",dif:2},
+  {pt:"maminha",es:["colita de cuadril"],cat:"carnes",dif:3},
+  {pt:"matambre",es:["matambre"],cat:"carnes",dif:1},
+  {pt:"mexilhão",es:["mejillón"],cat:"carnes",dif:2},
+  {pt:"miolo do contrafilé",es:["ojo de bife"],cat:"carnes",dif:3},
+  {pt:"miúdos",es:["achuras"],cat:"carnes",dif:3},
+  {pt:"moela",es:["molleja"],cat:"carnes",dif:3},
+  {pt:"morcilla",es:["morcilla"],cat:"carnes",dif:1},
+  {pt:"ossobuco",es:["osobuco"],cat:"carnes",dif:2},
+  {pt:"ostras",es:["ostras"],cat:"carnes",dif:1},
+  {pt:"ovo",es:["huevo"],cat:"carnes",dif:1},
+  {pt:"paleta",es:["paleta"],cat:"carnes",dif:1},
+  {pt:"patinho",es:["bola de lomo"],cat:"carnes",dif:3},
+  {pt:"peito de frango",es:["pechuga"],cat:"carnes",dif:2},
+  {pt:"peixe",es:["pescado"],cat:"carnes",dif:1},
+  {pt:"picanha",es:["tapa de cuadril"],cat:"carnes",dif:3},
+  {pt:"polvo",es:["pulpo"],cat:"carnes",dif:2},
+  {pt:"presunto",es:["jamón"],cat:"carnes",dif:1},
+  {pt:"provoleta",es:["provoleta"],cat:"carnes",dif:1},
+  {pt:"quibe",es:["keppe","kebbe"],cat:"carnes",dif:3},
+  {pt:"rins",es:["riñones"],cat:"carnes",dif:2},
+  {pt:"salmão",es:["salmón"],cat:"carnes",dif:1},
+  {pt:"salsicha",es:["salchicha"],cat:"carnes",dif:1},
+  {pt:"sobre coxa",es:["muslo"],cat:"carnes",dif:2},
+  {pt:"sobre paleta",es:["bondiola"],cat:"carnes",dif:3},
+  {pt:"tira de costela",es:["asado de tira"],cat:"carnes",dif:2},
+  {pt:"vazio",es:["vacío"],cat:"carnes",dif:2},
+  {pt:"assado na cruz",es:["asado al asador"],cat:"carnes",dif:3},
+  {pt:"bife de papo",es:["bife de chorizo de papo"],cat:"carnes",dif:3},
+  {pt:"bucho",es:["mondongo"],cat:"carnes",dif:3},
+  {pt:"caracu",es:["caracú"],cat:"carnes",dif:3},
+  {pt:"carne de leitão",es:["lechón"],cat:"carnes",dif:2},
+  {pt:"carne seca",es:["carne seca"],cat:"carnes",dif:1},
+  {pt:"coelho",es:["conejo"],cat:"carnes",dif:1},
+  {pt:"coração de frango",es:["corazoncitos de pollo"],cat:"carnes",dif:2},
+  {pt:"cozido misto",es:["puchero"],cat:"carnes",dif:3},
+  {pt:"escalope",es:["escalope"],cat:"carnes",dif:2},
+  {pt:"fraldão",es:["tapa de asado"],cat:"carnes",dif:3},
+  {pt:"galinha",es:["gallina"],cat:"carnes",dif:1},
+  {pt:"isca de peixe",es:["filet de pescado"],cat:"carnes",dif:2},
+  {pt:"javali",es:["jabalí"],cat:"carnes",dif:2},
+  {pt:"lula",es:["calamar"],cat:"carnes",dif:2},
+  {pt:"milanesa de frango",es:["milanesa de pollo"],cat:"carnes",dif:1},
+  {pt:"milanesa de vitela",es:["milanesa de ternera"],cat:"carnes",dif:2},
+  {pt:"pato",es:["pato"],cat:"carnes",dif:1},
+  {pt:"peru",es:["pavo"],cat:"carnes",dif:1},
+  {pt:"sobrepaleta",es:["marucha"],cat:"carnes",dif:3},
+  {pt:"abacate",es:["palta"],cat:"frutas",dif:2},
+  {pt:"abacaxi",es:["ananá"],cat:"frutas",dif:3},
+  {pt:"ameixa",es:["ciruela"],cat:"frutas",dif:1},
+  {pt:"amora",es:["mora"],cat:"frutas",dif:1},
+  {pt:"banana",es:["banana"],cat:"frutas",dif:1},
+  {pt:"caqui",es:["caqui"],cat:"frutas",dif:1},
+  {pt:"cereja",es:["cereza"],cat:"frutas",dif:1},
+  {pt:"coco",es:["coco"],cat:"frutas",dif:1},
+  {pt:"cranberry",es:["arándano rojo"],cat:"frutas",dif:2},
+  {pt:"damasco",es:["damasco"],cat:"frutas",dif:1},
+  {pt:"figo",es:["higo"],cat:"frutas",dif:2},
+  {pt:"framboesa",es:["frambuesa"],cat:"frutas",dif:2},
+  {pt:"goiaba",es:["guayaba"],cat:"frutas",dif:2},
+  {pt:"jaca",es:["yaca"],cat:"frutas",dif:2},
+  {pt:"kiwi",es:["kiwi"],cat:"frutas",dif:1},
+  {pt:"laranja",es:["naranja"],cat:"frutas",dif:1},
+  {pt:"lichia",es:["litchi"],cat:"frutas",dif:2},
+  {pt:"limão",es:["limón"],cat:"frutas",dif:1},
+  {pt:"maçã",es:["manzana"],cat:"frutas",dif:1},
+  {pt:"mamão",es:["papaya"],cat:"frutas",dif:1},
+  {pt:"manga",es:["mango"],cat:"frutas",dif:1},
+  {pt:"maracujá",es:["maracuyá"],cat:"frutas",dif:2},
+  {pt:"melancia",es:["sandía"],cat:"frutas",dif:2},
+  {pt:"melão",es:["melón"],cat:"frutas",dif:1},
+  {pt:"mirtilo",es:["arándano"],cat:"frutas",dif:2},
+  {pt:"morango",es:["frutilla"],cat:"frutas",dif:3},
+  {pt:"nectarina",es:["nectarina"],cat:"frutas",dif:1},
+  {pt:"pera",es:["pera"],cat:"frutas",dif:1},
+  {pt:"pêssego",es:["durazno"],cat:"frutas",dif:2},
+  {pt:"pitaya",es:["pitahaya"],cat:"frutas",dif:2},
+  {pt:"romã",es:["granada"],cat:"frutas",dif:2},
+  {pt:"tangerina",es:["mandarina"],cat:"frutas",dif:1},
+  {pt:"uva",es:["uva"],cat:"frutas",dif:1},
+  {pt:"uva passa",es:["pasas de uva"],cat:"frutas",dif:2},
+  {pt:"acerola",es:["acerola"],cat:"frutas",dif:2},
+  {pt:"amêndoa",es:["almendra"],cat:"frutas",dif:1},
+  {pt:"avelã",es:["avellana"],cat:"frutas",dif:2},
+  {pt:"azeitona verde",es:["aceituna verde"],cat:"frutas",dif:1},
+  {pt:"cajá",es:["jocote"],cat:"frutas",dif:3},
+  {pt:"caju",es:["castaña de cajú","anacardo"],cat:"frutas",dif:3},
+  {pt:"castanha",es:["castaña"],cat:"frutas",dif:2},
+  {pt:"castanha de caju",es:["castañas de cajú"],cat:"frutas",dif:3},
+  {pt:"fruta da estação",es:["fruta de estación"],cat:"frutas",dif:1},
+  {pt:"fruta seca",es:["fruta seca"],cat:"frutas",dif:1},
+  {pt:"laranja-baía",es:["naranja navel"],cat:"frutas",dif:2},
+  {pt:"limão-siciliano",es:["limón","limón amarillo"],cat:"frutas",dif:2},
+  {pt:"limonada",es:["limonada"],cat:"frutas",dif:1},
+  {pt:"nozes",es:["nueces"],cat:"frutas",dif:1},
+  {pt:"pinhão",es:["piñón"],cat:"frutas",dif:2},
+  {pt:"pistache",es:["pistacho"],cat:"frutas",dif:1},
+  {pt:"salada de frutas",es:["ensalada de frutas"],cat:"frutas",dif:1},
+  {pt:"tamarindo",es:["tamarindo"],cat:"frutas",dif:2},
+  {pt:"tomate-cereja",es:["tomate cherry"],cat:"frutas",dif:1},
+  {pt:"algodão doce",es:["algodón de azúcar"],cat:"padaria",dif:1},
+  {pt:"amido de milho",es:["fécula de maíz"],cat:"padaria",dif:2},
+  {pt:"baguete",es:["baguette"],cat:"padaria",dif:1},
+  {pt:"biscoito",es:["galletita"],cat:"padaria",dif:2},
+  {pt:"biscoito recheado",es:["galletita rellena"],cat:"padaria",dif:2},
+  {pt:"bolo",es:["torta"],cat:"padaria",dif:3},
+  {pt:"bombom",es:["bombón"],cat:"padaria",dif:1},
+  {pt:"brigadeiro",es:["brigadeiro"],cat:"padaria",dif:1},
+  {pt:"brownie",es:["brownie"],cat:"padaria",dif:1},
+  {pt:"café especial",es:["café de especialidad"],cat:"padaria",dif:2},
+  {pt:"café filtrado",es:["café filtrado"],cat:"padaria",dif:1},
+  {pt:"calda",es:["almíbar","sirope"],cat:"padaria",dif:3},
+  {pt:"caramelo",es:["caramelo"],cat:"padaria",dif:1},
+  {pt:"carolina",es:["profiterol"],cat:"padaria",dif:3},
+  {pt:"chantilly",es:["crema chantilly"],cat:"padaria",dif:2},
+  {pt:"cheesecake",es:["cheesecake"],cat:"padaria",dif:1},
+  {pt:"chocolate",es:["chocolate"],cat:"padaria",dif:1},
+  {pt:"churro",es:["churro"],cat:"padaria",dif:1},
+  {pt:"cobertura",es:["cobertura"],cat:"padaria",dif:1},
+  {pt:"coxinha",es:["coxinha","croqueta de pollo"],cat:"padaria",dif:2},
+  {pt:"croissant",es:["medialuna"],cat:"padaria",dif:3},
+  {pt:"cupcake",es:["cupcake"],cat:"padaria",dif:1},
+  {pt:"doce de leite",es:["dulce de leche"],cat:"padaria",dif:1},
+  {pt:"doce folhado",es:["hojaldre"],cat:"padaria",dif:3},
+  {pt:"donut",es:["dona"],cat:"padaria",dif:2},
+  {pt:"empada",es:["empanada"],cat:"padaria",dif:1},
+  {pt:"farinha",es:["harina"],cat:"padaria",dif:1},
+  {pt:"fermento",es:["levadura"],cat:"padaria",dif:2},
+  {pt:"ganache",es:["ganache"],cat:"padaria",dif:1},
+  {pt:"grão de café",es:["grano de café"],cat:"padaria",dif:1},
+  {pt:"lasanha",es:["lasaña"],cat:"padaria",dif:1},
+  {pt:"macarrão",es:["fideos"],cat:"padaria",dif:2},
+  {pt:"mil-folhas",es:["milhojas"],cat:"padaria",dif:2},
+  {pt:"mousse",es:["mousse"],cat:"padaria",dif:1},
+  {pt:"nhoque",es:["ñoquis"],cat:"padaria",dif:2},
+  {pt:"omelete",es:["omelette"],cat:"padaria",dif:1},
+  {pt:"panqueca",es:["panqueque"],cat:"padaria",dif:2},
+  {pt:"pão",es:["pan"],cat:"padaria",dif:1},
+  {pt:"pão francês",es:["pan francés"],cat:"padaria",dif:1},
+  {pt:"pão integral",es:["pan integral"],cat:"padaria",dif:1},
+  {pt:"pastel",es:["pastel"],cat:"padaria",dif:1},
+  {pt:"pipoca",es:["pochoclo"],cat:"padaria",dif:3},
+  {pt:"pizza",es:["pizza"],cat:"padaria",dif:1},
+  {pt:"pudim",es:["flan"],cat:"padaria",dif:3},
+  {pt:"ravióli",es:["ravioles"],cat:"padaria",dif:1},
+  {pt:"sonho",es:["bola de fraile"],cat:"padaria",dif:3},
+  {pt:"sorvete",es:["helado"],cat:"padaria",dif:2},
+  {pt:"suspiro",es:["merengue"],cat:"padaria",dif:2},
+  {pt:"torra escura",es:["tostado oscuro"],cat:"padaria",dif:2},
+  {pt:"torra média",es:["tostado medio"],cat:"padaria",dif:2},
+  {pt:"torta doce",es:["tarta dulce"],cat:"padaria",dif:2},
+  {pt:"torta salgada",es:["tarta salada"],cat:"padaria",dif:2},
+  {pt:"trufa",es:["trufa"],cat:"padaria",dif:1},
+  {pt:"waffle",es:["waffle"],cat:"padaria",dif:1},
+  {pt:"bolo de rolo",es:["pionono","arrollado"],cat:"padaria",dif:3},
+  {pt:"brioche",es:["brioche"],cat:"padaria",dif:1},
+  {pt:"canhão (doce recheado)",es:["cañón"],cat:"padaria",dif:2},
+  {pt:"cobertura de chocolate",es:["cobertura de chocolate"],cat:"padaria",dif:1},
+  {pt:"cookie",es:["cookie"],cat:"padaria",dif:1},
+  {pt:"empanada de maçã",es:["empanada de manzana"],cat:"padaria",dif:1},
+  {pt:"doces de padaria (facturas)",es:["facturas"],cat:"padaria",dif:2},
+  {pt:"focaccia",es:["focaccia"],cat:"padaria",dif:1},
+  {pt:"granola",es:["granola"],cat:"padaria",dif:1},
+  {pt:"muffin",es:["muffin"],cat:"padaria",dif:1},
+  {pt:"palmier",es:["palmera"],cat:"padaria",dif:2},
+  {pt:"pão de forma",es:["pan lactal"],cat:"padaria",dif:3},
+  {pt:"pão de queijo",es:["pan de queso"],cat:"padaria",dif:2},
+  {pt:"pão recheado",es:["pan relleno"],cat:"padaria",dif:1},
+  {pt:"polenta",es:["polenta"],cat:"padaria",dif:1},
+  {pt:"rosca",es:["rosca"],cat:"padaria",dif:1},
+  {pt:"sachê de açúcar",es:["sobre de azúcar"],cat:"padaria",dif:2},
+  {pt:"tablete de chocolate",es:["tableta de chocolate"],cat:"padaria",dif:1},
+  {pt:"torrada",es:["tostada"],cat:"padaria",dif:1},
+  {pt:"tortilha",es:["tortilla"],cat:"padaria",dif:1},
+  {pt:"alfajor",es:["alfajor"],cat:"fast-food",dif:1},
+  {pt:"amêndoas caramelizadas",es:["garrapiñada"],cat:"fast-food",dif:3},
+  {pt:"amendoim torrado",es:["maní tostado"],cat:"fast-food",dif:2},
+  {pt:"anéis de cebola",es:["aros de cebolla"],cat:"fast-food",dif:1},
+  {pt:"batata frita",es:["papas fritas"],cat:"fast-food",dif:1},
+  {pt:"batata rústica",es:["papas rústicas"],cat:"fast-food",dif:1},
+  {pt:"bola de sorvete",es:["bocha"],cat:"fast-food",dif:3},
+  {pt:"cachorro-quente",es:["pancho"],cat:"fast-food",dif:3},
+  {pt:"cachorro-quente com bacon",es:["pancho con panceta"],cat:"fast-food",dif:3},
+  {pt:"cachorro-quente completo",es:["pancho completo"],cat:"fast-food",dif:3},
+  {pt:"casquinha",es:["cucurucho"],cat:"fast-food",dif:3},
+  {pt:"casquinha mista",es:["cono mixto"],cat:"fast-food",dif:3},
+  {pt:"cebola caramelizada",es:["cebolla caramelizada"],cat:"fast-food",dif:1},
+  {pt:"cheeseburger",es:["hamburguesa con queso"],cat:"fast-food",dif:1},
+  {pt:"choripán",es:["choripán"],cat:"fast-food",dif:1},
+  {pt:"churros recheados",es:["churros rellenos"],cat:"fast-food",dif:1},
+  {pt:"drive-thru",es:["autopedido","drive thru"],cat:"fast-food",dif:3},
+  {pt:"empanada de presunto e queijo",es:["empanada de jamón y queso"],cat:"fast-food",dif:1},
+  {pt:"frango crocante",es:["pollo crocante"],cat:"fast-food",dif:1},
+  {pt:"fugazzeta",es:["fugazzeta"],cat:"fast-food",dif:1},
+  {pt:"hambúrguer artesanal",es:["hamburguesa artesanal"],cat:"fast-food",dif:1},
+  {pt:"lanche infantil",es:["menú infantil"],cat:"fast-food",dif:2},
+  {pt:"meia-lua (croissant argentino)",es:["medialuna"],cat:"fast-food",dif:1},
+  {pt:"milanesa no pão",es:["milanesa al pan"],cat:"fast-food",dif:1},
+  {pt:"milkshake",es:["milkshake"],cat:"fast-food",dif:1},
+  {pt:"misto quente",es:["tostado mixto"],cat:"fast-food",dif:3},
+  {pt:"molho especial",es:["salsa especial"],cat:"fast-food",dif:1},
+  {pt:"nuggets de frango",es:["nuggets de pollo"],cat:"fast-food",dif:1},
+  {pt:"panqueca doce",es:["panqueque dulce"],cat:"fast-food",dif:1},
+  {pt:"pedido para viagem",es:["pedido para llevar"],cat:"fast-food",dif:1},
+  {pt:"pizza de muçarela",es:["pizza de muzzarella"],cat:"fast-food",dif:2},
+  {pt:"pizza em fatia",es:["porción de pizza"],cat:"fast-food",dif:2},
+  {pt:"refil",es:["recarga"],cat:"fast-food",dif:2},
+  {pt:"sanduíche",es:["sánguche"],cat:"fast-food",dif:2},
+  {pt:"sanduíche de frango",es:["sánguche de pollo"],cat:"fast-food",dif:2},
+  {pt:"sanduíche de miga",es:["miga"],cat:"fast-food",dif:3},
+  {pt:"sanduíche de milanesa",es:["sánguche de milanesa"],cat:"fast-food",dif:2},
+  {pt:"sanduíche de pernil",es:["sánguche de bondiola"],cat:"fast-food",dif:3},
+  {pt:"sorvete na casquinha",es:["helado en cono"],cat:"fast-food",dif:2},
+  {pt:"sorvete sundae",es:["helado sundae"],cat:"fast-food",dif:2},
+  {pt:"burrito",es:["burrito"],cat:"fast-food",dif:1},
+  {pt:"calabresa",es:["longaniza","salchicha calabresa"],cat:"fast-food",dif:2},
+  {pt:"combo",es:["combo"],cat:"fast-food",dif:1},
+  {pt:"coxinha de frango",es:["croqueta de pollo"],cat:"fast-food",dif:2},
+  {pt:"empanada de carne",es:["empanada de carne"],cat:"fast-food",dif:1},
+  {pt:"empanada frita",es:["empanada frita"],cat:"fast-food",dif:1},
+  {pt:"hamburgueria",es:["hamburguesería"],cat:"fast-food",dif:1},
+  {pt:"molho de tomate",es:["salsa de tomate"],cat:"fast-food",dif:1},
+  {pt:"pacote de batata",es:["papas fritas de paquete"],cat:"fast-food",dif:2},
+  {pt:"pizza a metro",es:["pizza al metro"],cat:"fast-food",dif:2},
+  {pt:"pizza calabresa",es:["pizza de longaniza","pizza de salchicha calabresa"],cat:"fast-food",dif:2},
+  {pt:"pizza de lombardo",es:["pizza de rúcula"],cat:"fast-food",dif:3},
+  {pt:"porção de fritas",es:["papas fritas"],cat:"fast-food",dif:1},
+  {pt:"salgadinho",es:["palitos"],cat:"fast-food",dif:2},
+  {pt:"tacos",es:["tacos"],cat:"fast-food",dif:1},
+  {pt:"tele-entrega",es:["delivery por teléfono"],cat:"fast-food",dif:2},
+  {pt:"wrap",es:["wrap"],cat:"fast-food",dif:1},
+  {pt:"x-burguer",es:["hamburguesa con queso"],cat:"fast-food",dif:2},
+  {pt:"x-tudo",es:["hamburguesa completa","súper completa"],cat:"fast-food",dif:3},
+  {pt:"abobrinha",es:["zucchini","zapallito"],cat:"verduras",dif:2},
+  {pt:"açafrão",es:["azafrán"],cat:"verduras",dif:2},
+  {pt:"açúcar",es:["azúcar"],cat:"verduras",dif:1},
+  {pt:"alecrim",es:["romero"],cat:"verduras",dif:2},
+  {pt:"alface",es:["lechuga"],cat:"verduras",dif:1},
+  {pt:"alho",es:["ajo"],cat:"verduras",dif:1},
+  {pt:"alho-poró",es:["puerro"],cat:"verduras",dif:2},
+  {pt:"azeite",es:["aceite de oliva"],cat:"verduras",dif:1},
+  {pt:"azeitona",es:["aceituna"],cat:"verduras",dif:1},
+  {pt:"batata",es:["papa"],cat:"verduras",dif:2},
+  {pt:"batata-doce",es:["batata"],cat:"verduras",dif:2},
+  {pt:"baunilha",es:["vainilla"],cat:"verduras",dif:1},
+  {pt:"berinjela",es:["berenjena"],cat:"verduras",dif:1},
+  {pt:"beterraba",es:["remolacha"],cat:"verduras",dif:2},
+  {pt:"brócolis",es:["brócoli"],cat:"verduras",dif:1},
+  {pt:"canela",es:["canela"],cat:"verduras",dif:1},
+  {pt:"cebola",es:["cebolla"],cat:"verduras",dif:1},
+  {pt:"cebolinha",es:["cebolla de verdeo","cebollín"],cat:"verduras",dif:2},
+  {pt:"cenoura",es:["zanahoria"],cat:"verduras",dif:1},
+  {pt:"chimichurri",es:["chimichurri"],cat:"verduras",dif:1},
+  {pt:"coentro",es:["cilantro"],cat:"verduras",dif:1},
+  {pt:"cogumelo",es:["hongo","champiñón"],cat:"verduras",dif:1},
+  {pt:"couve",es:["col rizada"],cat:"verduras",dif:2},
+  {pt:"couve-flor",es:["coliflor"],cat:"verduras",dif:1},
+  {pt:"creme de leite",es:["crema de leche"],cat:"verduras",dif:1},
+  {pt:"curry",es:["curry"],cat:"verduras",dif:1},
+  {pt:"ervilha",es:["arveja"],cat:"verduras",dif:2},
+  {pt:"espinafre",es:["espinaca"],cat:"verduras",dif:1},
+  {pt:"farinha de rosca",es:["pan rallado"],cat:"verduras",dif:2},
+  {pt:"feijão",es:["poroto"],cat:"verduras",dif:3},
+  {pt:"fermentação natural",es:["fermentación natural"],cat:"verduras",dif:1},
+  {pt:"gengibre",es:["jengibre"],cat:"verduras",dif:1},
+  {pt:"grão-de-bico",es:["garbanzo"],cat:"verduras",dif:2},
+  {pt:"hortelã",es:["menta"],cat:"verduras",dif:1},
+  {pt:"ketchup",es:["kétchup"],cat:"verduras",dif:2},
+  {pt:"leite condensado",es:["leche condensada"],cat:"verduras",dif:1},
+  {pt:"lentilha",es:["lenteja"],cat:"verduras",dif:1},
+  {pt:"louro",es:["laurel"],cat:"verduras",dif:2},
+  {pt:"maionese",es:["mayonesa"],cat:"verduras",dif:1},
+  {pt:"mandioca",es:["mandioca"],cat:"verduras",dif:1},
+  {pt:"mandioquinha",es:["arracacha"],cat:"verduras",dif:3},
+  {pt:"manjericão",es:["albahaca"],cat:"verduras",dif:2},
+  {pt:"milho",es:["maíz"],cat:"verduras",dif:1},
+  {pt:"molho agridoce",es:["salsa agridulce"],cat:"verduras",dif:1},
+  {pt:"molho barbecue",es:["salsa barbacoa"],cat:"verduras",dif:2},
+  {pt:"molho de alho",es:["salsa de ajo"],cat:"verduras",dif:1},
+  {pt:"molho picante",es:["salsa picante"],cat:"verduras",dif:1},
+  {pt:"molho rosé",es:["salsa golf"],cat:"verduras",dif:3},
+  {pt:"molho tártaro",es:["salsa tártara"],cat:"verduras",dif:2},
+  {pt:"mostarda",es:["mostaza"],cat:"verduras",dif:1},
+  {pt:"noz-moscada",es:["nuez moscada"],cat:"verduras",dif:2},
+  {pt:"óleo",es:["aceite"],cat:"verduras",dif:2},
+  {pt:"orégano",es:["orégano"],cat:"verduras",dif:1},
+  {pt:"páprica",es:["pimentón"],cat:"verduras",dif:2},
+  {pt:"pepino",es:["pepino"],cat:"verduras",dif:1},
+  {pt:"picles",es:["pepinillos"],cat:"verduras",dif:2},
+  {pt:"pimenta",es:["pimienta"],cat:"verduras",dif:1},
+  {pt:"pimenta calabresa",es:["ají molido"],cat:"verduras",dif:2},
+  {pt:"pimentão",es:["morrón"],cat:"verduras",dif:2},
+  {pt:"queijo ralado",es:["queso rallado"],cat:"verduras",dif:1},
+  {pt:"repolho",es:["repollo"],cat:"verduras",dif:1},
+  {pt:"repolho roxo",es:["repollo morado"],cat:"verduras",dif:1},
+  {pt:"rúcula",es:["rúcula"],cat:"verduras",dif:1},
+  {pt:"sal",es:["sal"],cat:"verduras",dif:1},
+  {pt:"salsinha",es:["perejil"],cat:"verduras",dif:2},
+  {pt:"tomate",es:["tomate"],cat:"verduras",dif:1},
+  {pt:"vinagre",es:["vinagre"],cat:"verduras",dif:1},
+  {pt:"aceto balsâmico",es:["aceto balsámico"],cat:"verduras",dif:2},
+  {pt:"aipo",es:["apio"],cat:"verduras",dif:2},
+  {pt:"alcachofra",es:["alcaucil"],cat:"verduras",dif:3},
+  {pt:"alho negro",es:["ajo negro"],cat:"verduras",dif:2},
+  {pt:"amendoim",es:["maní"],cat:"verduras",dif:2},
+  {pt:"aspargo",es:["espárrago"],cat:"verduras",dif:2},
+  {pt:"azeitona preta",es:["aceituna negra"],cat:"verduras",dif:1},
+  {pt:"caldo de legumes",es:["caldo de verduras"],cat:"verduras",dif:1},
+  {pt:"cheiro-verde",es:["verdeo"],cat:"verduras",dif:3},
+  {pt:"chuchu",es:["chayote","papa del aire"],cat:"verduras",dif:3},
+  {pt:"endívia",es:["endivia"],cat:"verduras",dif:2},
+  {pt:"erva-doce (funcho)",es:["hinojo"],cat:"verduras",dif:2},
+  {pt:"leite de coco",es:["leche de coco"],cat:"verduras",dif:1},
+  {pt:"manteiga",es:["manteca"],cat:"verduras",dif:2},
+  {pt:"nabo",es:["nabo"],cat:"verduras",dif:1},
+  {pt:"palmito",es:["palmito"],cat:"verduras",dif:1},
+  {pt:"pimentão verde",es:["morrón verde"],cat:"verduras",dif:2},
+  {pt:"queijo",es:["queso"],cat:"verduras",dif:1},
+  {pt:"rúcula selvagem",es:["rúcula salvaje"],cat:"verduras",dif:2},
+  {pt:"tomilho",es:["tomillo"],cat:"verduras",dif:2},
+  {pt:"aerador de vinho",es:["aireador"],cat:"utensílios",dif:3},
+  {pt:"afiador",es:["afilador"],cat:"utensílios",dif:2},
+  {pt:"air fryer",es:["freidora de aire"],cat:"utensílios",dif:2},
+  {pt:"amaciador de carnes",es:["ablandador de carnes"],cat:"utensílios",dif:2},
+  {pt:"amassador de alho",es:["machacador"],cat:"utensílios",dif:3},
+  {pt:"assadeira",es:["bandeja para horno"],cat:"utensílios",dif:2},
+  {pt:"avental",es:["delantal"],cat:"utensílios",dif:1},
+  {pt:"balança de cozinha",es:["balanza"],cat:"utensílios",dif:2},
+  {pt:"bancada inox",es:["mesada de acero inoxidable"],cat:"utensílios",dif:3},
+  {pt:"batedeira",es:["batidora"],cat:"utensílios",dif:1},
+  {pt:"cafeteira",es:["cafetera"],cat:"utensílios",dif:1},
+  {pt:"câmara fria",es:["cámara frigorífica"],cat:"utensílios",dif:3},
+  {pt:"chaleira elétrica",es:["pava eléctrica"],cat:"utensílios",dif:3},
+  {pt:"colher",es:["cuchara"],cat:"utensílios",dif:1},
+  {pt:"concha",es:["cucharón"],cat:"utensílios",dif:2},
+  {pt:"controle de estoque",es:["control de stock"],cat:"utensílios",dif:2},
+  {pt:"cooktop",es:["anafe"],cat:"utensílios",dif:3},
+  {pt:"copo",es:["vaso"],cat:"utensílios",dif:1},
+  {pt:"cortador de pizza",es:["cortapizza"],cat:"utensílios",dif:2},
+  {pt:"cozinha industrial",es:["cocina industrial"],cat:"utensílios",dif:1},
+  {pt:"cuba",es:["bacha"],cat:"utensílios",dif:3},
+  {pt:"descascador",es:["pelador"],cat:"utensílios",dif:2},
+  {pt:"escorredor de louça",es:["escurridor"],cat:"utensílios",dif:2},
+  {pt:"escumadeira",es:["espumadera"],cat:"utensílios",dif:3},
+  {pt:"espátula",es:["espátula"],cat:"utensílios",dif:1},
+  {pt:"etiqueta de validade",es:["etiqueta de vencimiento"],cat:"utensílios",dif:2},
+  {pt:"exaustor",es:["extractor"],cat:"utensílios",dif:2},
+  {pt:"expositor refrigerado",es:["vitrina refrigerada"],cat:"utensílios",dif:3},
+  {pt:"faca",es:["cuchillo"],cat:"utensílios",dif:1},
+  {pt:"filme plástico",es:["film plástico"],cat:"utensílios",dif:1},
+  {pt:"fogão",es:["cocina"],cat:"utensílios",dif:2},
+  {pt:"forma",es:["molde"],cat:"utensílios",dif:2},
+  {pt:"forno",es:["horno"],cat:"utensílios",dif:1},
+  {pt:"freezer",es:["freezer"],cat:"utensílios",dif:1},
+  {pt:"frigideira",es:["sartén"],cat:"utensílios",dif:2},
+  {pt:"garfo",es:["tenedor"],cat:"utensílios",dif:1},
+  {pt:"garrafa térmica",es:["termo"],cat:"utensílios",dif:2},
+  {pt:"geladeira",es:["heladera"],cat:"utensílios",dif:2},
+  {pt:"grill",es:["parrilla eléctrica"],cat:"utensílios",dif:2},
+  {pt:"guardanapo",es:["servilleta"],cat:"utensílios",dif:1},
+  {pt:"jarra",es:["jarra"],cat:"utensílios",dif:1},
+  {pt:"lava-louças",es:["lavavajillas"],cat:"utensílios",dif:2},
+  {pt:"liquidificador",es:["licuadora"],cat:"utensílios",dif:2},
+  {pt:"luvas de cozinha",es:["guantes"],cat:"utensílios",dif:2},
+  {pt:"mandolim",es:["mandolina"],cat:"utensílios",dif:2},
+  {pt:"micro-ondas",es:["microondas"],cat:"utensílios",dif:1},
+  {pt:"mixer",es:["mixer"],cat:"utensílios",dif:1},
+  {pt:"moedor de café",es:["molinillo de café"],cat:"utensílios",dif:2},
+  {pt:"oveira",es:["huevera"],cat:"utensílios",dif:3},
+  {pt:"palitos",es:["palillos"],cat:"utensílios",dif:1},
+  {pt:"panela",es:["olla"],cat:"utensílios",dif:1},
+  {pt:"panela de pressão",es:["olla a presión"],cat:"utensílios",dif:2},
+  {pt:"panela wok",es:["wok"],cat:"utensílios",dif:1},
+  {pt:"panquequeira",es:["panquequera"],cat:"utensílios",dif:2},
+  {pt:"papel alumínio",es:["papel aluminio"],cat:"utensílios",dif:1},
+  {pt:"papel toalha",es:["rollo de cocina"],cat:"utensílios",dif:3},
+  {pt:"pegador",es:["pinza"],cat:"utensílios",dif:2},
+  {pt:"pegador de massa",es:["pinza para pasta"],cat:"utensílios",dif:2},
+  {pt:"peneira",es:["colador"],cat:"utensílios",dif:2},
+  {pt:"pimenteiro",es:["pimentero"],cat:"utensílios",dif:2},
+  {pt:"pipoqueira",es:["pochoclera"],cat:"utensílios",dif:3},
+  {pt:"processador",es:["procesadora","picadora"],cat:"utensílios",dif:2},
+  {pt:"ralador",es:["rallador"],cat:"utensílios",dif:2},
+  {pt:"saca-rolhas",es:["sacacorchos"],cat:"utensílios",dif:2},
+  {pt:"saleiro",es:["salero"],cat:"utensílios",dif:2},
+  {pt:"sanduicheira",es:["sandwichera"],cat:"utensílios",dif:2},
+  {pt:"tábua",es:["tabla"],cat:"utensílios",dif:2},
+  {pt:"taça de vinho",es:["copa de vino"],cat:"utensílios",dif:1},
+  {pt:"talheres",es:["cubiertos"],cat:"utensílios",dif:1},
+  {pt:"tesoura",es:["tijera"],cat:"utensílios",dif:1},
+  {pt:"tigela",es:["bol"],cat:"utensílios",dif:2},
+  {pt:"toalha de mesa",es:["mantel"],cat:"utensílios",dif:1},
+  {pt:"torradeira",es:["tostadora"],cat:"utensílios",dif:1},
+  {pt:"travessa",es:["fuente"],cat:"utensílios",dif:2},
+  {pt:"vidro para tempero",es:["tarro de especias"],cat:"utensílios",dif:2},
+  {pt:"xícara",es:["taza"],cat:"utensílios",dif:1},
+  {pt:"yogurteira",es:["yogurtera"],cat:"utensílios",dif:3},
+  {pt:"abridor de lata",es:["abrelatas"],cat:"utensílios",dif:2},
+  {pt:"bandeja",es:["bandeja"],cat:"utensílios",dif:1},
+  {pt:"bowl de vidro",es:["bol de vidrio"],cat:"utensílios",dif:1},
+  {pt:"coador de café",es:["filtro de café"],cat:"utensílios",dif:2},
+  {pt:"colher de pau",es:["cuchara de madera"],cat:"utensílios",dif:1},
+  {pt:"colher de sobremesa",es:["cucharita"],cat:"utensílios",dif:2},
+  {pt:"colher medidora",es:["cuchara medidora"],cat:"utensílios",dif:2},
+  {pt:"congelador",es:["freezer"],cat:"utensílios",dif:1},
+  {pt:"cortador de legumes",es:["cortador de verduras"],cat:"utensílios",dif:2},
+  {pt:"espremedor",es:["exprimidor"],cat:"utensílios",dif:2},
+  {pt:"faca de chef",es:["cuchillo de chef"],cat:"utensílios",dif:1},
+  {pt:"faca de pão",es:["cuchillo para pan"],cat:"utensílios",dif:1},
+  {pt:"frigideira antiaderente",es:["sartén antiadherente"],cat:"utensílios",dif:2},
+  {pt:"funil",es:["embudo"],cat:"utensílios",dif:2},
+  {pt:"medidor de líquidos",es:["jarra medidora"],cat:"utensílios",dif:2},
+  {pt:"palha de aço",es:["virulana","esponja de acero"],cat:"utensílios",dif:3},
+  {pt:"pano de prato",es:["repasador"],cat:"utensílios",dif:3},
+  {pt:"pincel de cozinha",es:["pincel de cocina"],cat:"utensílios",dif:2},
+  {pt:"porta-temperos",es:["especiero"],cat:"utensílios",dif:2},
+  {pt:"termômetro culinário",es:["termómetro de cocina"],cat:"utensílios",dif:2},
+  {pt:"açougue",es:["carnicería"],cat:"mercado",dif:1},
+  {pt:"açougueiro",es:["carnicero"],cat:"mercado",dif:1},
+  {pt:"aplicativo de delivery",es:["app de delivery"],cat:"mercado",dif:1},
+  {pt:"atacado",es:["mayorista"],cat:"mercado",dif:2},
+  {pt:"auxiliar de cozinha",es:["ayudante de cocina"],cat:"mercado",dif:1},
+  {pt:"caixa",es:["caja"],cat:"mercado",dif:1},
+  {pt:"caixa registradora",es:["caja registradora"],cat:"mercado",dif:1},
+  {pt:"cardápio",es:["menú"],cat:"mercado",dif:2},
+  {pt:"carrinho",es:["changuito"],cat:"mercado",dif:3},
+  {pt:"cesta",es:["canasta"],cat:"mercado",dif:1},
+  {pt:"chef",es:["chef"],cat:"mercado",dif:1},
+  {pt:"cliente",es:["cliente"],cat:"mercado",dif:1},
+  {pt:"confeiteiro",es:["pastelero"],cat:"mercado",dif:2},
+  {pt:"congelador vertical",es:["freezer vertical"],cat:"mercado",dif:2},
+  {pt:"conta",es:["cuenta"],cat:"mercado",dif:1},
+  {pt:"cozinheiro",es:["cocinero"],cat:"mercado",dif:1},
+  {pt:"cupom de desconto",es:["cupón de descuento"],cat:"mercado",dif:1},
+  {pt:"delivery",es:["delivery"],cat:"mercado",dif:1},
+  {pt:"desconto",es:["descuento"],cat:"mercado",dif:1},
+  {pt:"embalagem",es:["envase"],cat:"mercado",dif:2},
+  {pt:"embalagem econômica",es:["envase económico"],cat:"mercado",dif:2},
+  {pt:"entrega agendada",es:["entrega programada"],cat:"mercado",dif:1},
+  {pt:"entrega grátis",es:["envío gratis"],cat:"mercado",dif:1},
+  {pt:"excelente atendimento",es:["excelente atención"],cat:"mercado",dif:1},
+  {pt:"feira livre",es:["feria"],cat:"mercado",dif:2},
+  {pt:"fila",es:["fila"],cat:"mercado",dif:1},
+  {pt:"fila de espera",es:["lista de espera"],cat:"mercado",dif:1},
+  {pt:"garçom",es:["mozo"],cat:"mercado",dif:2},
+  {pt:"garçonete",es:["moza"],cat:"mercado",dif:2},
+  {pt:"gorjeta",es:["propina"],cat:"mercado",dif:2},
+  {pt:"hortifruti",es:["verdulería"],cat:"mercado",dif:2},
+  {pt:"ilha de congelados",es:["isla de congelados"],cat:"mercado",dif:2},
+  {pt:"laticínios",es:["lácteos"],cat:"mercado",dif:2},
+  {pt:"mercado",es:["mercado"],cat:"mercado",dif:1},
+  {pt:"mesa ocupada",es:["mesa ocupada"],cat:"mercado",dif:1},
+  {pt:"mesa para dois",es:["mesa para dos"],cat:"mercado",dif:1},
+  {pt:"motoboy",es:["repartidor"],cat:"mercado",dif:2},
+  {pt:"oferta do dia",es:["oferta del día"],cat:"mercado",dif:1},
+  {pt:"padaria",es:["panadería"],cat:"mercado",dif:1},
+  {pt:"padeiro",es:["panadero"],cat:"mercado",dif:1},
+  {pt:"pagamento na entrega",es:["pago contra entrega"],cat:"mercado",dif:2},
+  {pt:"pedido",es:["pedido"],cat:"mercado",dif:1},
+  {pt:"pedido atrasado",es:["pedido atrasado"],cat:"mercado",dif:1},
+  {pt:"pedido em preparo",es:["pedido en preparación"],cat:"mercado",dif:1},
+  {pt:"pedido saiu para entrega",es:["pedido en camino"],cat:"mercado",dif:2},
+  {pt:"preço por quilo",es:["precio por kilo"],cat:"mercado",dif:1},
+  {pt:"produto a granel",es:["producto a granel"],cat:"mercado",dif:2},
+  {pt:"produto importado",es:["producto importado"],cat:"mercado",dif:1},
+  {pt:"produto nacional",es:["producto nacional"],cat:"mercado",dif:1},
+  {pt:"produto orgânico",es:["producto orgánico"],cat:"mercado",dif:1},
+  {pt:"promoção",es:["oferta"],cat:"mercado",dif:2},
+  {pt:"reposição",es:["reposición"],cat:"mercado",dif:2},
+  {pt:"reserva",es:["reserva"],cat:"mercado",dif:1},
+  {pt:"reserva confirmada",es:["reserva confirmada"],cat:"mercado",dif:1},
+  {pt:"retirar no balcão",es:["retirar en mostrador"],cat:"mercado",dif:2},
+  {pt:"sacola reutilizável",es:["bolsa reutilizable"],cat:"mercado",dif:1},
+  {pt:"supermercado",es:["supermercado"],cat:"mercado",dif:1},
+  {pt:"taxa de entrega",es:["costo de envío"],cat:"mercado",dif:2},
+  {pt:"troco",es:["vuelto"],cat:"mercado",dif:2},
+  {pt:"validade",es:["vencimiento"],cat:"mercado",dif:2},
+  {pt:"validade vencida",es:["vencido"],cat:"mercado",dif:2},
+  {pt:"varejo",es:["minorista"],cat:"mercado",dif:2},
+  {pt:"atendente",es:["empleado"],cat:"mercado",dif:2},
+  {pt:"balcão de frios",es:["mostrador de fiambres"],cat:"mercado",dif:3},
+  {pt:"bandeja de isopor",es:["bandeja de telgopor"],cat:"mercado",dif:3},
+  {pt:"bebida gelada",es:["bebida fría"],cat:"mercado",dif:1},
+  {pt:"boleto",es:["boleta"],cat:"mercado",dif:2},
+  {pt:"cartão fidelidade",es:["tarjeta de puntos"],cat:"mercado",dif:2},
+  {pt:"cesta básica",es:["canasta básica"],cat:"mercado",dif:2},
+  {pt:"comida pronta",es:["comida lista"],cat:"mercado",dif:1},
+  {pt:"data de fabricação",es:["fecha de elaboración"],cat:"mercado",dif:2},
+  {pt:"desconto no cartão",es:["descuento con tarjeta"],cat:"mercado",dif:1},
+  {pt:"devolução",es:["devolución"],cat:"mercado",dif:1},
+  {pt:"estoque esgotado",es:["agotado"],cat:"mercado",dif:2},
+  {pt:"fiambre",es:["fiambre"],cat:"mercado",dif:2},
+  {pt:"gôndola",es:["góndola"],cat:"mercado",dif:2},
+  {pt:"loja de conveniência",es:["kiosco"],cat:"mercado",dif:3},
+  {pt:"mercearia",es:["almacén"],cat:"mercado",dif:2},
+  {pt:"nota fiscal",es:["factura"],cat:"mercado",dif:2},
+  {pt:"pedir o troco",es:["pedir el vuelto"],cat:"mercado",dif:2},
+  {pt:"produto vencido",es:["producto vencido"],cat:"mercado",dif:1},
+  {pt:"seção de laticínios",es:["sección de lácteos"],cat:"mercado",dif:2},
+  {pt:"A conta, por favor",es:["La cuenta, por favor"],cat:"expressões",dif:1},
+  {pt:"Aceita cartão?",es:["¿Aceptan tarjeta?"],cat:"expressões",dif:1},
+  {pt:"Aceita dólares?",es:["¿Aceptan dólares?"],cat:"expressões",dif:1},
+  {pt:"Bom apetite",es:["Buen provecho"],cat:"expressões",dif:1},
+  {pt:"Cara / amigo",es:["Che"],cat:"expressões",dif:2},
+  {pt:"Com bastante queijo",es:["Con mucho queso"],cat:"expressões",dif:1},
+  {pt:"Está delicioso",es:["Está riquísimo"],cat:"expressões",dif:2},
+  {pt:"Estou com fome",es:["Tengo hambre"],cat:"expressões",dif:1},
+  {pt:"Estou satisfeito",es:["Estoy satisfecho"],cat:"expressões",dif:1},
+  {pt:"Excelente",es:["De diez"],cat:"expressões",dif:3},
+  {pt:"Isso está incrível",es:["Esto está zarpado"],cat:"expressões",dif:3},
+  {pt:"Mais gelo",es:["Más hielo"],cat:"expressões",dif:1},
+  {pt:"Mais guardanapos",es:["Más servilletas"],cat:"expressões",dif:1},
+  {pt:"Mais uma cerveja",es:["Otra birra"],cat:"expressões",dif:2},
+  {pt:"Muito bom",es:["Re bueno"],cat:"expressões",dif:3},
+  {pt:"O que você recomenda?",es:["¿Qué recomienda?"],cat:"expressões",dif:1},
+  {pt:"Ok",es:["Dale"],cat:"expressões",dif:3},
+  {pt:"Onde fica o banheiro?",es:["¿Dónde queda el baño?"],cat:"expressões",dif:2},
+  {pt:"Para viagem",es:["Para llevar"],cat:"expressões",dif:1},
+  {pt:"Pode repetir?",es:["¿Puede repetir?"],cat:"expressões",dif:1},
+  {pt:"Quanto custa?",es:["¿Cuánto cuesta?"],cat:"expressões",dif:1},
+  {pt:"Quero experimentar",es:["Quiero probar"],cat:"expressões",dif:1},
+  {pt:"Saúde!",es:["¡Salud!"],cat:"expressões",dif:1},
+  {pt:"Sem carne",es:["Sin carne"],cat:"expressões",dif:1},
+  {pt:"Sem cebola",es:["Sin cebolla"],cat:"expressões",dif:1},
+  {pt:"Sem glúten",es:["Sin gluten"],cat:"expressões",dif:1},
+  {pt:"Sem lactose",es:["Sin lactosa"],cat:"expressões",dif:1},
+  {pt:"Sem pimenta",es:["Sin pimienta"],cat:"expressões",dif:1},
+  {pt:"Tem delivery?",es:["¿Tienen delivery?"],cat:"expressões",dif:1},
+  {pt:"Tem wi-fi?",es:["¿Hay wifi?"],cat:"expressões",dif:1},
+  {pt:"Traga o cardápio",es:["Traiga el menú"],cat:"expressões",dif:1},
+  {pt:"Um saco de pipoca",es:["Un paquete de pochoclo"],cat:"expressões",dif:3},
+  {pt:"Uma casquinha com duas bolas",es:["Dos bochas en cucurucho"],cat:"expressões",dif:3},
+  {pt:"Vamos comer?",es:["¿Vamos a comer?"],cat:"expressões",dif:1},
+  {pt:"Vou comer aqui",es:["Voy a comer acá"],cat:"expressões",dif:1},
+  {pt:"Vou pagar no crédito",es:["Voy a pagar con crédito"],cat:"expressões",dif:1},
+  {pt:"Vou pagar no débito",es:["Voy a pagar con débito"],cat:"expressões",dif:1},
+  {pt:"Acabou o estoque",es:["Se agotó el stock"],cat:"expressões",dif:2},
+  {pt:"Aqui está",es:["Acá está"],cat:"expressões",dif:1},
+  {pt:"Cadê o garçom?",es:["¿Dónde está el mozo?"],cat:"expressões",dif:1},
+  {pt:"Com licença",es:["Con permiso"],cat:"expressões",dif:1},
+  {pt:"Desculpe a demora",es:["Disculpá la demora"],cat:"expressões",dif:2},
+  {pt:"E aí, tudo bem?",es:["¿Todo bien?"],cat:"expressões",dif:1},
+  {pt:"Espera um segundo",es:["Esperá un segundo"],cat:"expressões",dif:1},
+  {pt:"Eu quero",es:["Yo quiero"],cat:"expressões",dif:1},
+  {pt:"Faz favor",es:["Por favor"],cat:"expressões",dif:1},
+  {pt:"Já escolheu?",es:["¿Ya eligió?"],cat:"expressões",dif:2},
+  {pt:"Me traz mais pão",es:["Traeme más pan"],cat:"expressões",dif:2},
+  {pt:"Não tem pimenta?",es:["¿No tiene pimienta?"],cat:"expressões",dif:1},
+  {pt:"Para mim está bom",es:["Para mí está bien"],cat:"expressões",dif:1},
+  {pt:"Posso ver o cardápio?",es:["¿Puedo ver el menú?"],cat:"expressões",dif:1},
+  {pt:"Que horas fecha?",es:["¿A qué hora cierra?"],cat:"expressões",dif:1},
+  {pt:"Quero repetir",es:["Quiero repetir"],cat:"expressões",dif:1},
+  {pt:"Tem mesa livre?",es:["¿Hay mesa libre?"],cat:"expressões",dif:1},
+  {pt:"Troca por outro?",es:["¿Lo cambia por otro?"],cat:"expressões",dif:2},
+  {pt:"Vou querer sobremesa",es:["Voy a querer postre"],cat:"expressões",dif:1},
+  // ── Falsas amigas ──
+  {pt:"borracha",es:["goma"],cat:"falsas amigas",dif:3,example:"No encontré la <em>goma</em> para borrar el dibujo."},
+  {pt:"embaraçado",es:["avergonzado"],cat:"falsas amigas",dif:3,example:"Me puse muy <em>avergonzado</em> cuando derramé el vino."},
+  {pt:"polvo (animal)",es:["pulpo"],cat:"falsas amigas",dif:3,example:"El <em>pulpo</em> a la parrilla es exquisito."},
+  {pt:"caliente (quente)",es:["caliente"],cat:"falsas amigas",dif:2,example:"¡Cuidado, el plato está muy <em>caliente</em>!"},
+  {pt:"borracho (bêbado)",es:["borracho"],cat:"falsas amigas",dif:2,example:"Ese cliente llegó <em>borracho</em> al restaurante."},
+  {pt:"embarazada (grávida)",es:["embarazada"],cat:"falsas amigas",dif:3,example:"La cocinera está <em>embarazada</em> de seis meses."},
+  {pt:"tirar (retirar)",es:["sacar"],cat:"falsas amigas",dif:2,example:"¿Podés <em>sacar</em> los platos de la mesa?"},
+  {pt:"vaso sanitário",es:["inodoro"],cat:"falsas amigas",dif:3,example:"El <em>inodoro</em> del baño del restaurante está sucio."},
+  {pt:"colar (pescoço)",es:["collar"],cat:"falsas amigas",dif:2,example:"La moza usa un <em>collar</em> de plata."},
+  {pt:"largo (amplo)",es:["ancho","amplio"],cat:"falsas amigas",dif:2,example:"El salón es muy <em>ancho</em>, entran muchas mesas."},
+  {pt:"policia",es:["policía"],cat:"falsas amigas",dif:2,example:"La <em>policía</em> cerró el local por irregularidades."},
+  {pt:"parentes",es:["familiares"],cat:"falsas amigas",dif:2,example:"Vine a comer con mis <em>familiares</em>."},
+  {pt:"propina (suborno)",es:["soborno"],cat:"falsas amigas",dif:3,example:"Lo detuvieron por intentar un <em>soborno</em>."},
+  {pt:"exquisito (delicioso em ES)",es:["exquisito"],cat:"falsas amigas",dif:2,example:"Este bife está absolutamente <em>exquisito</em>."},
+  {pt:"confiança",es:["confianza"],cat:"falsas amigas",dif:1,example:"El chef tiene mucha <em>confianza</em> en su receta."},
+  {pt:"polvo (pó)",es:["polvo"],cat:"falsas amigas",dif:2,example:"Añadí <em>polvo</em> de cacao al postre."},
+  {pt:"maçaneta",es:["manija"],cat:"falsas amigas",dif:3,example:"La <em>manija</em> de la heladera está rota."},
+  {pt:"aperitivo (entrada fria)",es:["entrada fría"],cat:"falsas amigas",dif:2,example:"Pedimos una <em>entrada fría</em> de fiambres para empezar."},
+  {pt:"bicho (inseto)",es:["bicho"],cat:"falsas amigas",dif:1,example:"Encontraron un <em>bicho</em> en la ensalada."},
+  {pt:"biscoito (galleta)",es:["galletita"],cat:"falsas amigas",dif:2,example:"Trajo unas <em>galletitas</em> para el café."},
+  {pt:"borrar (apagar)",es:["borrar"],cat:"falsas amigas",dif:2,example:"Pudo <em>borrar</em> la mancha de la mesa."},
+  {pt:"cana (prisão em PT)",es:["cana"],cat:"falsas amigas",dif:3,example:"Le cayó la <em>cana</em> después de la pelea en el bar."},
+  {pt:"cargo (encargo)",es:["cargo"],cat:"falsas amigas",dif:2,example:"El <em>cargo</em> de chef ejecutivo es muy exigente."},
+  {pt:"carro (carrinho)",es:["changuito"],cat:"falsas amigas",dif:2,example:"Llené el <em>changuito</em> en el super."},
+  {pt:"cola (fila)",es:["cola"],cat:"falsas amigas",dif:2,example:"Hay mucha <em>cola</em> en la caja del supermercado."},
+  {pt:"embaraçoso",es:["vergonzoso"],cat:"falsas amigas",dif:2,example:"Fue muy <em>vergonzoso</em> que se cayera la bandeja."},
+  {pt:"esquisito (estranho em PT)",es:["raro"],cat:"falsas amigas",dif:2,example:"Ese plato tiene un sabor muy <em>raro</em>."},
+  {pt:"graça (humor)",es:["gracia"],cat:"falsas amigas",dif:2,example:"El mozo tenía mucha <em>gracia</em>, nos hizo reír toda la noche."},
+  {pt:"largo (rua)",es:["plaza"],cat:"falsas amigas",dif:2,example:"El restaurante está frente a la <em>plaza</em>."},
+  {pt:"legal (ótimo em PT)",es:["copado"],cat:"falsas amigas",dif:3,example:"El lugar nuevo está muy <em>copado</em>, te va a gustar."},
+  {pt:"loja",es:["local"],cat:"falsas amigas",dif:2,example:"Abrieron un <em>local</em> nuevo de sushi en Palermo."},
+  {pt:"óleo (azeite de oliva em PT)",es:["aceite de oliva"],cat:"falsas amigas",dif:2,example:"Rociá con <em>aceite de oliva</em> antes de servir."},
+  {pt:"pegar (tomar)",es:["agarrar"],cat:"falsas amigas",dif:2,example:"Agarrá el plato con las dos manos, está caliente."},
+  {pt:"sobrenome",es:["apellido"],cat:"falsas amigas",dif:1,example:"¿Me dice su <em>apellido</em> para la reserva?"},
+  {pt:"tarde (vespertino)",es:["tarde"],cat:"falsas amigas",dif:1,example:"El almuerzo es a las dos de la <em>tarde</em>."},
+
+  // ── alimentos extras (60 → 100) ──
+  {pt:"salgado",es:["salado"],cat:"alimentos",dif:1},
+  {pt:"doce",es:["dulce"],cat:"alimentos",dif:1},
+  {pt:"picante",es:["picante"],cat:"alimentos",dif:1},
+  {pt:"crocante",es:["crocante"],cat:"alimentos",dif:1},
+  {pt:"macio",es:["tierno"],cat:"alimentos",dif:2},
+  {pt:"gratinado",es:["gratinado"],cat:"alimentos",dif:2},
+  {pt:"refogado",es:["rehogado"],cat:"alimentos",dif:2},
+  {pt:"caramelizado",es:["caramelizado"],cat:"alimentos",dif:1},
+  {pt:"aferventado",es:["blanqueado"],cat:"alimentos",dif:3},
+  {pt:"salada",es:["ensalada"],cat:"alimentos",dif:1},
+  {pt:"tábua de frios",es:["tabla de fiambres"],cat:"alimentos",dif:2},
+  {pt:"salada mista",es:["ensalada mixta"],cat:"alimentos",dif:1},
+  {pt:"vinagrete (molho)",es:["salsa criolla","vinagreta"],cat:"alimentos",dif:2},
+  {pt:"caldo de frango",es:["caldo de pollo"],cat:"alimentos",dif:1},
+  {pt:"caldo de carne",es:["caldo de carne"],cat:"alimentos",dif:1},
+  {pt:"porção para dois",es:["porción para dos"],cat:"alimentos",dif:1},
+  {pt:"meia porção",es:["media porción"],cat:"alimentos",dif:1},
+  {pt:"para compartilhar",es:["para compartir"],cat:"alimentos",dif:1},
+  {pt:"prato frio",es:["plato frío"],cat:"alimentos",dif:1},
+  {pt:"prato quente",es:["plato caliente"],cat:"alimentos",dif:1},
+  {pt:"prato vegano",es:["plato vegano"],cat:"alimentos",dif:1},
+  {pt:"prato sem glúten",es:["plato sin gluten"],cat:"alimentos",dif:1},
+  {pt:"prato típico",es:["plato típico"],cat:"alimentos",dif:1},
+  {pt:"menu executivo",es:["menú ejecutivo"],cat:"alimentos",dif:2},
+  {pt:"couvert",es:["cubierto"],cat:"alimentos",dif:3},
+  {pt:"condimento",es:["condimento"],cat:"alimentos",dif:1},
+  {pt:"especiaria",es:["especia"],cat:"alimentos",dif:2},
+  {pt:"ervas frescas",es:["hierbas frescas"],cat:"alimentos",dif:1},
+  {pt:"escaldado",es:["escaldado"],cat:"alimentos",dif:2},
+  {pt:"sal grosso",es:["sal gruesa"],cat:"alimentos",dif:1},
+  {pt:"azeite extravirgem",es:["aceite de oliva extra virgen"],cat:"alimentos",dif:2},
+  {pt:"suculento",es:["jugoso"],cat:"alimentos",dif:2},
+  {pt:"cardápio degustação",es:["menú degustación"],cat:"alimentos",dif:3},
+  {pt:"crouton",es:["crutón"],cat:"alimentos",dif:2},
+  {pt:"salada caesar",es:["ensalada caesar"],cat:"alimentos",dif:1},
+  {pt:"queijo fundido",es:["queso fundido"],cat:"alimentos",dif:2},
+  {pt:"prato sem lactose",es:["plato sin lactosa"],cat:"alimentos",dif:1},
+  {pt:"cozimento lento",es:["cocción lenta"],cat:"alimentos",dif:2},
+  {pt:"carne desossada",es:["carne deshuesada"],cat:"alimentos",dif:2},
+  {pt:"redução",es:["reducción"],cat:"alimentos",dif:3},
+  // ── bebidas extras (74 → 100) ──
+  {pt:"vitamina de fruta",es:["licuado de fruta"],cat:"bebidas",dif:3},
+  {pt:"suco de laranja",es:["jugo de naranja"],cat:"bebidas",dif:1},
+  {pt:"suco de maçã",es:["jugo de manzana"],cat:"bebidas",dif:1},
+  {pt:"suco de limão",es:["jugo de limón"],cat:"bebidas",dif:1},
+  {pt:"suco de uva",es:["jugo de uva"],cat:"bebidas",dif:1},
+  {pt:"água tônica",es:["agua tónica"],cat:"bebidas",dif:1},
+  {pt:"leite com barra de chocolate",es:["submarino"],cat:"bebidas",dif:3},
+  {pt:"tereré",es:["tereré"],cat:"bebidas",dif:2},
+  {pt:"cerveja sem álcool",es:["cerveza sin alcohol"],cat:"bebidas",dif:1},
+  {pt:"vinho da casa",es:["vino de la casa"],cat:"bebidas",dif:1},
+  {pt:"café coado",es:["café de filtro"],cat:"bebidas",dif:2},
+  {pt:"café curto",es:["café corto"],cat:"bebidas",dif:2},
+  {pt:"café longo",es:["café largo"],cat:"bebidas",dif:2},
+  {pt:"cuba libre",es:["cuba libre"],cat:"bebidas",dif:1},
+  {pt:"negroni",es:["negroni"],cat:"bebidas",dif:2},
+  {pt:"bebida quente",es:["bebida caliente"],cat:"bebidas",dif:1},
+  {pt:"leite quente",es:["leche caliente"],cat:"bebidas",dif:1},
+  {pt:"bebida alcoólica",es:["bebida alcohólica"],cat:"bebidas",dif:1},
+  {pt:"long drink",es:["trago largo"],cat:"bebidas",dif:2},
+  {pt:"cerveja de trigo",es:["cerveza de trigo"],cat:"bebidas",dif:1},
+  {pt:"gancia",es:["gancia"],cat:"bebidas",dif:2},
+  {pt:"aperol spritz",es:["aperol spritz"],cat:"bebidas",dif:1},
+  {pt:"vinho quente",es:["vino caliente"],cat:"bebidas",dif:1},
+  {pt:"ponche de frutas",es:["ponche de frutas"],cat:"bebidas",dif:2},
+  {pt:"infusão de ervas",es:["infusión de hierbas"],cat:"bebidas",dif:2},
+  {pt:"mojito",es:["mojito"],cat:"bebidas",dif:1},
+  // ── carnes extras (95 → 100) ──
+  {pt:"ovo frito",es:["huevo frito"],cat:"carnes",dif:1},
+  {pt:"ovo mexido",es:["huevo revuelto"],cat:"carnes",dif:2},
+  {pt:"ovo cozido",es:["huevo duro"],cat:"carnes",dif:1},
+  {pt:"ovo pochê",es:["huevo poché"],cat:"carnes",dif:2},
+  {pt:"filé de peixe",es:["filete de pescado"],cat:"carnes",dif:1},
+  // ── frutas extras (54 → 100) ──
+  {pt:"toranja",es:["pomelo"],cat:"frutas",dif:3},
+  {pt:"lima",es:["lima"],cat:"frutas",dif:1},
+  {pt:"carambola",es:["carambola"],cat:"frutas",dif:2},
+  {pt:"graviola",es:["guanábana"],cat:"frutas",dif:3},
+  {pt:"jabuticaba",es:["jabuticaba"],cat:"frutas",dif:2},
+  {pt:"marmelo",es:["membrillo"],cat:"frutas",dif:2},
+  {pt:"figo da índia",es:["tuna"],cat:"frutas",dif:3},
+  {pt:"cereja silvestre",es:["guinda"],cat:"frutas",dif:3},
+  {pt:"noz pecã",es:["nuez pecan"],cat:"frutas",dif:2},
+  {pt:"noz de macadâmia",es:["nuez de macadamia"],cat:"frutas",dif:2},
+  {pt:"polpa de fruta",es:["pulpa de fruta"],cat:"frutas",dif:1},
+  {pt:"pêssego em calda",es:["durazno en almíbar"],cat:"frutas",dif:2},
+  {pt:"uva sem semente",es:["uva sin semillas"],cat:"frutas",dif:2},
+  {pt:"suco de abacaxi",es:["jugo de ananá"],cat:"frutas",dif:2},
+  {pt:"mix de frutas secas",es:["mix de frutas secas"],cat:"frutas",dif:1},
+  {pt:"banana prata",es:["banana chica"],cat:"frutas",dif:2},
+  {pt:"maçã verde",es:["manzana verde"],cat:"frutas",dif:1},
+  {pt:"maçã vermelha",es:["manzana roja"],cat:"frutas",dif:1},
+  {pt:"pera williams",es:["pera williams"],cat:"frutas",dif:2},
+  {pt:"amora preta",es:["mora negra"],cat:"frutas",dif:2},
+  {pt:"frutas tropicais",es:["frutas tropicales"],cat:"frutas",dif:1},
+  {pt:"frutas cristalizadas",es:["frutas abrillantadas"],cat:"frutas",dif:3},
+  {pt:"geleia de frutas",es:["mermelada de frutas"],cat:"frutas",dif:1},
+  {pt:"cupuaçu",es:["cupuazú"],cat:"frutas",dif:3},
+  {pt:"laranja-pera",es:["naranja pera"],cat:"frutas",dif:2},
+  {pt:"caju torrado",es:["anacardo tostado"],cat:"frutas",dif:2},
+  {pt:"uva moscatel",es:["uva moscatel"],cat:"frutas",dif:2},
+  {pt:"damasco seco",es:["damasco seco"],cat:"frutas",dif:1},
+  {pt:"pinhão assado",es:["piñón asado"],cat:"frutas",dif:2},
+  {pt:"framboesa congelada",es:["frambuesa congelada"],cat:"frutas",dif:2},
+  {pt:"manga em fatias",es:["mango en rodajas"],cat:"frutas",dif:1},
+  {pt:"maracujá azedo",es:["maracuyá ácido"],cat:"frutas",dif:2},
+  {pt:"goiabada",es:["dulce de guayaba","pasta de guayaba"],cat:"frutas",dif:3},
+  {pt:"compota de frutas",es:["compota de frutas"],cat:"frutas",dif:2},
+  {pt:"fruta do conde",es:["chirimoya"],cat:"frutas",dif:3},
+  {pt:"açaí",es:["açaí"],cat:"frutas",dif:1},
+  {pt:"castanha do pará",es:["nuez de Brasil","castaña de Brasil"],cat:"frutas",dif:2},
+  {pt:"melancia gelada",es:["sandía fría"],cat:"frutas",dif:1},
+  {pt:"abacaxi grelhado",es:["ananá a la parrilla"],cat:"frutas",dif:2},
+  {pt:"kiwi fatiado",es:["kiwi en rodajas"],cat:"frutas",dif:1},
+  {pt:"banana caramelizada",es:["banana caramelizada"],cat:"frutas",dif:2},
+  {pt:"mix de berries",es:["mix de berries"],cat:"frutas",dif:1},
+  {pt:"lima taiti",es:["lima tahití"],cat:"frutas",dif:2},
+  {pt:"melão cantaloupe",es:["melón cantaloupe"],cat:"frutas",dif:2},
+  {pt:"toranja gelada",es:["pomelo frío"],cat:"frutas",dif:2},
+  // ── padaria extras (74 → 100) ──
+  {pt:"pão doce",es:["pan dulce"],cat:"padaria",dif:2},
+  {pt:"pão de centeio",es:["pan de centeno"],cat:"padaria",dif:2},
+  {pt:"pão sírio",es:["pan árabe"],cat:"padaria",dif:2},
+  {pt:"pão sem glúten",es:["pan sin gluten"],cat:"padaria",dif:1},
+  {pt:"bolo de chocolate",es:["torta de chocolate"],cat:"padaria",dif:1},
+  {pt:"bolo de cenoura",es:["torta de zanahoria"],cat:"padaria",dif:2},
+  {pt:"bolo de banana",es:["torta de banana"],cat:"padaria",dif:1},
+  {pt:"creme de confeiteiro",es:["crema pastelera"],cat:"padaria",dif:2},
+  {pt:"creme de manteiga",es:["crema de manteca"],cat:"padaria",dif:2},
+  {pt:"farinha integral",es:["harina integral"],cat:"padaria",dif:1},
+  {pt:"farinha de trigo",es:["harina de trigo"],cat:"padaria",dif:1},
+  {pt:"torta de limão",es:["tarta de limón"],cat:"padaria",dif:2},
+  {pt:"torta de maçã",es:["tarta de manzana"],cat:"padaria",dif:1},
+  {pt:"massa folhada",es:["masa de hojaldre"],cat:"padaria",dif:2},
+  {pt:"massa podre",es:["masa quebrada"],cat:"padaria",dif:3},
+  {pt:"merengue italiano",es:["merengue italiano"],cat:"padaria",dif:2},
+  {pt:"massa de pizza",es:["masa de pizza"],cat:"padaria",dif:1},
+  {pt:"glacê",es:["glasé"],cat:"padaria",dif:2},
+  {pt:"fondant",es:["fondant"],cat:"padaria",dif:1},
+  {pt:"mini torta",es:["tortita"],cat:"padaria",dif:2},
+  {pt:"pão de leite",es:["pan de leche"],cat:"padaria",dif:1},
+  {pt:"cobertura de açúcar",es:["cobertura de azúcar"],cat:"padaria",dif:2},
+  {pt:"torta de ricota",es:["tarta de ricota"],cat:"padaria",dif:1},
+  {pt:"pão ciabatta",es:["ciabatta"],cat:"padaria",dif:1},
+  {pt:"empanada frita de maçã",es:["empanada frita de manzana"],cat:"padaria",dif:2},
+  {pt:"canhão recheado",es:["cañón relleno"],cat:"padaria",dif:2},
+  // ── fast-food extras (60 → 100) ──
+  {pt:"pizza napolitana",es:["pizza napolitana"],cat:"fast-food",dif:2},
+  {pt:"pizza al taglio",es:["pizza al corte"],cat:"fast-food",dif:2},
+  {pt:"mini pizza",es:["pizzeta"],cat:"fast-food",dif:2},
+  {pt:"pizza de presunto",es:["pizza de jamón"],cat:"fast-food",dif:1},
+  {pt:"pizza de frango",es:["pizza de pollo"],cat:"fast-food",dif:1},
+  {pt:"pão de alho",es:["pan al ajo"],cat:"fast-food",dif:1},
+  {pt:"empanada de milho",es:["empanada de choclo"],cat:"fast-food",dif:1},
+  {pt:"empanada de frango",es:["empanada de pollo"],cat:"fast-food",dif:1},
+  {pt:"empanada de espinafre",es:["empanada de espinaca"],cat:"fast-food",dif:1},
+  {pt:"medialunas de manteiga",es:["medialunas de manteca"],cat:"fast-food",dif:2},
+  {pt:"clube sanduíche",es:["club sándwich"],cat:"fast-food",dif:2},
+  {pt:"hambúrguer duplo",es:["hamburguesa doble"],cat:"fast-food",dif:1},
+  {pt:"hambúrguer simples",es:["hamburguesa simple"],cat:"fast-food",dif:1},
+  {pt:"pão de hambúrguer",es:["pan de hamburguesa"],cat:"fast-food",dif:1},
+  {pt:"frango frito",es:["pollo frito"],cat:"fast-food",dif:1},
+  {pt:"batata palito",es:["papas bastón"],cat:"fast-food",dif:2},
+  {pt:"batata ondulada",es:["papas onduladas"],cat:"fast-food",dif:2},
+  {pt:"batata recheada",es:["papa rellena"],cat:"fast-food",dif:2},
+  {pt:"mostarda com mel",es:["mostaza miel"],cat:"fast-food",dif:2},
+  {pt:"sorvete na taça",es:["helado en copa"],cat:"fast-food",dif:2},
+  {pt:"crepe doce",es:["crepe dulce"],cat:"fast-food",dif:1},
+  {pt:"crepe salgado",es:["crepe salado"],cat:"fast-food",dif:1},
+  {pt:"quibe frito",es:["keppe frito","kebbe frito"],cat:"fast-food",dif:2},
+  {pt:"lombo no pão",es:["sánguche de carré"],cat:"fast-food",dif:3},
+  {pt:"pizza brotinho",es:["pizza chica"],cat:"fast-food",dif:3},
+  {pt:"tostada com manteiga",es:["tostada con manteca"],cat:"fast-food",dif:1},
+  {pt:"salgado de forno",es:["saladito al horno"],cat:"fast-food",dif:2},
+  {pt:"cachorro-quente simples",es:["pancho simple"],cat:"fast-food",dif:2},
+  {pt:"hambúrguer vegetariano",es:["hamburguesa vegetariana"],cat:"fast-food",dif:1},
+  {pt:"pão na chapa",es:["pan a la plancha"],cat:"fast-food",dif:2},
+  {pt:"pizza por quilo",es:["pizza por peso"],cat:"fast-food",dif:2},
+  {pt:"sobremesa do dia",es:["postre del día"],cat:"fast-food",dif:1},
+  {pt:"alitas ao forno",es:["alitas al horno"],cat:"fast-food",dif:1},
+  {pt:"porção mista",es:["picada mixta"],cat:"fast-food",dif:2},
+  {pt:"provoleta no pão",es:["provoleta al pan"],cat:"fast-food",dif:2},
+  {pt:"milanesa completa",es:["milanesa completa"],cat:"fast-food",dif:1},
+  {pt:"batata com cheddar",es:["papas con cheddar"],cat:"fast-food",dif:1},
+  {pt:"pastelzinho",es:["pastelito"],cat:"fast-food",dif:2},
+  {pt:"porção de frango",es:["plato de pollo"],cat:"fast-food",dif:1},
+  // ── verduras extras (87 → 100) ──
+  {pt:"pimentão amarelo",es:["morrón amarillo"],cat:"verduras",dif:2},
+  {pt:"pimentão vermelho",es:["morrón rojo"],cat:"verduras",dif:2},
+  {pt:"tomate pelado",es:["tomate pelado"],cat:"verduras",dif:1},
+  {pt:"tomate seco",es:["tomate seco"],cat:"verduras",dif:1},
+  {pt:"cebola roxa",es:["cebolla morada"],cat:"verduras",dif:1},
+  {pt:"vagem",es:["chaucha"],cat:"verduras",dif:2},
+  {pt:"alcaparra",es:["alcaparra"],cat:"verduras",dif:2},
+  {pt:"rabanete",es:["rábano"],cat:"verduras",dif:1},
+  {pt:"cebolinha verde",es:["cebolla de verdeo"],cat:"verduras",dif:2},
+  {pt:"tomate-pera",es:["tomate perita"],cat:"verduras",dif:2},
+  {pt:"abobrinha grelhada",es:["zucchini a la parrilla"],cat:"verduras",dif:2},
+  {pt:"alho assado",es:["ajo asado"],cat:"verduras",dif:1},
+  {pt:"salsa de iogurte",es:["salsa de yogur"],cat:"verduras",dif:2},
+  // ── utensílios extras (97 → 100) ──
+  {pt:"porta-guardanapos",es:["servilletero"],cat:"utensílios",dif:2},
+  {pt:"cesto de pão",es:["canasto de pan"],cat:"utensílios",dif:2},
+  {pt:"garrafão de água",es:["bidón de agua"],cat:"utensílios",dif:2},
+  // ── mercado extras (82 → 100) ──
+  {pt:"peixaria",es:["pescadería"],cat:"mercado",dif:1},
+  {pt:"vinoteca",es:["vinoteca"],cat:"mercado",dif:1},
+  {pt:"casa de massas",es:["casa de pastas"],cat:"mercado",dif:2},
+  {pt:"comanda",es:["comanda"],cat:"mercado",dif:2},
+  {pt:"rotisseria",es:["rotisería"],cat:"mercado",dif:2},
+  {pt:"adega",es:["bodega"],cat:"mercado",dif:2},
+  {pt:"sorveteria",es:["heladería"],cat:"mercado",dif:1},
+  {pt:"cantina",es:["cantina"],cat:"mercado",dif:1},
+  {pt:"restaurante",es:["restaurante"],cat:"mercado",dif:1},
+  {pt:"boteco",es:["bodegón"],cat:"mercado",dif:3},
+  {pt:"churrascaria",es:["parrilla"],cat:"mercado",dif:2},
+  {pt:"embalagem a vácuo",es:["envasado al vacío"],cat:"mercado",dif:2},
+  {pt:"self-service",es:["autoservicio"],cat:"mercado",dif:2},
+  {pt:"produto fresco",es:["producto fresco"],cat:"mercado",dif:1},
+  {pt:"produto congelado",es:["producto congelado"],cat:"mercado",dif:1},
+  {pt:"meio quilo",es:["medio kilo"],cat:"mercado",dif:1},
+  {pt:"quilo e meio",es:["kilo y medio"],cat:"mercado",dif:1},
+  {pt:"kilo",es:["kilo"],cat:"mercado",dif:1},
+  // ── expressões extras (57 → 100) ──
+  {pt:"Tem mesa para quatro?",es:["¿Tienen mesa para cuatro?"],cat:"expressões",dif:1},
+  {pt:"Vou pagar em dinheiro",es:["Voy a pagar en efectivo"],cat:"expressões",dif:1},
+  {pt:"Dividir a conta",es:["Separar la cuenta","Dividir la cuenta"],cat:"expressões",dif:2},
+  {pt:"Tudo junto",es:["Todo junto"],cat:"expressões",dif:1},
+  {pt:"Que delícia!",es:["¡Qué rico!"],cat:"expressões",dif:1},
+  {pt:"Está frio",es:["Está frío"],cat:"expressões",dif:1},
+  {pt:"Pode esquentar?",es:["¿Lo podés calentar?"],cat:"expressões",dif:2},
+  {pt:"Quero a mesma coisa",es:["Quiero lo mismo"],cat:"expressões",dif:1},
+  {pt:"É para presente",es:["Es para regalo"],cat:"expressões",dif:1},
+  {pt:"Quanto tempo de espera?",es:["¿Cuánto tiempo de espera?"],cat:"expressões",dif:1},
+  {pt:"Tem fila?",es:["¿Hay fila?"],cat:"expressões",dif:1},
+  {pt:"Está aberto?",es:["¿Están abiertos?"],cat:"expressões",dif:1},
+  {pt:"Que horas abre?",es:["¿A qué hora abren?"],cat:"expressões",dif:1},
+  {pt:"Fazer uma reserva",es:["Hacer una reserva"],cat:"expressões",dif:1},
+  {pt:"Para quantas pessoas?",es:["¿Para cuántas personas?"],cat:"expressões",dif:1},
+  {pt:"Qual é o prato do dia?",es:["¿Cuál es el plato del día?"],cat:"expressões",dif:1},
+  {pt:"Serve até que horas?",es:["¿Hasta qué hora sirven?"],cat:"expressões",dif:2},
+  {pt:"É muito picante",es:["Es muy picante"],cat:"expressões",dif:1},
+  {pt:"Estou com pressa",es:["Estoy apurado"],cat:"expressões",dif:2},
+  {pt:"Conta separada",es:["Cuenta separada"],cat:"expressões",dif:1},
+  {pt:"Uma conta só",es:["Una sola cuenta"],cat:"expressões",dif:1},
+  {pt:"Sem açúcar",es:["Sin azúcar"],cat:"expressões",dif:1},
+  {pt:"Está muito doce",es:["Está muy dulce"],cat:"expressões",dif:1},
+  {pt:"Está muito amargo",es:["Está muy amargo"],cat:"expressões",dif:1},
+  {pt:"Quero pedir",es:["Quiero pedir"],cat:"expressões",dif:1},
+  {pt:"Vou querer",es:["Voy a querer"],cat:"expressões",dif:1},
+  {pt:"Me dá um",es:["Dame uno"],cat:"expressões",dif:1},
+  {pt:"Tem opção vegetariana?",es:["¿Tienen opción vegetariana?"],cat:"expressões",dif:2},
+  {pt:"Tem alguma promoção?",es:["¿Tienen alguna oferta?"],cat:"expressões",dif:2},
+  {pt:"Sem pressa",es:["Sin apuro"],cat:"expressões",dif:2},
+  {pt:"Está pronto o pedido?",es:["¿Está listo el pedido?"],cat:"expressões",dif:1},
+  {pt:"Pode trazer mais pão?",es:["¿Me traés más pan?"],cat:"expressões",dif:1},
+  {pt:"Muito bem feito",es:["Muy bien hecho"],cat:"expressões",dif:1},
+  {pt:"Com certeza",es:["Por supuesto"],cat:"expressões",dif:1},
+  {pt:"Está na conta",es:["Está en la cuenta"],cat:"expressões",dif:2},
+  {pt:"Sem presunto",es:["Sin jamón"],cat:"expressões",dif:1},
+  {pt:"Com molho à parte",es:["Con la salsa aparte"],cat:"expressões",dif:2},
+  {pt:"Quero ver a carta de bebidas",es:["Quiero ver la carta de tragos"],cat:"expressões",dif:2},
+  {pt:"Está muito salgado",es:["Está muy salado"],cat:"expressões",dif:1},
+  {pt:"Que bom!",es:["¡Qué bueno!"],cat:"expressões",dif:1},
+  {pt:"Ficamos esperando há muito",es:["Llevamos mucho tiempo esperando"],cat:"expressões",dif:3},
+  {pt:"Tem algo mais barato?",es:["¿Tienen algo más barato?"],cat:"expressões",dif:2},
+  {pt:"Sem molho",es:["Sin salsa"],cat:"expressões",dif:1},
+  // ── falsas amigas extras (40 → 100) ──
+  {pt:"sobremesa (conversa pós-refeição em ES)",es:["sobremesa"],cat:"falsas amigas",dif:2,example:"Después del asado nos quedamos en la <em>sobremesa</em> hasta la medianoche."},
+  {pt:"bala (doce)",es:["caramelo"],cat:"falsas amigas",dif:2,example:"¿Querés un <em>caramelo</em> de postre?"},
+  {pt:"copo (vidro para água)",es:["vaso"],cat:"falsas amigas",dif:2,example:"Traeme un <em>vaso</em> de agua bien fría."},
+  {pt:"geleia",es:["mermelada"],cat:"falsas amigas",dif:2,example:"La <em>mermelada</em> de frambuesa es la mejor del desayuno."},
+  {pt:"taxa (confundida com 'taza')",es:["tasa"],cat:"falsas amigas",dif:3,example:"La <em>tasa</em> del delivery cambió este mes."},
+  {pt:"poltrona",es:["sillón"],cat:"falsas amigas",dif:2,example:"El <em>sillón</em> del salón de espera es muy cómodo."},
+  {pt:"ameixa (não é 'almeja')",es:["ciruela"],cat:"falsas amigas",dif:2,example:"La mermelada de <em>ciruela</em> va muy bien con el queso."},
+  {pt:"vitrine",es:["vidriera"],cat:"falsas amigas",dif:2,example:"La <em>vidriera</em> del restaurante muestra los platos del día."},
+  {pt:"manteca (banha em PT, manteiga em ES-AR)",es:["manteca"],cat:"falsas amigas",dif:3,example:"Untá las medialunas con <em>manteca</em>, que acá es la mantequilla."},
+  {pt:"carro (automóvel em PT)",es:["auto"],cat:"falsas amigas",dif:2,example:"Vine en <em>auto</em> hasta el restaurante."},
+  {pt:"lagosta (pode ser gafanhoto em ES)",es:["langosta"],cat:"falsas amigas",dif:2,example:"Pedimos una <em>langosta</em> a la plancha, estaba enorme."},
+  {pt:"engraçado (não é 'engrasado')",es:["gracioso"],cat:"falsas amigas",dif:2,example:"El mozo era muy <em>gracioso</em>, nos hizo reír toda la noche."},
+  {pt:"azar (má sorte em PT)",es:["mala suerte"],cat:"falsas amigas",dif:2,example:"¡Qué <em>mala suerte</em>, no había más asado!"},
+  {pt:"pão (não confundir com 'paño')",es:["pan"],cat:"falsas amigas",dif:1,example:"¿Me traés más <em>pan</em>?"},
+  {pt:"assistir (ver, não 'atender')",es:["mirar"],cat:"falsas amigas",dif:2,example:"Fui a <em>mirar</em> el partido en el bar del barrio."},
+  {pt:"calçada",es:["vereda"],cat:"falsas amigas",dif:2,example:"Las mesas en la <em>vereda</em> son muy buscadas en verano."},
+  {pt:"apelido (alcunha)",es:["apodo"],cat:"falsas amigas",dif:2,example:"El cocinero es conocido por su <em>apodo</em>: el Rey del Asado."},
+  {pt:"bolacha",es:["galletita"],cat:"falsas amigas",dif:2,example:"Trajo unas <em>galletitas</em> de manteca con el café."},
+  {pt:"fato (terno)",es:["traje"],cat:"falsas amigas",dif:2,example:"El maître atendía de <em>traje</em> y corbata."},
+  {pt:"encomenda",es:["encargo"],cat:"falsas amigas",dif:2,example:"Le hice un <em>encargo</em> al pastelero para el cumpleaños."},
+  {pt:"quente (não é 'caliente'... é!)",es:["caliente"],cat:"falsas amigas",dif:1,example:"¡Cuidado, el plato está muy <em>caliente</em>!"},
+  {pt:"bilhete",es:["boleto"],cat:"falsas amigas",dif:2,example:"Guardá el <em>boleto</em> del super para el reclamo."},
+  {pt:"geladeira (não é 'refrigerador')",es:["heladera"],cat:"falsas amigas",dif:2,example:"Guardá el sobrante en la <em>heladera</em>."},
+  {pt:"preguiça (fiaca em lunfardo)",es:["fiaca"],cat:"falsas amigas",dif:3,example:"Tengo mucha <em>fiaca</em> de cocinar, mejor pedimos delivery."},
+  {pt:"coitado",es:["pobrecito"],cat:"falsas amigas",dif:2,example:"<em>Pobrecito</em>, le quemaron la milanesa."},
+  {pt:"estranho (diferente)",es:["raro"],cat:"falsas amigas",dif:1,example:"Ese sabor es muy <em>raro</em>, no lo reconozco."},
+  {pt:"endereço",es:["dirección"],cat:"falsas amigas",dif:1,example:"¿Me das la <em>dirección</em> del restaurante?"},
+  {pt:"fechado",es:["cerrado"],cat:"falsas amigas",dif:1,example:"El local estaba <em>cerrado</em> por reformas."},
+  {pt:"aberto",es:["abierto"],cat:"falsas amigas",dif:1,example:"La feria está <em>abierta</em> de lunes a sábado."},
+  {pt:"gratuito",es:["gratis"],cat:"falsas amigas",dif:1,example:"El postre es <em>gratis</em> para los cumpleañeros."},
+  {pt:"lotado",es:["a pleno"],cat:"falsas amigas",dif:3,example:"El bar estaba <em>a pleno</em> esa noche."},
+  {pt:"saudade",es:["nostalgia"],cat:"falsas amigas",dif:2,example:"Tengo <em>nostalgia</em> del asado de mi abuela."},
+  {pt:"desculpa",es:["disculpa"],cat:"falsas amigas",dif:1,example:"<em>Disculpá</em>, ¿este plato viene con guarnición?"},
+  {pt:"franquia (restaurante)",es:["franquicia"],cat:"falsas amigas",dif:2,example:"Ese local es una <em>franquicia</em> de Estados Unidos."},
+  {pt:"qualidade",es:["calidad"],cat:"falsas amigas",dif:1,example:"La <em>calidad</em> de los ingredientes hace la diferencia."},
+  {pt:"tempero (condimento em PT)",es:["condimento"],cat:"falsas amigas",dif:2,example:"El <em>condimento</em> secreto del chef es el pimentón ahumado."},
+  {pt:"despesa",es:["gasto"],cat:"falsas amigas",dif:2,example:"El <em>gasto</em> de la cena fue mayor de lo esperado."},
+  {pt:"fraqueza",es:["debilidad"],cat:"falsas amigas",dif:2,example:"Mi <em>debilidad</em> son los postres de dulce de leche."},
+  {pt:"recibo",es:["recibo"],cat:"falsas amigas",dif:1,example:"¿Me podría dar el <em>recibo</em> de la compra?"},
+  {pt:"fome",es:["hambre"],cat:"falsas amigas",dif:1,example:"Tengo mucha <em>hambre</em>, ¿hay algo rápido?"},
+  {pt:"sede (de água)",es:["sed"],cat:"falsas amigas",dif:2,example:"Tengo mucha <em>sed</em>, ¿me traés agua?"},
+  {pt:"adega",es:["bodega"],cat:"falsas amigas",dif:2,example:"La <em>bodega</em> del restaurante tiene más de 300 etiquetas."},
+  {pt:"cardápio de vinhos",es:["carta de vinos"],cat:"falsas amigas",dif:2,example:"¿Me traés la <em>carta de vinos</em>?"},
+  {pt:"jeito (modo)",es:["manera"],cat:"falsas amigas",dif:2,example:"Preparado de esa <em>manera</em>, el asado queda perfecto."},
+  {pt:"lotação (capacidade)",es:["capacidad"],cat:"falsas amigas",dif:2,example:"El salón tiene <em>capacidad</em> para cien personas."},
+  {pt:"viagem (não é 'viaje' de comida)",es:["llevar"],cat:"falsas amigas",dif:2,example:"¿Lo querés para <em>llevar</em> o lo comés acá?"},
+  {pt:"boa (exclamação em PT)",es:["genial"],cat:"falsas amigas",dif:2,example:"¡<em>Genial</em>! Justo llegó el pedido."},
+  {pt:"atravancado (cheio)",es:["lleno"],cat:"falsas amigas",dif:2,example:"El restaurante estaba <em>lleno</em>, tuvimos que esperar."},
+  {pt:"gritar (não é 'gritar'... é igual!)",es:["gritar"],cat:"falsas amigas",dif:1,example:"No <em>grites</em>, el mozo ya viene."},
+  {pt:"policial",es:["policial"],cat:"falsas amigas",dif:1,example:"Una inspección <em>policial</em> cerró el local por irregularidades."},
+  {pt:"parede",es:["pared"],cat:"falsas amigas",dif:1,example:"Las <em>paredes</em> del restaurante tienen fotos antiguas de Buenos Aires."},
+  {pt:"estúdio (apto pequeno)",es:["monoambiente"],cat:"falsas amigas",dif:3,example:"Vive en un <em>monoambiente</em> a dos cuadras del mercado."},
+  {pt:"garagem",es:["garage"],cat:"falsas amigas",dif:1,example:"El restaurante tiene <em>garage</em> para clientes."},
+  {pt:"cardápio (não é 'cartão')",es:["menú"],cat:"falsas amigas",dif:1,example:"¿Me traés el <em>menú</em>, por favor?"},
+  {pt:"bêbado",es:["borracho"],cat:"falsas amigas",dif:2,example:"El cliente estaba muy <em>borracho</em> y no lo atendieron."},
+
+  {pt:"cereja em calda",es:["cereza en almíbar"],cat:"frutas",dif:2},
+  {pt:"mentira (não é 'mentira'... é igual!)",es:["mentira"],cat:"falsas amigas",dif:1,example:"¡No me digas eso, es una <em>mentira</em>! Este asado no puede estar listo tan rápido."},
+  // ── completando categorias para 100 ──
+  {pt:"em conserva",es:["en conserva"],cat:"alimentos",dif:1},
+  {pt:"água da torneira",es:["agua de la canilla"],cat:"bebidas",dif:3},
+  {pt:"Bom dia",es:["Buen día"],cat:"expressões",dif:1},
+  {pt:"fainá (massa de grão-de-bico)",es:["fainá"],cat:"fast-food",dif:2},
+  {pt:"pizza de pedra",es:["pizza a la piedra"],cat:"fast-food",dif:2},
+  {pt:"abacaxi em calda",es:["ananá en almíbar"],cat:"frutas",dif:2},
+  {pt:"cadeira (não é 'cadera', quadril)",es:["silla"],cat:"falsas amigas",dif:2,example:"Traé una <em>silla</em> más para la mesa."},
+  {pt:"salada (em ES 'salada' = salgada)",es:["ensalada"],cat:"falsas amigas",dif:2,example:"Pedí una <em>ensalada</em> mixta de entrada."},
+  {pt:"escritório (não é 'escritorio')",es:["oficina"],cat:"falsas amigas",dif:2,example:"Almorzamos en un bodegón cerca de la <em>oficina</em>."},
+  {pt:"oficina (mecânica)",es:["taller"],cat:"falsas amigas",dif:2,example:"Dejé el auto en el <em>taller</em> y fui a comer algo."},
+  {pt:"vassoura (não é 'basura', lixo)",es:["escoba"],cat:"falsas amigas",dif:2,example:"Pasá la <em>escoba</em> por la cocina, por favor."},
+  {pt:"lixo",es:["basura"],cat:"falsas amigas",dif:1,example:"Tirá las sobras a la <em>basura</em>."},
+  {pt:"talher (não é 'taller', oficina)",es:["cubierto"],cat:"falsas amigas",dif:2,example:"Falta un <em>cubierto</em> en esta mesa."},
+  {pt:"careca (pelado em ES-AR)",es:["pelado"],cat:"falsas amigas",dif:2,example:"El <em>pelado</em> de la parrilla hace el mejor asado del barrio."},
+  {pt:"salsinha (não é 'salsa', molho)",es:["perejil"],cat:"falsas amigas",dif:2,example:"Picá un poco de <em>perejil</em> para el chimichurri."},
+];
+
+/* ── Example sentences (indexed by pt key, for words without inline example) ── */
+const EXAMPLES={
+  "petisco":"Pedimos una <em>picada</em> para compartir.",
+  "rodízio":"En el <em>tenedor libre</em> podés comer todo lo que quieras.",
+  "mal passado":"Me gusta el bife <em>jugoso</em>, con el centro rosado.",
+  "canudo":"¿Me traés un <em>sorbete</em> para el jugo?",
+  "chope":"Quiero una <em>cerveza tirada</em> bien fría.",
+  "harmonização":"El <em>maridaje</em> del vino con el asado fue perfecto.",
+  "safra":"Esta <em>cosecha</em> del 2018 es excelente.",
+  "taça de espumante":"Brindamos con <em>copas flauta</em> de espumante.",
+  "abacaxi":"El <em>ananá</em> en rodajas con azúcar está riquísimo.",
+  "morango":"La torta de <em>frutillas</em> es el postre favorito de la casa.",
+  "bolo":"La <em>torta</em> de cumpleaños tenía dulce de leche.",
+  "calda":"Los panqueques vienen bañados en <em>almíbar</em>.",
+  "carolina":"El <em>profiterol</em> está relleno de crema chantilly.",
+  "croissant":"La <em>medialuna</em> de manteca es el desayuno típico porteño.",
+  "doce folhado":"El <em>hojaldre</em> de manzana estaba crocante.",
+  "pipoca":"En el cine pedí <em>pochoclo</em> con manteca.",
+  "pudim":"El <em>flan</em> casero viene con dulce de leche.",
+  "sonho":"Comí una <em>bola de fraile</em> rellena de crema.",
+  "bola de sorvete":"Quiero tres <em>bochas</em> de helado: vainilla, frutilla y dulce de leche.",
+  "cachorro-quente":"Me pedí un <em>pancho</em> completo con mostaza.",
+  "casquinha":"Dame un <em>cucurucho</em> de helado de chocolate.",
+  "drive-thru":"Pasé por el <em>autopedido</em> a buscar el pedido.",
+  "misto quente":"Un <em>tostado mixto</em> de jamón y queso, por favor.",
+  "sanduíche de miga":"Las <em>migas</em> son los sándwiches finos típicos de Buenos Aires.",
+  "sanduíche de pernil":"El <em>sánguche de bondiola</em> es el favorito en las ferias.",
+  "batata":"La <em>papa</em> frita es el acompañamiento más popular.",
+  "batata-doce":"La <em>batata</em> asada con miel está deliciosa.",
+  "feijão":"El <em>poroto</em> negro es la base del guiso.",
+  "molho rosé":"La ensalada viene con <em>salsa golf</em>, que es la mezcla de mayo y ketchup.",
+  "mandioquinha":"La <em>arracacha</em> es perfecta para la sopa.",
+  "aerador de vinho":"Usé el <em>aireador</em> para oxigenar el Malbec.",
+  "amassador de alho":"Usé el <em>machacador</em> para preparar el chimichurri.",
+  "bancada inox":"La <em>mesada de acero inoxidable</em> es fácil de limpiar.",
+  "câmara fria":"La carne se guarda en la <em>cámara frigorífica</em>.",
+  "chaleira elétrica":"La <em>pava eléctrica</em> es imprescindible para el mate.",
+  "cooktop":"El <em>anafe</em> tiene cuatro hornallas a gas.",
+  "cuba":"Lavé los platos en la <em>bacha</em>.",
+  "escumadeira":"Saqué la espuma con la <em>espumadera</em>.",
+  "oveira":"Guardo los huevos en la <em>huevera</em> de la heladera.",
+  "papel toalha":"Limpié el aceite con el <em>rollo de cocina</em>.",
+  "pipoqueira":"La <em>pochoclera</em> de la esquina trabaja todos los días.",
+  "yogurteira":"La <em>yogurtera</em> hace el yogur en ocho horas.",
+  "carrinho":"Llené el <em>changuito</em> de frutas y verduras.",
+  "cardápio":"¿Me traés el <em>menú</em>, por favor?",
+  "garçom":"El <em>mozo</em> recomendó el plato del día.",
+  "gorjeta":"Le dejé una <em>propina</em> al mozo porque fue muy atento.",
+  "hortifruti":"Compré los tomates en la <em>verdulería</em> de la esquina.",
+  "promoção":"La <em>oferta</em> de los domingos incluye postre.",
+  "troco":"Me dio el <em>vuelto</em> equivocado.",
+  "Ok":"¡<em>Dale</em>, nos vemos mañana para el asado!",
+  "Excelente":"El servicio estuvo <em>de diez</em>, sin dudas.",
+  "Isso está incrível":"Probé la provoleta y dije: '¡<em>Esto está zarpado</em>!'",
+  "Muito bom":"El choripán estaba <em>re bueno</em>.",
+  "Um saco de pipoca":"Dame <em>un paquete de pochoclo</em> con sal.",
+  "Uma casquinha com duas bolas":"Quiero <em>dos bochas en cucurucho</em>.",
+  "alcatra":"El <em>cuadril</em> es el corte favorito para la parrilla familiar.",
+  "acém (agulha)":"La <em>aguja</em> es ideal para guisos y pucheros.",
+  "barriga de porco":"El <em>matambrito de cerdo</em> a la parrilla es una entrada clásica.",
+  "carré (bisteca)":"La <em>costeleta de cerdo</em> a la parrilla estaba jugosa.",
+  "contra-filé":"El <em>bife angosto</em> es jugoso y económico.",
+  "coxão duro":"La <em>cuadrada</em> es ideal para estofado.",
+  "coxão mole":"La <em>nalga</em> se usa para milanesas.",
+  "fraldinha":"El <em>vacío</em> es el corte más popular en los asados porteños.",
+  "intestino delgado":"Los <em>chinchulines</em> son una achura clásica del asado.",
+  "lagarto":"El <em>peceto</em> se usa para el roast beef casero.",
+  "maminha":"La <em>colita de cuadril</em> es tierna y sabrosa.",
+  "miolo do contrafilé":"El <em>ojo de bife</em> es un corte premium muy buscado.",
+  "miúdos":"Las <em>achuras</em> incluyen chinchulines, riñones y mollejas.",
+  "moela":"La <em>molleja</em> a la parrilla con limón es exquisita.",
+  "patinho":"La <em>bola de lomo</em> se usa para carne picada y milanesas.",
+  "picanha":"La <em>tapa de cuadril</em> es el corte más famoso del Brasil.",
+  "sobre paleta":"La <em>bondiola</em> es jugosa y muy usada en sándwiches.",
+  "lombo":"El <em>carré</em> de cerdo asado con hierbas es una delicia.",
+};
+
+/* ── Helpers ── */
+const norm=s=>s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[¿¡?!.,;:]/g,"").replace(/\s+/g," ").trim();
+function prefixChar(item){
+  const es=item.es;
+  if(es.every(a=>a.startsWith('¿')))return'¿';
+  if(es.every(a=>a.startsWith('¡')))return'¡';
+  return'';
+}
+const shuffle=a=>{const b=[...a];for(let i=b.length-1;i>0;i--){const j=0|Math.random()*(i+1);[b[i],b[j]]=[b[j],b[i]];}return b;};
+function diffPips(dif){
+  return Array.from({length:3},(_,i)=>`<span style="${i<dif?'':'opacity:.22;filter:grayscale(1);'}">🌶</span>`).join('');
+}
+function getExample(item){
+  if(item.example)return item.example;
+  if(EXAMPLES[item.pt])return EXAMPLES[item.pt];
+  return null;
+}
+
+/* ── State ── */
+let deck,idx,lives,score,streak,bestStreak;
+let fb,wrongIn,gameOver,gameWon,totalErrors;
+let origLen,selectedCats,sessionConsolidated;
+let _justSaved=false,_savedName="";
+let advTimer=null,fbAt=0;
+// Track error count per card in current session (by deck index seed)
+let sessionErrors={};
+
+/* ── Splash ── */
+function renderSplash(){
+  const sh=document.getElementById('shell');
+  const list=loadRanking();
+  const rec=list[0]||null;
+  const chef=loadChef();
+  const lv=getChefLevel(chef.consolidated||0);
+  const prog=chefLevelProgress(chef.consolidated||0);
+  const nextLv=CHEF_LEVELS[lv.idx+1];
+
+  const recHTML=rec
+    ?`<div class="splash-record">
+        <div><div class="splash-record-label">🏅 Recorde histórico</div>
+        <div class="splash-record-name">${rec.name}</div></div>
+        <div class="splash-record-pts">${rec.pts}</div>
+      </div>`
+    :`<div class="splash-record" style="opacity:.55">
+        <div><div class="splash-record-label">🏅 Recorde histórico</div>
+        <div class="splash-record-name" style="color:var(--muted)">Nenhum ainda</div></div>
+        <div class="splash-record-pts" style="color:var(--dim)">—</div>
+      </div>`;
+
+  const chefHTML=`<div class="splash-chef-level">
+    <div class="scl-top">
+      <div><div class="scl-label">Seu nível</div><div class="scl-name">${lv.icon} ${lv.name}</div></div>
+      <div class="scl-pts">${chef.consolidated||0} palavras${nextLv?' · próx: '+nextLv.min:''}</div>
+    </div>
+    <div class="scl-bar"><div class="scl-fill" style="width:${Math.round(prog*100)}%"></div></div>
+  </div>`;
+
+  // Category selector
+  const allCats=Object.keys(CC);
+  const savedSel=(() => {try{return JSON.parse(localStorage.getItem('cocina_cats')||'null');}catch(e){return null;}})();
+  const initSel=savedSel||allCats;
+  const catCounts={};
+  ITEMS.forEach(it=>{catCounts[it.cat]=(catCounts[it.cat]||0)+1;});
+
+  const sdbSplash=loadSRS();
+  const catGridHTML=allCats.map(c=>{
+    const col=CC[c];const icon=CAT_ICON[c]||'';
+    const sel=initSel.includes(c);
+    const done=ITEMS.filter(it=>it.cat===c&&sdbSplash[it.pt]&&sdbSplash[it.pt].correct>=3).length;
+    const pctCat=catCounts[c]?Math.round(done/catCounts[c]*100):0;
+    return `<button class="cat-toggle${sel?' selected':''}" data-cat="${c}"
+      style="${sel?`border-color:${col.b};background:${col.bg};color:${col.c};`:''}">
+      <span class="cat-toggle-main">${icon} ${c}
+        <span class="cat-count">${done>0?done+'/':''}${catCounts[c]}</span>
+        <span class="cat-toggle-check">✓</span></span>
+      <span class="cat-mini-bar"><span class="cat-mini-fill" style="width:${pctCat}%"></span></span>
+    </button>`;
+  }).join('');
+
+  sh.innerHTML=`
+    <header>
+      <div class="logo"><span class="logo-icon">👨‍🍳</span><span class="logo-name">La Cocina Porteña</span></div>
+      <div class="hud">
+        <div class="ranking-io">
+          <button onclick="exportRanking()" title="Exportar dados">⬆ Export</button>
+          <button onclick="importRanking()" title="Importar dados">⬇ Import</button>
+        </div>
+      </div>
+    </header>
+    <div class="splash">
+      <div class="splash-chef">👨‍🍳</div>
+      <div class="splash-title">La Cocina Porteña</div>
+      <div class="splash-sub">Vocabulário gastronômico do espanhol rioplatense<br>com pronúncia em áudio 🔊</div>
+      ${recHTML}
+      ${chefHTML}
+      <div class="cat-selector">
+        <div class="cat-selector-title">Categorias para jogar</div>
+        <div class="select-all-row">
+          <button onclick="toggleAllCats(true)">Todas</button>
+          <button onclick="toggleAllCats(false)">Nenhuma</button>
+        </div>
+        <div class="cat-grid" id="cat-grid">${catGridHTML}</div>
+      </div>
+      <button class="play-btn" id="play-btn" onclick="beginGame()">¡A jugar! 🍽</button>
+      <div class="splash-info" id="splash-info"></div>
+    </div>`;
+
+  // Bind toggles
+  document.querySelectorAll('.cat-toggle').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      btn.classList.toggle('selected');
+      const cat=btn.dataset.cat;
+      const col=CC[cat];
+      if(btn.classList.contains('selected')){
+        btn.style.borderColor=col.b;btn.style.background=col.bg;btn.style.color=col.c;
+      } else {
+        btn.style.borderColor='';btn.style.background='';btn.style.color='';
+      }
+      updateSplashInfo();
+    });
+  });
+  updateSplashInfo();
+}
+
+function toggleAllCats(val){
+  document.querySelectorAll('.cat-toggle').forEach(btn=>{
+    const cat=btn.dataset.cat;const col=CC[cat];
+    if(val){
+      btn.classList.add('selected');
+      btn.style.borderColor=col.b;btn.style.background=col.bg;btn.style.color=col.c;
+    } else {
+      btn.classList.remove('selected');
+      btn.style.borderColor='';btn.style.background='';btn.style.color='';
+    }
+  });
+  updateSplashInfo();
+}
+
+function getSelectedCats(){
+  return [...document.querySelectorAll('.cat-toggle.selected')].map(b=>b.dataset.cat);
+}
+
+function updateSplashInfo(){
+  const sel=getSelectedCats();
+  const count=ITEMS.filter(it=>sel.includes(it.cat)).length;
+  const info=document.getElementById('splash-info');
+  const btn=document.getElementById('play-btn');
+  if(info)info.textContent=`${count} palavras selecionadas · 5 vidas · sequências recuperam vidas`;
+  if(btn)btn.disabled=count===0;
+}
+
+function beginGame(){
+  selectedCats=getSelectedCats();
+  try{localStorage.setItem('cocina_cats',JSON.stringify(selectedCats));}catch(e){}
+  const pool=ITEMS.filter(it=>selectedCats.includes(it.cat));
+  if(!pool.length)return;
+  // SRS-prioritized shuffle: top 30% by priority, rest random
+  const prioritized=srsPrioritize(pool);
+  const splitAt=Math.ceil(prioritized.length*0.3);
+  const front=shuffle(prioritized.slice(0,splitAt));
+  const rest=shuffle(prioritized.slice(splitAt));
+  deck=[...front,...rest];
+  origLen=deck.length;
+  idx=0;lives=MAX_LIVES;score=0;streak=0;bestStreak=0;totalErrors=0;
+  fb=null;wrongIn='';gameOver=false;gameWon=false;
+  sessionErrors={};sessionConsolidated=0;
+  render();
+}
+
+function start(){renderSplash();}
+
+/* ── Ranking HTML ── */
+function rankingHTML(currentPts,currentStreak,justSaved,savedName){
+  const list=loadRanking();
+  const medals=['🥇','🥈','🥉','4º','5º'];
+  const rows=list.map((r,i)=>{
+    const isCurrent=justSaved&&r.name===savedName&&r.pts===currentPts&&i===list.findIndex(x=>x.name===savedName&&x.pts===currentPts);
+    const cls=`ranking-row${isCurrent?' current':''}${i===0?' gold':''}`;
+    return `<div class="${cls}">
+      <span class="rank-pos">${medals[i]||`${i+1}º`}</span>
+      <span class="rank-name">${r.name}</span>
+      <span class="rank-score">${r.pts}</span>
+      <span class="rank-detail">streak ${r.streak} · ${r.date}</span>
+    </div>`;
+  }).join('');
+  return `<div class="ranking-section">
+    <div class="ranking-title">
+      <span class="ranking-title-left">🏆 Top ${MAX_RANKING}</span>
+      <div class="ranking-io">
+        <button onclick="exportRanking()">⬆ Export</button>
+        <button onclick="importRanking()">⬇ Import</button>
+      </div>
+    </div>
+    ${rows}
+    ${!justSaved?`<div class="save-row">
+      <input class="save-input" id="rank-name" type="text" placeholder="Seu nome…" maxlength="18"
+        autocomplete="off" autocorrect="off" autocapitalize="words" spellcheck="false"/>
+      <button class="save-btn" onclick="saveScore()">Salvar</button>
+    </div>`:`<div class="saved-ok">✓ Salvo com sucesso!</div>`}
+  </div>`;
+}
+
+function saveScore(){
+  const inp=document.getElementById('rank-name');
+  if(!inp||!inp.value.trim())return;
+  const name=inp.value.trim();
+  _justSaved=true;_savedName=name;
+  addToRanking(name,score,bestStreak);
+  renderEnd();
+}
+
+/* ── Achievements ── */
+function calcAchievements(){
+  const achs=[];
+  if(bestStreak>=10)achs.push('🔥 Racha de 10+');
+  if(bestStreak>=5)achs.push('⚡ Racha de 5+');
+  if(totalErrors===0)achs.push('🏅 Sem erros!');
+  if(totalErrors<=3)achs.push('✨ Quase perfeito');
+  if(sessionConsolidated>=5)achs.push('📚 5 novas consolidadas');
+  if(sessionConsolidated>=10)achs.push('🎓 10 novas consolidadas');
+  const sdb=loadSRS();
+  const catsDone={};
+  selectedCats&&selectedCats.forEach(c=>{
+    const items=ITEMS.filter(it=>it.cat===c);
+    const allOk=items.every(it=>sdb[it.pt]&&sdb[it.pt].correct>=3);
+    if(allOk)catsDone[c]=true;
+  });
+  Object.keys(catsDone).forEach(c=>achs.push(`🗂 ${c} dominada!`));
+  return achs;
+}
+
+/* ── Palavras erradas da sessão (para revisar) ── */
+function reviewHTML(){
+  const keys=Object.keys(sessionErrors||{});
+  if(!keys.length)return'';
+  const rows=keys
+    .sort((a,b)=>sessionErrors[b]-sessionErrors[a])
+    .slice(0,8)
+    .map(pt=>{
+      const it=ITEMS.find(x=>x.pt===pt);
+      if(!it)return'';
+      return `<button class="review-chip" onclick="speakES('${it.es[0].replace(/'/g,"\\'")}',true)">
+        ${pt} → <strong>${it.es[0]}</strong> 🔊</button>`;
+    }).join('');
+  return `<div class="review-box">
+    <div class="review-title">📖 Para revisar (toque para ouvir)</div>
+    <div class="review-chips">${rows}</div>
+  </div>`;
+}
+
+/* ── Render end ── */
+function renderEnd(){
+  const sh=document.getElementById('shell');
+  const listBefore=loadRanking();
+  const prevRecord=listBefore[0]||null;
+  const isNewRecord=!prevRecord||score>prevRecord.pts;
+  const recBannerHTML=(()=>{
+    const displayRecord=isNewRecord&&!_justSaved
+      ?{pts:score,name:'Você'}
+      :(_justSaved&&isNewRecord)?{pts:score,name:_savedName||'Você'}:prevRecord;
+    if(!displayRecord)return'';
+    if(isNewRecord)return`<div class="record-banner new-record">
+      <div class="record-banner-icon">🏆</div>
+      <div class="record-banner-body">
+        <div class="record-banner-label">Novo recorde!</div>
+        <div class="record-banner-name">${displayRecord.name}</div>
+      </div>
+      <div class="record-banner-pts">${displayRecord.pts}</div>
+    </div>`;
+    return`<div class="record-banner same-record">
+      <div class="record-banner-icon">🥇</div>
+      <div class="record-banner-body">
+        <div class="record-banner-label">Recorde histórico</div>
+        <div class="record-banner-name">${displayRecord.name}</div>
+      </div>
+      <div class="record-banner-pts">${displayRecord.pts}</div>
+    </div>`;
+  })();
+
+  const chef=loadChef();
+  const lv=getChefLevel(chef.consolidated||0);
+  const prog=chefLevelProgress(chef.consolidated||0);
+  const achs=calcAchievements();
+  const achHTML=achs.length?`<div class="achievements">${achs.map(a=>`<span class="ach-pill">${a}</span>`).join('')}</div>`:'';
+
+  sh.innerHTML=`
+    <header>
+      <div class="logo"><span class="logo-icon">👨‍🍳</span><span class="logo-name">La Cocina Porteña</span></div>
+    </header>
+    <div class="end">
+      <div class="end-em">${gameWon?'🏆':'😵'}</div>
+      <div class="end-title">${gameWon?'¡Ganaste, bocho!':'¡Perdiste, che!'}</div>
+      <div class="end-sub">${gameWon
+        ?`Pasaste las ${origLen} cartas. ¡Sos un crak!`
+        :`Llegaste a la carta ${idx+1}. Mejor suerte la próxima.`}</div>
+      <div class="stats">
+        <div class="stat"><span class="stat-n">${score}</span><span class="stat-l">correctas</span></div>
+        <div class="stat"><span class="stat-n">${totalErrors}</span><span class="stat-l">erradas</span></div>
+        <div class="stat"><span class="stat-n">${bestStreak}</span><span class="stat-l">mejor racha</span></div>
+        <div class="stat"><span class="stat-n">${sessionConsolidated}</span><span class="stat-l">consolidadas</span></div>
+      </div>
+      <div class="chef-level">
+        <span>${lv.icon} ${lv.name}</span>
+        <div class="chef-level-bar"><div class="chef-level-fill" style="width:${Math.round(prog*100)}%"></div></div>
+        <span style="font-size:10px;color:var(--dim)">${chef.consolidated||0}</span>
+      </div>
+      ${achHTML}
+      ${reviewHTML()}
+      ${recBannerHTML}
+      ${rankingHTML(score,bestStreak,_justSaved,_savedName)}
+      <button class="restart" onclick="start()">Jugar de nuevo 🔄</button>
+      ${!gameWon?`<button class="exit-btn" onclick="window.close()">Sair ✕</button>`:''}
+    </div>`;
+
+  const ni=document.getElementById('rank-name');
+  if(ni)ni.addEventListener('keydown',e=>{if(e.key==='Enter')saveScore();});
+
+  if(gameWon&&!sh._confettiDone){
+    sh._confettiDone=true;
+    const ems=['🎉','🎊','⭐','🍕','🥐','🍷','🥩','✨'];
+    for(let i=0;i<26;i++){
+      const sp=document.createElement('span');
+      sp.className='confetti';
+      sp.textContent=ems[i%ems.length];
+      sp.style.left=Math.random()*100+'vw';
+      sp.style.animationDelay=(Math.random()*1.6)+'s';
+      sp.style.fontSize=(14+Math.random()*16)+'px';
+      document.body.appendChild(sp);
+      setTimeout(()=>sp.remove(),4500);
+    }
+  }
+}
+
+/* ── Render ── */
+function render(){
+  const sh=document.getElementById('shell');
+
+  if(gameOver||gameWon){_justSaved=false;_savedName='';renderEnd();return;}
+
+  const total=deck.length;
+  const pct=Math.min(Math.round(idx/origLen*100),100);
+  const retryCount=deck.slice(idx).filter(c=>c.retry||c.immediateRetry).length;
+  const retryPct=Math.min(Math.round(retryCount/origLen*100),100);
+
+  const heartHTML=Array.from({length:MAX_LIVES},(_,i)=>{
+    const lost=i>=lives;
+    return`<span class="heart${lost?' lost':''}">${lost?'🤍':'❤️'}</span>`;
+  }).join('');
+
+  const streakN=streak>=3?`🔥 ${streak}`:streak>0?`✨ ${streak}`:`✨ 0`;
+  const streakHot=streak>=3?' hot':'';
+  const cur=deck[idx];
+  const col=CC[cur.cat]||CC['ingrediente'];
+  const icon=CAT_ICON[cur.cat]||'🍽';
+
+  let fbHTML='';
+  // Show example after 2nd error on same card (uses sessionErrors keyed by pt)
+  const errThisCard=sessionErrors[cur.pt]||0;
+  const exampleToShow=(fb==='err'&&errThisCard>=2)?getExample(cur):null;
+
+  if(fb==='ok'){
+    const alts=cur.es.length>1?`<span class="fb-also">(tb: ${cur.es.slice(1,3).join(', ')})</span>`:'';
+    fbHTML=`<span class="fb-ok">✓ ${cur.es[0]}</span><button class="speak-btn" onclick="event.stopPropagation();speakCur()" aria-label="Ouvir pronúncia">🔊</button>${alts}`;
+    announce(`Correto! ${cur.es[0]}`);
+  } else if(fb==='err'){
+    fbHTML=`<span class="fb-wrong">${wrongIn}</span><span class="fb-arrow">→</span><span class="fb-correct-word">${cur.es[0]}</span><button class="speak-btn" onclick="event.stopPropagation();speakCur()" aria-label="Ouvir pronúncia">🔊</button>`;
+    if(exampleToShow)fbHTML+=`<div class="example-line">Ex: ${exampleToShow}</div>`;
+    announce(`Errado. A resposta é ${cur.es[0]}.${exampleToShow?' Exemplo mostrado.':''}`);
+  }
+
+  const cardCls=`word-card${fb==='ok'?' ok':fb==='err'?' err':''}${cur.retry?' retry-card':''}`;
+  const inpCls=fb==='ok'?'ok':fb==='err'?'err':'';
+  const retryPill=cur.immediateRetry
+    ?`<span class="retry-pill" style="background:#fff0e0;border-color:#f0a030;color:#8b4800;">⚡ tente de novo</span>`
+    :cur.retry?`<span class="retry-pill">↩ revisar</span>`:'';
+  const pfx=prefixChar(cur);
+  const prefixHint=pfx?`<span class="prefix-hint">${pfx}…${pfx==='¿'?'?':'!'}</span>`:'';
+  const dif=cur.dif||1;
+  const difHTML=`<span class="diff-pip" title="Dificuldade ${dif}/3">${diffPips(dif)}</span>`;
+
+  const retryInfo=`<div class="retry-count">${Math.min(idx,origLen)}/${origLen}${retryCount>0?` · ↩ ${retryCount} carta${retryCount>1?'s':''} em revisão`:''}</div>`;
+
+  sh.innerHTML=`
+    <header>
+      <div class="logo"><span class="logo-icon">👨‍🍳</span><span class="logo-name">La Cocina Porteña</span></div>
+      <div class="hud">
+        <button class="voice-toggle" id="voice-btn" onclick="toggleVoice()" aria-label="Ativar ou desativar pronúncia">${voiceOn?'🔊':'🔇'}</button>
+        <div class="streak-badge${streakHot}">${streakN}</div>
+        <div class="score-badge">${score}</div>
+      </div>
+    </header>
+    <div class="prog-wrap">
+      <div class="prog-wrap-inner">
+        <div class="prog-fill" style="width:${pct}%"></div>
+        <div class="prog-retry" style="width:${retryPct}%"></div>
+      </div>
+    </div>
+    ${retryInfo}
+    <div class="lives-bar" role="img" aria-label="${lives} de ${MAX_LIVES} vidas">${heartHTML}</div>
+    <div class="spacer"></div>
+    <div class="${cardCls}" id="wc" role="region" aria-label="Carta ${idx+1} de ${total}"${fb!==null?' onclick="skipWait()" style="cursor:pointer;"':''}>
+      <div style="display:flex;align-items:center;gap:0;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="cat-badge" style="background:${col.bg};color:${col.c};border-color:${col.b};">${icon} ${cur.cat}</span>
+        ${difHTML}${retryPill}${prefixHint}
+      </div>
+      <div class="pt-word" lang="pt">${cur.pt}</div>
+      <div class="feedback-line" aria-live="polite">${fbHTML}</div>
+    </div>
+    <div style="height:10px;flex-shrink:0;"></div>
+    <div class="input-wrap">
+      <div id="ans" class="ans-div ${inpCls}"
+        ${fb!==null?'contenteditable="false"':'contenteditable="true"'}
+        data-placeholder="en castellano…"
+        spellcheck="false" autocorrect="off" autocapitalize="off"
+        role="textbox" aria-label="Resposta em espanhol" lang="es"></div>
+      <button class="btn" onclick="submit()" ${fb!==null?'disabled':''} aria-label="Confirmar resposta">OK</button>
+    </div>
+    <div class="hint-text">${fb===null?`Carta ${idx+1} de ${total}${total>origLen?' (com revisões)':''}`:''}</div>
+    <div class="enter-hint">${fb===null?'Enter ou toque em OK':'Enter ou toque na carta para continuar'}</div>
+    <div class="counter"></div>`;
+
+  const inp=document.getElementById('ans');
+  if(inp&&fb===null){
+    setTimeout(()=>{
+      const pre=prefixChar(cur);
+      if(pre&&inp.textContent.trim()==='')inp.textContent=pre;
+      inp.focus();
+      const range=document.createRange(),sel=window.getSelection();
+      range.selectNodeContents(inp);range.collapse(false);
+      sel.removeAllRanges();sel.addRange(range);
+    },60);
+    inp.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();submit();}});
+    inp.addEventListener('paste',e=>{
+      e.preventDefault();
+      const text=(e.clipboardData||window.clipboardData).getData('text/plain');
+      document.execCommand('insertText',false,text);
+    });
+  }
+}
+
+/* ── Submit ── */
+function submit(){
+  if(fb!==null)return;
+  const inp=document.getElementById('ans');
+  if(!inp)return;
+  const val=(inp.innerText||inp.textContent||'').trim();
+  if(!val)return;
+  const cur=deck[idx];
+  const ok=cur.es.some(a=>norm(a)===norm(val));
+
+  if(ok){
+    score++;streak++;
+    if(streak>bestStreak)bestStreak=streak;
+    fb='ok';
+    if(streak===3||streak===5||streak%10===0)soundStreak();else soundOk();
+    fbAt=Date.now();
+    setTimeout(()=>speakES(cur.es[0]),250);
+
+    // SRS: register correct
+    const newlyConsolidated=srsCorrect(cur.pt);
+    if(newlyConsolidated){
+      sessionConsolidated++;
+      const chef=loadChef();
+      const prevLv=getChefLevel((chef.consolidated||1)-1);
+      const newLv=getChefLevel(chef.consolidated||0);
+      if(newLv.idx>prevLv.idx){
+        soundLevelUp();
+        toast(`${newLv.icon} Novo nível: ${newLv.name}!`,'#7b1fa2');
+      }
+    }
+
+    // Recover life every 5 consecutive
+    if(streak%5===0&&lives<MAX_LIVES){
+      lives++;
+      setTimeout(()=>{
+        const hearts=document.querySelectorAll('.heart');
+        const newHeart=hearts[lives-1];
+        if(newHeart){newHeart.classList.add('beat');setTimeout(()=>newHeart.classList.remove('beat'),600);}
+      },80);
+      soundLife();toast(`¡Vida recuperada! ❤️ (${streak} seguidas)`);
+    } else if(streak===3){
+      toast('🔥 Racha de 3! Seguí así…','#c96a20');
+    } else if(streak===5){
+      toast('⚡ ¡5 seguidas! ¡Capa total!','#7b1fa2');
+    }
+    render();
+    const wc=document.getElementById('wc');
+    if(wc){wc.classList.remove('pop');void wc.offsetWidth;wc.classList.add('pop');}
+    advTimer=setTimeout(advance,1400);
+  } else {
+    lives--;streak=0;totalErrors++;wrongIn=val;fb='err';
+    sessionErrors[cur.pt]=(sessionErrors[cur.pt]||0)+1;
+    soundErr();
+    srsError(cur.pt);
+    fbAt=Date.now();
+    setTimeout(()=>speakES(cur.es[0]),400);
+
+    deck.splice(idx+1,0,{...cur,immediateRetry:true});
+    if(!cur.immediateRetry){
+      const insertAt=Math.min(idx+2+Math.floor(Math.random()*5),deck.length);
+      deck.splice(insertAt,0,{...cur,retry:true});
+    }
+    render();
+    const wc=document.getElementById('wc');
+    if(wc){wc.classList.remove('shake');void wc.offsetWidth;wc.classList.add('shake');}
+    if(lives<=0){soundGameOver();advTimer=setTimeout(()=>{gameOver=true;render();},2800);}
+    else advTimer=setTimeout(advance,2800);
+  }
+}
+
+/* ── Skip wait (Enter ou toque avançam antes do tempo) ── */
+function skipWait(){
+  if(fb===null||gameOver||gameWon)return;
+  if(Date.now()-fbAt<400)return;
+  clearTimeout(advTimer);
+  if(lives<=0){gameOver=true;render();}
+  else advance();
+}
+document.addEventListener('keydown',e=>{
+  if(e.key==='Enter'&&fb!==null)skipWait();
+});
+
+/* ── Advance ── */
+function advance(){
+  const next=idx+1;
+  const inp=document.getElementById('ans');
+  if(inp){inp.textContent='';inp.classList.remove('ok','err');}
+  if(next>=deck.length){soundGameWin();gameWon=true;render();}
+  else{idx=next;fb=null;wrongIn='';render();}
+}
+
+/* ── Keyboard resize ── */
+if(window.visualViewport){
+  window.visualViewport.addEventListener('resize',()=>{
+    const sh=document.getElementById('shell');
+    if(sh)sh.style.height=window.visualViewport.height+'px';
+  });
+  document.getElementById('shell').style.height=window.visualViewport.height+'px';
+}
+
+start();
+</script>
+</body>
+</html>

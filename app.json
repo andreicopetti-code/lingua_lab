@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "Lingua Lab",
+    "slug": "lingua_lab",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "scheme": "lingualab",
+    "splash": {
+      "backgroundColor": "#fef6e8"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.andreicopetti.lingualab"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#fef6e8",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "package": "com.andreicopetti.lingualab",
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}

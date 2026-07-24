@@ -1,0 +1,8930 @@
+[
+  {
+    "pt": "acompanhamento",
+    "es": [
+      "guarnición"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "almoço",
+    "es": [
+      "almuerzo"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "ao ponto",
+    "es": [
+      "a punto"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "assado",
+    "es": [
+      "asado"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "bem passado",
+    "es": [
+      "bien cocido"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "café da manhã",
+    "es": [
+      "desayuno"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "caldo",
+    "es": [
+      "caldo"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "ceia",
+    "es": [
+      "cena tardía"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "comida caseira",
+    "es": [
+      "comida casera"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "comida leve",
+    "es": [
+      "comida liviana"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "comida vegana",
+    "es": [
+      "comida vegana"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "comida vegetariana",
+    "es": [
+      "comida vegetariana"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "cozido",
+    "es": [
+      "hervido"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "cru",
+    "es": [
+      "crudo"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "degustação",
+    "es": [
+      "degustación"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "grelhado",
+    "es": [
+      "a la parrilla"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "jantar",
+    "es": [
+      "cena"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "lanche",
+    "es": [
+      "merienda"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "mal passado",
+    "es": [
+      "jugoso"
+    ],
+    "cat": "alimentos",
+    "dif": 3
+  },
+  {
+    "pt": "massa",
+    "es": [
+      "masa"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "mistura",
+    "es": [
+      "mezcla"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "molho",
+    "es": [
+      "salsa"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "orgânico",
+    "es": [
+      "orgánico"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "petisco",
+    "es": [
+      "picada"
+    ],
+    "cat": "alimentos",
+    "dif": 3
+  },
+  {
+    "pt": "porção",
+    "es": [
+      "porción"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "prato do dia",
+    "es": [
+      "plato del día"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "purê",
+    "es": [
+      "puré"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "receita",
+    "es": [
+      "receta"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "recheio",
+    "es": [
+      "relleno"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "refeição",
+    "es": [
+      "comida"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "rodízio",
+    "es": [
+      "tenedor libre"
+    ],
+    "cat": "alimentos",
+    "dif": 3
+  },
+  {
+    "pt": "sobremesa",
+    "es": [
+      "postre"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "aperitivo",
+    "es": [
+      "aperitivo"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "buffet",
+    "es": [
+      "buffet"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "entrada",
+    "es": [
+      "entrada"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "prato",
+    "es": [
+      "plato"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "sopa",
+    "es": [
+      "sopa"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "frito",
+    "es": [
+      "frito"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "fresco",
+    "es": [
+      "fresco"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "congelado",
+    "es": [
+      "congelado"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "à milanesa",
+    "es": [
+      "a la milanesa"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "ao forno",
+    "es": [
+      "al horno"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "carne desfiada",
+    "es": [
+      "carne desmechada"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "caseiro",
+    "es": [
+      "casero"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "cozinha de fusão",
+    "es": [
+      "cocina de fusión"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "crua",
+    "es": [
+      "cruda"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "defumagem",
+    "es": [
+      "ahumado"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "empanado à milanesa",
+    "es": [
+      "rebozado a la milanesa"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "guisado",
+    "es": [
+      "guiso"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "marinado",
+    "es": [
+      "marinado"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "peça inteira",
+    "es": [
+      "pieza entera"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "picado",
+    "es": [
+      "picado"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "ponto de sal",
+    "es": [
+      "punto de sal"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "porção individual",
+    "es": [
+      "porción individual"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "prato principal",
+    "es": [
+      "plato principal"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "preparação",
+    "es": [
+      "preparación"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "temperado",
+    "es": [
+      "sazonado"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "tira",
+    "es": [
+      "tira"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "no vapor",
+    "es": [
+      "al vapor"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "água",
+    "es": [
+      "agua"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "água com gás",
+    "es": [
+      "agua con gas"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "água mineral",
+    "es": [
+      "agua mineral"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "água sem gás",
+    "es": [
+      "agua sin gas"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "aroma frutado",
+    "es": [
+      "aroma frutal"
+    ],
+    "cat": "bebidas",
+    "dif": 2
+  },
+  {
+    "pt": "cerveja (gíria)",
+    "es": [
+      "birra"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "café com leite",
+    "es": [
+      "café con leche"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "café expresso",
+    "es": [
+      "café expreso"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "caipirinha",
+    "es": [
+      "caipirinha"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "canudo",
+    "es": [
+      "sorbete"
+    ],
+    "cat": "bebidas",
+    "dif": 3
+  },
+  {
+    "pt": "cerveja",
+    "es": [
+      "cerveza"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "chá",
+    "es": [
+      "té"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "chá gelado",
+    "es": [
+      "té helado"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "chá preto",
+    "es": [
+      "té negro"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "chá verde",
+    "es": [
+      "té verde"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "chope",
+    "es": [
+      "cerveza tirada",
+      "chopp"
+    ],
+    "cat": "bebidas",
+    "dif": 3
+  },
+  {
+    "pt": "coquetel",
+    "es": [
+      "cóctel"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "decantar",
+    "es": [
+      "decantar"
+    ],
+    "cat": "bebidas",
+    "dif": 2
+  },
+  {
+    "pt": "degustar",
+    "es": [
+      "degustar"
+    ],
+    "cat": "bebidas",
+    "dif": 2
+  },
+  {
+    "pt": "dose",
+    "es": [
+      "shot",
+      "medida"
+    ],
+    "cat": "bebidas",
+    "dif": 2
+  },
+  {
+    "pt": "drink",
+    "es": [
+      "trago"
+    ],
+    "cat": "bebidas",
+    "dif": 2
+  },
+  {
+    "pt": "energético",
+    "es": [
+      "energizante"
+    ],
+    "cat": "bebidas",
+    "dif": 2
+  },
+  {
+    "pt": "espumante",
+    "es": [
+      "espumante"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "garrafa",
+    "es": [
+      "botella"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "gelo",
+    "es": [
+      "hielo"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "gin tônica",
+    "es": [
+      "gin tonic"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "happy hour",
+    "es": [
+      "happy hour"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "harmonização",
+    "es": [
+      "maridaje"
+    ],
+    "cat": "bebidas",
+    "dif": 3
+  },
+  {
+    "pt": "licor",
+    "es": [
+      "licor"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "notas amadeiradas",
+    "es": [
+      "notas amaderadas"
+    ],
+    "cat": "bebidas",
+    "dif": 2
+  },
+  {
+    "pt": "refrigerante",
+    "es": [
+      "gaseosa"
+    ],
+    "cat": "bebidas",
+    "dif": 2
+  },
+  {
+    "pt": "rolha",
+    "es": [
+      "corcho"
+    ],
+    "cat": "bebidas",
+    "dif": 2
+  },
+  {
+    "pt": "rum",
+    "es": [
+      "ron"
+    ],
+    "cat": "bebidas",
+    "dif": 2
+  },
+  {
+    "pt": "safra",
+    "es": [
+      "cosecha"
+    ],
+    "cat": "bebidas",
+    "dif": 3
+  },
+  {
+    "pt": "suco",
+    "es": [
+      "jugo"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "suco natural",
+    "es": [
+      "jugo natural"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "taça",
+    "es": [
+      "copa"
+    ],
+    "cat": "bebidas",
+    "dif": 2
+  },
+  {
+    "pt": "taça de espumante",
+    "es": [
+      "copa flauta"
+    ],
+    "cat": "bebidas",
+    "dif": 3
+  },
+  {
+    "pt": "tequila",
+    "es": [
+      "tequila"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "uísque",
+    "es": [
+      "whisky"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "vinho",
+    "es": [
+      "vino"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "vinho branco",
+    "es": [
+      "vino blanco"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "vinho encorpado",
+    "es": [
+      "vino con cuerpo"
+    ],
+    "cat": "bebidas",
+    "dif": 2
+  },
+  {
+    "pt": "vinho rosé",
+    "es": [
+      "vino rosado"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "vinho seco",
+    "es": [
+      "vino seco"
+    ],
+    "cat": "bebidas",
+    "dif": 2
+  },
+  {
+    "pt": "vinho suave",
+    "es": [
+      "vino dulce"
+    ],
+    "cat": "bebidas",
+    "dif": 2
+  },
+  {
+    "pt": "vinho tinto",
+    "es": [
+      "vino tinto"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "vodca",
+    "es": [
+      "vodka"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "aperol",
+    "es": [
+      "aperol"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "campari",
+    "es": [
+      "campari"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "martini",
+    "es": [
+      "martini"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "sidra",
+    "es": [
+      "sidra"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "café",
+    "es": [
+      "café"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "cappuccino",
+    "es": [
+      "capuchino",
+      "cappuccino"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "amargo",
+    "es": [
+      "amargo"
+    ],
+    "cat": "bebidas",
+    "dif": 2
+  },
+  {
+    "pt": "aguardente de cana",
+    "es": [
+      "caña"
+    ],
+    "cat": "bebidas",
+    "dif": 2
+  },
+  {
+    "pt": "cerveja artesanal",
+    "es": [
+      "cerveza artesanal"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "cerveja gelada",
+    "es": [
+      "cerveza fría"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "cortar o vinho",
+    "es": [
+      "cortar el vino"
+    ],
+    "cat": "bebidas",
+    "dif": 3
+  },
+  {
+    "pt": "drinks sem álcool",
+    "es": [
+      "tragos sin alcohol"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "fernet",
+    "es": [
+      "fernet"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "fernet com cola",
+    "es": [
+      "fernet con coca"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "garrafão (de vinho)",
+    "es": [
+      "damajuana"
+    ],
+    "cat": "bebidas",
+    "dif": 3
+  },
+  {
+    "pt": "mate",
+    "es": [
+      "mate"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "mate amargo",
+    "es": [
+      "mate amargo"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "mate com açúcar",
+    "es": [
+      "mate dulce"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "meia garrafa",
+    "es": [
+      "media botella"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "mosto",
+    "es": [
+      "mosto"
+    ],
+    "cat": "bebidas",
+    "dif": 2
+  },
+  {
+    "pt": "pingado",
+    "es": [
+      "lágrima",
+      "cortado"
+    ],
+    "cat": "bebidas",
+    "dif": 3
+  },
+  {
+    "pt": "soda",
+    "es": [
+      "soda"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "tônica",
+    "es": [
+      "tónica"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "vermute",
+    "es": [
+      "vermut"
+    ],
+    "cat": "bebidas",
+    "dif": 2
+  },
+  {
+    "pt": "yerba-mate",
+    "es": [
+      "yerba mate"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "acém (agulha)",
+    "es": [
+      "aguja",
+      "roast beef"
+    ],
+    "cat": "carnes",
+    "dif": 3
+  },
+  {
+    "pt": "alcatra",
+    "es": [
+      "cuadril"
+    ],
+    "cat": "carnes",
+    "dif": 3
+  },
+  {
+    "pt": "almôndega",
+    "es": [
+      "albóndiga"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "asas de frango",
+    "es": [
+      "alitas"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "atum",
+    "es": [
+      "atún"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "bacalhau",
+    "es": [
+      "bacalao"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "bacon",
+    "es": [
+      "panceta"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "barriga de porco",
+    "es": [
+      "matambrito de cerdo"
+    ],
+    "cat": "carnes",
+    "dif": 3
+  },
+  {
+    "pt": "bem passada",
+    "es": [
+      "cocida"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "bife",
+    "es": [
+      "bife"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "bife ancho",
+    "es": [
+      "bife ancho"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "bife de chorizo",
+    "es": [
+      "bife de chorizo"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "brasa",
+    "es": [
+      "brasas"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "cabrito",
+    "es": [
+      "cabrito"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "camarão",
+    "es": [
+      "camarón"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "carne bovina",
+    "es": [
+      "carne vacuna"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "carne moída",
+    "es": [
+      "carne picada"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "carne suína",
+    "es": [
+      "carne de cerdo"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "carpaccio",
+    "es": [
+      "carpaccio"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "carré (bisteca)",
+    "es": [
+      "costeleta de cerdo",
+      "carré"
+    ],
+    "cat": "carnes",
+    "dif": 3
+  },
+  {
+    "pt": "carvão",
+    "es": [
+      "carbón"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "churrascada",
+    "es": [
+      "parrillada"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "churrasco",
+    "es": [
+      "asado"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "churrasqueira",
+    "es": [
+      "parrilla"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "clara",
+    "es": [
+      "clara"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "contra-filé",
+    "es": [
+      "bife angosto"
+    ],
+    "cat": "carnes",
+    "dif": 3
+  },
+  {
+    "pt": "coração",
+    "es": [
+      "corazón"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "cordeiro",
+    "es": [
+      "cordero"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "costela",
+    "es": [
+      "costilla"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "coxa",
+    "es": [
+      "pata"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "coxão duro",
+    "es": [
+      "cuadrada"
+    ],
+    "cat": "carnes",
+    "dif": 3
+  },
+  {
+    "pt": "coxão mole",
+    "es": [
+      "nalga"
+    ],
+    "cat": "carnes",
+    "dif": 3
+  },
+  {
+    "pt": "defumado",
+    "es": [
+      "ahumado"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "empanado",
+    "es": [
+      "rebozado"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "entranha",
+    "es": [
+      "entraña"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "espetinho",
+    "es": [
+      "pincho"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "espeto",
+    "es": [
+      "brochette"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "fígado",
+    "es": [
+      "hígado"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "filé mignon",
+    "es": [
+      "lomo"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "fraldinha",
+    "es": [
+      "vacío"
+    ],
+    "cat": "carnes",
+    "dif": 3
+  },
+  {
+    "pt": "frango",
+    "es": [
+      "pollo"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "frutos do mar",
+    "es": [
+      "mariscos"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "gema",
+    "es": [
+      "yema"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "hambúrguer",
+    "es": [
+      "hamburguesa"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "intestino delgado",
+    "es": [
+      "chinchulines"
+    ],
+    "cat": "carnes",
+    "dif": 3
+  },
+  {
+    "pt": "lagarto",
+    "es": [
+      "peceto"
+    ],
+    "cat": "carnes",
+    "dif": 3
+  },
+  {
+    "pt": "linguiça",
+    "es": [
+      "chorizo"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "lombo",
+    "es": [
+      "carré"
+    ],
+    "cat": "carnes",
+    "dif": 3
+  },
+  {
+    "pt": "mal passada",
+    "es": [
+      "jugosa"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "maminha",
+    "es": [
+      "colita de cuadril"
+    ],
+    "cat": "carnes",
+    "dif": 3
+  },
+  {
+    "pt": "matambre",
+    "es": [
+      "matambre"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "mexilhão",
+    "es": [
+      "mejillón"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "miolo do contrafilé",
+    "es": [
+      "ojo de bife"
+    ],
+    "cat": "carnes",
+    "dif": 3
+  },
+  {
+    "pt": "miúdos",
+    "es": [
+      "achuras"
+    ],
+    "cat": "carnes",
+    "dif": 3
+  },
+  {
+    "pt": "moela",
+    "es": [
+      "molleja"
+    ],
+    "cat": "carnes",
+    "dif": 3
+  },
+  {
+    "pt": "morcilla",
+    "es": [
+      "morcilla"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "ossobuco",
+    "es": [
+      "osobuco"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "ostras",
+    "es": [
+      "ostras"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "ovo",
+    "es": [
+      "huevo"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "paleta",
+    "es": [
+      "paleta"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "patinho",
+    "es": [
+      "bola de lomo"
+    ],
+    "cat": "carnes",
+    "dif": 3
+  },
+  {
+    "pt": "peito de frango",
+    "es": [
+      "pechuga"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "peixe",
+    "es": [
+      "pescado"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "picanha",
+    "es": [
+      "tapa de cuadril"
+    ],
+    "cat": "carnes",
+    "dif": 3
+  },
+  {
+    "pt": "polvo",
+    "es": [
+      "pulpo"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "presunto",
+    "es": [
+      "jamón"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "provoleta",
+    "es": [
+      "provoleta"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "quibe",
+    "es": [
+      "keppe",
+      "kebbe"
+    ],
+    "cat": "carnes",
+    "dif": 3
+  },
+  {
+    "pt": "rins",
+    "es": [
+      "riñones"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "salmão",
+    "es": [
+      "salmón"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "salsicha",
+    "es": [
+      "salchicha"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "sobre coxa",
+    "es": [
+      "muslo"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "sobre paleta",
+    "es": [
+      "bondiola"
+    ],
+    "cat": "carnes",
+    "dif": 3
+  },
+  {
+    "pt": "tira de costela",
+    "es": [
+      "asado de tira"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "vazio",
+    "es": [
+      "vacío"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "assado na cruz",
+    "es": [
+      "asado al asador"
+    ],
+    "cat": "carnes",
+    "dif": 3
+  },
+  {
+    "pt": "bife de papo",
+    "es": [
+      "bife de chorizo de papo"
+    ],
+    "cat": "carnes",
+    "dif": 3
+  },
+  {
+    "pt": "bucho",
+    "es": [
+      "mondongo"
+    ],
+    "cat": "carnes",
+    "dif": 3
+  },
+  {
+    "pt": "caracu",
+    "es": [
+      "caracú"
+    ],
+    "cat": "carnes",
+    "dif": 3
+  },
+  {
+    "pt": "carne de leitão",
+    "es": [
+      "lechón"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "carne seca",
+    "es": [
+      "carne seca"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "coelho",
+    "es": [
+      "conejo"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "coração de frango",
+    "es": [
+      "corazoncitos de pollo"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "cozido misto",
+    "es": [
+      "puchero"
+    ],
+    "cat": "carnes",
+    "dif": 3
+  },
+  {
+    "pt": "escalope",
+    "es": [
+      "escalope"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "fraldão",
+    "es": [
+      "tapa de asado"
+    ],
+    "cat": "carnes",
+    "dif": 3
+  },
+  {
+    "pt": "galinha",
+    "es": [
+      "gallina"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "isca de peixe",
+    "es": [
+      "filet de pescado"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "javali",
+    "es": [
+      "jabalí"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "lula",
+    "es": [
+      "calamar"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "milanesa de frango",
+    "es": [
+      "milanesa de pollo"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "milanesa de vitela",
+    "es": [
+      "milanesa de ternera"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "pato",
+    "es": [
+      "pato"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "peru",
+    "es": [
+      "pavo"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "sobrepaleta",
+    "es": [
+      "marucha"
+    ],
+    "cat": "carnes",
+    "dif": 3
+  },
+  {
+    "pt": "abacate",
+    "es": [
+      "palta"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "abacaxi",
+    "es": [
+      "ananá"
+    ],
+    "cat": "frutas",
+    "dif": 3
+  },
+  {
+    "pt": "ameixa",
+    "es": [
+      "ciruela"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "amora",
+    "es": [
+      "mora"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "banana",
+    "es": [
+      "banana"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "caqui",
+    "es": [
+      "caqui"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "cereja",
+    "es": [
+      "cereza"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "coco",
+    "es": [
+      "coco"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "cranberry",
+    "es": [
+      "arándano rojo"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "damasco",
+    "es": [
+      "damasco"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "figo",
+    "es": [
+      "higo"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "framboesa",
+    "es": [
+      "frambuesa"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "goiaba",
+    "es": [
+      "guayaba"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "jaca",
+    "es": [
+      "yaca"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "kiwi",
+    "es": [
+      "kiwi"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "laranja",
+    "es": [
+      "naranja"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "lichia",
+    "es": [
+      "litchi"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "limão",
+    "es": [
+      "limón"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "maçã",
+    "es": [
+      "manzana"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "mamão",
+    "es": [
+      "papaya"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "manga",
+    "es": [
+      "mango"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "maracujá",
+    "es": [
+      "maracuyá"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "melancia",
+    "es": [
+      "sandía"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "melão",
+    "es": [
+      "melón"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "mirtilo",
+    "es": [
+      "arándano"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "morango",
+    "es": [
+      "frutilla"
+    ],
+    "cat": "frutas",
+    "dif": 3
+  },
+  {
+    "pt": "nectarina",
+    "es": [
+      "nectarina"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "pera",
+    "es": [
+      "pera"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "pêssego",
+    "es": [
+      "durazno"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "pitaya",
+    "es": [
+      "pitahaya"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "romã",
+    "es": [
+      "granada"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "tangerina",
+    "es": [
+      "mandarina"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "uva",
+    "es": [
+      "uva"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "uva passa",
+    "es": [
+      "pasas de uva"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "acerola",
+    "es": [
+      "acerola"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "amêndoa",
+    "es": [
+      "almendra"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "avelã",
+    "es": [
+      "avellana"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "azeitona verde",
+    "es": [
+      "aceituna verde"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "cajá",
+    "es": [
+      "jocote"
+    ],
+    "cat": "frutas",
+    "dif": 3
+  },
+  {
+    "pt": "caju",
+    "es": [
+      "castaña de cajú",
+      "anacardo"
+    ],
+    "cat": "frutas",
+    "dif": 3
+  },
+  {
+    "pt": "castanha",
+    "es": [
+      "castaña"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "castanha de caju",
+    "es": [
+      "castañas de cajú"
+    ],
+    "cat": "frutas",
+    "dif": 3
+  },
+  {
+    "pt": "fruta da estação",
+    "es": [
+      "fruta de estación"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "fruta seca",
+    "es": [
+      "fruta seca"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "laranja-baía",
+    "es": [
+      "naranja navel"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "limão-siciliano",
+    "es": [
+      "limón",
+      "limón amarillo"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "limonada",
+    "es": [
+      "limonada"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "nozes",
+    "es": [
+      "nueces"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "pinhão",
+    "es": [
+      "piñón"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "pistache",
+    "es": [
+      "pistacho"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "salada de frutas",
+    "es": [
+      "ensalada de frutas"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "tamarindo",
+    "es": [
+      "tamarindo"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "tomate-cereja",
+    "es": [
+      "tomate cherry"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "algodão doce",
+    "es": [
+      "algodón de azúcar"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "amido de milho",
+    "es": [
+      "fécula de maíz"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "baguete",
+    "es": [
+      "baguette"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "biscoito",
+    "es": [
+      "galletita"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "biscoito recheado",
+    "es": [
+      "galletita rellena"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "bolo",
+    "es": [
+      "torta"
+    ],
+    "cat": "padaria",
+    "dif": 3
+  },
+  {
+    "pt": "bombom",
+    "es": [
+      "bombón"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "brigadeiro",
+    "es": [
+      "brigadeiro"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "brownie",
+    "es": [
+      "brownie"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "café especial",
+    "es": [
+      "café de especialidad"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "café filtrado",
+    "es": [
+      "café filtrado"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "calda",
+    "es": [
+      "almíbar",
+      "sirope"
+    ],
+    "cat": "padaria",
+    "dif": 3
+  },
+  {
+    "pt": "caramelo",
+    "es": [
+      "caramelo"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "carolina",
+    "es": [
+      "profiterol"
+    ],
+    "cat": "padaria",
+    "dif": 3
+  },
+  {
+    "pt": "chantilly",
+    "es": [
+      "crema chantilly"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "cheesecake",
+    "es": [
+      "cheesecake"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "chocolate",
+    "es": [
+      "chocolate"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "churro",
+    "es": [
+      "churro"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "cobertura",
+    "es": [
+      "cobertura"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "coxinha",
+    "es": [
+      "coxinha",
+      "croqueta de pollo"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "croissant",
+    "es": [
+      "medialuna"
+    ],
+    "cat": "padaria",
+    "dif": 3
+  },
+  {
+    "pt": "cupcake",
+    "es": [
+      "cupcake"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "doce de leite",
+    "es": [
+      "dulce de leche"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "doce folhado",
+    "es": [
+      "hojaldre"
+    ],
+    "cat": "padaria",
+    "dif": 3
+  },
+  {
+    "pt": "donut",
+    "es": [
+      "dona"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "empada",
+    "es": [
+      "empanada"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "farinha",
+    "es": [
+      "harina"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "fermento",
+    "es": [
+      "levadura"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "ganache",
+    "es": [
+      "ganache"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "grão de café",
+    "es": [
+      "grano de café"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "lasanha",
+    "es": [
+      "lasaña"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "macarrão",
+    "es": [
+      "fideos"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "mil-folhas",
+    "es": [
+      "milhojas"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "mousse",
+    "es": [
+      "mousse"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "nhoque",
+    "es": [
+      "ñoquis"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "omelete",
+    "es": [
+      "omelette"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "panqueca",
+    "es": [
+      "panqueque"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "pão",
+    "es": [
+      "pan"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "pão francês",
+    "es": [
+      "pan francés"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "pão integral",
+    "es": [
+      "pan integral"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "pastel",
+    "es": [
+      "pastel"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "pipoca",
+    "es": [
+      "pochoclo"
+    ],
+    "cat": "padaria",
+    "dif": 3
+  },
+  {
+    "pt": "pizza",
+    "es": [
+      "pizza"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "pudim",
+    "es": [
+      "flan"
+    ],
+    "cat": "padaria",
+    "dif": 3
+  },
+  {
+    "pt": "ravióli",
+    "es": [
+      "ravioles"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "sonho",
+    "es": [
+      "bola de fraile"
+    ],
+    "cat": "padaria",
+    "dif": 3
+  },
+  {
+    "pt": "sorvete",
+    "es": [
+      "helado"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "suspiro",
+    "es": [
+      "merengue"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "torra escura",
+    "es": [
+      "tostado oscuro"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "torra média",
+    "es": [
+      "tostado medio"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "torta doce",
+    "es": [
+      "tarta dulce"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "torta salgada",
+    "es": [
+      "tarta salada"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "trufa",
+    "es": [
+      "trufa"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "waffle",
+    "es": [
+      "waffle"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "bolo de rolo",
+    "es": [
+      "pionono",
+      "arrollado"
+    ],
+    "cat": "padaria",
+    "dif": 3
+  },
+  {
+    "pt": "brioche",
+    "es": [
+      "brioche"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "canhão (doce recheado)",
+    "es": [
+      "cañón"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "cobertura de chocolate",
+    "es": [
+      "cobertura de chocolate"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "cookie",
+    "es": [
+      "cookie"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "empanada de maçã",
+    "es": [
+      "empanada de manzana"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "doces de padaria (facturas)",
+    "es": [
+      "facturas"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "focaccia",
+    "es": [
+      "focaccia"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "granola",
+    "es": [
+      "granola"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "muffin",
+    "es": [
+      "muffin"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "palmier",
+    "es": [
+      "palmera"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "pão de forma",
+    "es": [
+      "pan lactal"
+    ],
+    "cat": "padaria",
+    "dif": 3
+  },
+  {
+    "pt": "pão de queijo",
+    "es": [
+      "pan de queso"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "pão recheado",
+    "es": [
+      "pan relleno"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "polenta",
+    "es": [
+      "polenta"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "rosca",
+    "es": [
+      "rosca"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "sachê de açúcar",
+    "es": [
+      "sobre de azúcar"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "tablete de chocolate",
+    "es": [
+      "tableta de chocolate"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "torrada",
+    "es": [
+      "tostada"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "tortilha",
+    "es": [
+      "tortilla"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "alfajor",
+    "es": [
+      "alfajor"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "amêndoas caramelizadas",
+    "es": [
+      "garrapiñada"
+    ],
+    "cat": "fast-food",
+    "dif": 3
+  },
+  {
+    "pt": "amendoim torrado",
+    "es": [
+      "maní tostado"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "anéis de cebola",
+    "es": [
+      "aros de cebolla"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "batata frita",
+    "es": [
+      "papas fritas"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "batata rústica",
+    "es": [
+      "papas rústicas"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "bola de sorvete",
+    "es": [
+      "bocha"
+    ],
+    "cat": "fast-food",
+    "dif": 3
+  },
+  {
+    "pt": "cachorro-quente",
+    "es": [
+      "pancho"
+    ],
+    "cat": "fast-food",
+    "dif": 3
+  },
+  {
+    "pt": "cachorro-quente com bacon",
+    "es": [
+      "pancho con panceta"
+    ],
+    "cat": "fast-food",
+    "dif": 3
+  },
+  {
+    "pt": "cachorro-quente completo",
+    "es": [
+      "pancho completo"
+    ],
+    "cat": "fast-food",
+    "dif": 3
+  },
+  {
+    "pt": "casquinha",
+    "es": [
+      "cucurucho"
+    ],
+    "cat": "fast-food",
+    "dif": 3
+  },
+  {
+    "pt": "casquinha mista",
+    "es": [
+      "cono mixto"
+    ],
+    "cat": "fast-food",
+    "dif": 3
+  },
+  {
+    "pt": "cebola caramelizada",
+    "es": [
+      "cebolla caramelizada"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "cheeseburger",
+    "es": [
+      "hamburguesa con queso"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "choripán",
+    "es": [
+      "choripán"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "churros recheados",
+    "es": [
+      "churros rellenos"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "drive-thru",
+    "es": [
+      "autopedido",
+      "drive thru"
+    ],
+    "cat": "fast-food",
+    "dif": 3
+  },
+  {
+    "pt": "empanada de presunto e queijo",
+    "es": [
+      "empanada de jamón y queso"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "frango crocante",
+    "es": [
+      "pollo crocante"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "fugazzeta",
+    "es": [
+      "fugazzeta"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "hambúrguer artesanal",
+    "es": [
+      "hamburguesa artesanal"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "lanche infantil",
+    "es": [
+      "menú infantil"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "meia-lua (croissant argentino)",
+    "es": [
+      "medialuna"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "milanesa no pão",
+    "es": [
+      "milanesa al pan"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "milkshake",
+    "es": [
+      "milkshake"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "misto quente",
+    "es": [
+      "tostado mixto"
+    ],
+    "cat": "fast-food",
+    "dif": 3
+  },
+  {
+    "pt": "molho especial",
+    "es": [
+      "salsa especial"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "nuggets de frango",
+    "es": [
+      "nuggets de pollo"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "panqueca doce",
+    "es": [
+      "panqueque dulce"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "pedido para viagem",
+    "es": [
+      "pedido para llevar"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "pizza de muçarela",
+    "es": [
+      "pizza de muzzarella"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "pizza em fatia",
+    "es": [
+      "porción de pizza"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "refil",
+    "es": [
+      "recarga"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "sanduíche",
+    "es": [
+      "sánguche"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "sanduíche de frango",
+    "es": [
+      "sánguche de pollo"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "sanduíche de miga",
+    "es": [
+      "miga"
+    ],
+    "cat": "fast-food",
+    "dif": 3
+  },
+  {
+    "pt": "sanduíche de milanesa",
+    "es": [
+      "sánguche de milanesa"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "sanduíche de pernil",
+    "es": [
+      "sánguche de bondiola"
+    ],
+    "cat": "fast-food",
+    "dif": 3
+  },
+  {
+    "pt": "sorvete na casquinha",
+    "es": [
+      "helado en cono"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "sorvete sundae",
+    "es": [
+      "helado sundae"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "burrito",
+    "es": [
+      "burrito"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "calabresa",
+    "es": [
+      "longaniza",
+      "salchicha calabresa"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "combo",
+    "es": [
+      "combo"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "coxinha de frango",
+    "es": [
+      "croqueta de pollo"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "empanada de carne",
+    "es": [
+      "empanada de carne"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "empanada frita",
+    "es": [
+      "empanada frita"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "hamburgueria",
+    "es": [
+      "hamburguesería"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "molho de tomate",
+    "es": [
+      "salsa de tomate"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "pacote de batata",
+    "es": [
+      "papas fritas de paquete"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "pizza a metro",
+    "es": [
+      "pizza al metro"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "pizza calabresa",
+    "es": [
+      "pizza de longaniza",
+      "pizza de salchicha calabresa"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "pizza de lombardo",
+    "es": [
+      "pizza de rúcula"
+    ],
+    "cat": "fast-food",
+    "dif": 3
+  },
+  {
+    "pt": "porção de fritas",
+    "es": [
+      "papas fritas"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "salgadinho",
+    "es": [
+      "palitos"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "tacos",
+    "es": [
+      "tacos"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "tele-entrega",
+    "es": [
+      "delivery por teléfono"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "wrap",
+    "es": [
+      "wrap"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "x-burguer",
+    "es": [
+      "hamburguesa con queso"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "x-tudo",
+    "es": [
+      "hamburguesa completa",
+      "súper completa"
+    ],
+    "cat": "fast-food",
+    "dif": 3
+  },
+  {
+    "pt": "abobrinha",
+    "es": [
+      "zucchini",
+      "zapallito"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "açafrão",
+    "es": [
+      "azafrán"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "açúcar",
+    "es": [
+      "azúcar"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "alecrim",
+    "es": [
+      "romero"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "alface",
+    "es": [
+      "lechuga"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "alho",
+    "es": [
+      "ajo"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "alho-poró",
+    "es": [
+      "puerro"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "azeite",
+    "es": [
+      "aceite de oliva"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "azeitona",
+    "es": [
+      "aceituna"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "batata",
+    "es": [
+      "papa"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "batata-doce",
+    "es": [
+      "batata"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "baunilha",
+    "es": [
+      "vainilla"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "berinjela",
+    "es": [
+      "berenjena"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "beterraba",
+    "es": [
+      "remolacha"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "brócolis",
+    "es": [
+      "brócoli"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "canela",
+    "es": [
+      "canela"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "cebola",
+    "es": [
+      "cebolla"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "cebolinha",
+    "es": [
+      "cebolla de verdeo",
+      "cebollín"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "cenoura",
+    "es": [
+      "zanahoria"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "chimichurri",
+    "es": [
+      "chimichurri"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "coentro",
+    "es": [
+      "cilantro"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "cogumelo",
+    "es": [
+      "hongo",
+      "champiñón"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "couve",
+    "es": [
+      "col rizada"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "couve-flor",
+    "es": [
+      "coliflor"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "creme de leite",
+    "es": [
+      "crema de leche"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "curry",
+    "es": [
+      "curry"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "ervilha",
+    "es": [
+      "arveja"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "espinafre",
+    "es": [
+      "espinaca"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "farinha de rosca",
+    "es": [
+      "pan rallado"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "feijão",
+    "es": [
+      "poroto"
+    ],
+    "cat": "verduras",
+    "dif": 3
+  },
+  {
+    "pt": "fermentação natural",
+    "es": [
+      "fermentación natural"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "gengibre",
+    "es": [
+      "jengibre"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "grão-de-bico",
+    "es": [
+      "garbanzo"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "hortelã",
+    "es": [
+      "menta"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "ketchup",
+    "es": [
+      "kétchup"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "leite condensado",
+    "es": [
+      "leche condensada"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "lentilha",
+    "es": [
+      "lenteja"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "louro",
+    "es": [
+      "laurel"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "maionese",
+    "es": [
+      "mayonesa"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "mandioca",
+    "es": [
+      "mandioca"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "mandioquinha",
+    "es": [
+      "arracacha"
+    ],
+    "cat": "verduras",
+    "dif": 3
+  },
+  {
+    "pt": "manjericão",
+    "es": [
+      "albahaca"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "milho",
+    "es": [
+      "maíz"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "molho agridoce",
+    "es": [
+      "salsa agridulce"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "molho barbecue",
+    "es": [
+      "salsa barbacoa"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "molho de alho",
+    "es": [
+      "salsa de ajo"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "molho picante",
+    "es": [
+      "salsa picante"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "molho rosé",
+    "es": [
+      "salsa golf"
+    ],
+    "cat": "verduras",
+    "dif": 3
+  },
+  {
+    "pt": "molho tártaro",
+    "es": [
+      "salsa tártara"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "mostarda",
+    "es": [
+      "mostaza"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "noz-moscada",
+    "es": [
+      "nuez moscada"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "óleo",
+    "es": [
+      "aceite"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "orégano",
+    "es": [
+      "orégano"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "páprica",
+    "es": [
+      "pimentón"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "pepino",
+    "es": [
+      "pepino"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "picles",
+    "es": [
+      "pepinillos"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "pimenta",
+    "es": [
+      "pimienta"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "pimenta calabresa",
+    "es": [
+      "ají molido"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "pimentão",
+    "es": [
+      "morrón"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "queijo ralado",
+    "es": [
+      "queso rallado"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "repolho",
+    "es": [
+      "repollo"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "repolho roxo",
+    "es": [
+      "repollo morado"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "rúcula",
+    "es": [
+      "rúcula"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "sal",
+    "es": [
+      "sal"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "salsinha",
+    "es": [
+      "perejil"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "tomate",
+    "es": [
+      "tomate"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "vinagre",
+    "es": [
+      "vinagre"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "aceto balsâmico",
+    "es": [
+      "aceto balsámico"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "aipo",
+    "es": [
+      "apio"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "alcachofra",
+    "es": [
+      "alcaucil"
+    ],
+    "cat": "verduras",
+    "dif": 3
+  },
+  {
+    "pt": "alho negro",
+    "es": [
+      "ajo negro"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "amendoim",
+    "es": [
+      "maní"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "aspargo",
+    "es": [
+      "espárrago"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "azeitona preta",
+    "es": [
+      "aceituna negra"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "caldo de legumes",
+    "es": [
+      "caldo de verduras"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "cheiro-verde",
+    "es": [
+      "verdeo"
+    ],
+    "cat": "verduras",
+    "dif": 3
+  },
+  {
+    "pt": "chuchu",
+    "es": [
+      "chayote",
+      "papa del aire"
+    ],
+    "cat": "verduras",
+    "dif": 3
+  },
+  {
+    "pt": "endívia",
+    "es": [
+      "endivia"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "erva-doce (funcho)",
+    "es": [
+      "hinojo"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "leite de coco",
+    "es": [
+      "leche de coco"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "manteiga",
+    "es": [
+      "manteca"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "nabo",
+    "es": [
+      "nabo"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "palmito",
+    "es": [
+      "palmito"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "pimentão verde",
+    "es": [
+      "morrón verde"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "queijo",
+    "es": [
+      "queso"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "rúcula selvagem",
+    "es": [
+      "rúcula salvaje"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "tomilho",
+    "es": [
+      "tomillo"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "aerador de vinho",
+    "es": [
+      "aireador"
+    ],
+    "cat": "utensílios",
+    "dif": 3
+  },
+  {
+    "pt": "afiador",
+    "es": [
+      "afilador"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "air fryer",
+    "es": [
+      "freidora de aire"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "amaciador de carnes",
+    "es": [
+      "ablandador de carnes"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "amassador de alho",
+    "es": [
+      "machacador"
+    ],
+    "cat": "utensílios",
+    "dif": 3
+  },
+  {
+    "pt": "assadeira",
+    "es": [
+      "bandeja para horno"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "avental",
+    "es": [
+      "delantal"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "balança de cozinha",
+    "es": [
+      "balanza"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "bancada inox",
+    "es": [
+      "mesada de acero inoxidable"
+    ],
+    "cat": "utensílios",
+    "dif": 3
+  },
+  {
+    "pt": "batedeira",
+    "es": [
+      "batidora"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "cafeteira",
+    "es": [
+      "cafetera"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "câmara fria",
+    "es": [
+      "cámara frigorífica"
+    ],
+    "cat": "utensílios",
+    "dif": 3
+  },
+  {
+    "pt": "chaleira elétrica",
+    "es": [
+      "pava eléctrica"
+    ],
+    "cat": "utensílios",
+    "dif": 3
+  },
+  {
+    "pt": "colher",
+    "es": [
+      "cuchara"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "concha",
+    "es": [
+      "cucharón"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "controle de estoque",
+    "es": [
+      "control de stock"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "cooktop",
+    "es": [
+      "anafe"
+    ],
+    "cat": "utensílios",
+    "dif": 3
+  },
+  {
+    "pt": "copo",
+    "es": [
+      "vaso"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "cortador de pizza",
+    "es": [
+      "cortapizza"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "cozinha industrial",
+    "es": [
+      "cocina industrial"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "cuba",
+    "es": [
+      "bacha"
+    ],
+    "cat": "utensílios",
+    "dif": 3
+  },
+  {
+    "pt": "descascador",
+    "es": [
+      "pelador"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "escorredor de louça",
+    "es": [
+      "escurridor"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "escumadeira",
+    "es": [
+      "espumadera"
+    ],
+    "cat": "utensílios",
+    "dif": 3
+  },
+  {
+    "pt": "espátula",
+    "es": [
+      "espátula"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "etiqueta de validade",
+    "es": [
+      "etiqueta de vencimiento"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "exaustor",
+    "es": [
+      "extractor"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "expositor refrigerado",
+    "es": [
+      "vitrina refrigerada"
+    ],
+    "cat": "utensílios",
+    "dif": 3
+  },
+  {
+    "pt": "faca",
+    "es": [
+      "cuchillo"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "filme plástico",
+    "es": [
+      "film plástico"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "fogão",
+    "es": [
+      "cocina"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "forma",
+    "es": [
+      "molde"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "forno",
+    "es": [
+      "horno"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "freezer",
+    "es": [
+      "freezer"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "frigideira",
+    "es": [
+      "sartén"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "garfo",
+    "es": [
+      "tenedor"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "garrafa térmica",
+    "es": [
+      "termo"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "geladeira",
+    "es": [
+      "heladera"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "grill",
+    "es": [
+      "parrilla eléctrica"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "guardanapo",
+    "es": [
+      "servilleta"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "jarra",
+    "es": [
+      "jarra"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "lava-louças",
+    "es": [
+      "lavavajillas"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "liquidificador",
+    "es": [
+      "licuadora"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "luvas de cozinha",
+    "es": [
+      "guantes"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "mandolim",
+    "es": [
+      "mandolina"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "micro-ondas",
+    "es": [
+      "microondas"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "mixer",
+    "es": [
+      "mixer"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "moedor de café",
+    "es": [
+      "molinillo de café"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "oveira",
+    "es": [
+      "huevera"
+    ],
+    "cat": "utensílios",
+    "dif": 3
+  },
+  {
+    "pt": "palitos",
+    "es": [
+      "palillos"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "panela",
+    "es": [
+      "olla"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "panela de pressão",
+    "es": [
+      "olla a presión"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "panela wok",
+    "es": [
+      "wok"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "panquequeira",
+    "es": [
+      "panquequera"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "papel alumínio",
+    "es": [
+      "papel aluminio"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "papel toalha",
+    "es": [
+      "rollo de cocina"
+    ],
+    "cat": "utensílios",
+    "dif": 3
+  },
+  {
+    "pt": "pegador",
+    "es": [
+      "pinza"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "pegador de massa",
+    "es": [
+      "pinza para pasta"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "peneira",
+    "es": [
+      "colador"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "pimenteiro",
+    "es": [
+      "pimentero"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "pipoqueira",
+    "es": [
+      "pochoclera"
+    ],
+    "cat": "utensílios",
+    "dif": 3
+  },
+  {
+    "pt": "processador",
+    "es": [
+      "procesadora",
+      "picadora"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "ralador",
+    "es": [
+      "rallador"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "saca-rolhas",
+    "es": [
+      "sacacorchos"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "saleiro",
+    "es": [
+      "salero"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "sanduicheira",
+    "es": [
+      "sandwichera"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "tábua",
+    "es": [
+      "tabla"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "taça de vinho",
+    "es": [
+      "copa de vino"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "talheres",
+    "es": [
+      "cubiertos"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "tesoura",
+    "es": [
+      "tijera"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "tigela",
+    "es": [
+      "bol"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "toalha de mesa",
+    "es": [
+      "mantel"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "torradeira",
+    "es": [
+      "tostadora"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "travessa",
+    "es": [
+      "fuente"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "vidro para tempero",
+    "es": [
+      "tarro de especias"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "xícara",
+    "es": [
+      "taza"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "yogurteira",
+    "es": [
+      "yogurtera"
+    ],
+    "cat": "utensílios",
+    "dif": 3
+  },
+  {
+    "pt": "abridor de lata",
+    "es": [
+      "abrelatas"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "bandeja",
+    "es": [
+      "bandeja"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "bowl de vidro",
+    "es": [
+      "bol de vidrio"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "coador de café",
+    "es": [
+      "filtro de café"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "colher de pau",
+    "es": [
+      "cuchara de madera"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "colher de sobremesa",
+    "es": [
+      "cucharita"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "colher medidora",
+    "es": [
+      "cuchara medidora"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "congelador",
+    "es": [
+      "freezer"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "cortador de legumes",
+    "es": [
+      "cortador de verduras"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "espremedor",
+    "es": [
+      "exprimidor"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "faca de chef",
+    "es": [
+      "cuchillo de chef"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "faca de pão",
+    "es": [
+      "cuchillo para pan"
+    ],
+    "cat": "utensílios",
+    "dif": 1
+  },
+  {
+    "pt": "frigideira antiaderente",
+    "es": [
+      "sartén antiadherente"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "funil",
+    "es": [
+      "embudo"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "medidor de líquidos",
+    "es": [
+      "jarra medidora"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "palha de aço",
+    "es": [
+      "virulana",
+      "esponja de acero"
+    ],
+    "cat": "utensílios",
+    "dif": 3
+  },
+  {
+    "pt": "pano de prato",
+    "es": [
+      "repasador"
+    ],
+    "cat": "utensílios",
+    "dif": 3
+  },
+  {
+    "pt": "pincel de cozinha",
+    "es": [
+      "pincel de cocina"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "porta-temperos",
+    "es": [
+      "especiero"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "termômetro culinário",
+    "es": [
+      "termómetro de cocina"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "açougue",
+    "es": [
+      "carnicería"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "açougueiro",
+    "es": [
+      "carnicero"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "aplicativo de delivery",
+    "es": [
+      "app de delivery"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "atacado",
+    "es": [
+      "mayorista"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "auxiliar de cozinha",
+    "es": [
+      "ayudante de cocina"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "caixa",
+    "es": [
+      "caja"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "caixa registradora",
+    "es": [
+      "caja registradora"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "cardápio",
+    "es": [
+      "menú"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "carrinho",
+    "es": [
+      "changuito"
+    ],
+    "cat": "mercado",
+    "dif": 3
+  },
+  {
+    "pt": "cesta",
+    "es": [
+      "canasta"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "chef",
+    "es": [
+      "chef"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "cliente",
+    "es": [
+      "cliente"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "confeiteiro",
+    "es": [
+      "pastelero"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "congelador vertical",
+    "es": [
+      "freezer vertical"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "conta",
+    "es": [
+      "cuenta"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "cozinheiro",
+    "es": [
+      "cocinero"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "cupom de desconto",
+    "es": [
+      "cupón de descuento"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "delivery",
+    "es": [
+      "delivery"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "desconto",
+    "es": [
+      "descuento"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "embalagem",
+    "es": [
+      "envase"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "embalagem econômica",
+    "es": [
+      "envase económico"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "entrega agendada",
+    "es": [
+      "entrega programada"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "entrega grátis",
+    "es": [
+      "envío gratis"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "excelente atendimento",
+    "es": [
+      "excelente atención"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "feira livre",
+    "es": [
+      "feria"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "fila",
+    "es": [
+      "fila"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "fila de espera",
+    "es": [
+      "lista de espera"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "garçom",
+    "es": [
+      "mozo"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "garçonete",
+    "es": [
+      "moza"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "gorjeta",
+    "es": [
+      "propina"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "hortifruti",
+    "es": [
+      "verdulería"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "ilha de congelados",
+    "es": [
+      "isla de congelados"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "laticínios",
+    "es": [
+      "lácteos"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "mercado",
+    "es": [
+      "mercado"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "mesa ocupada",
+    "es": [
+      "mesa ocupada"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "mesa para dois",
+    "es": [
+      "mesa para dos"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "motoboy",
+    "es": [
+      "repartidor"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "oferta do dia",
+    "es": [
+      "oferta del día"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "padaria",
+    "es": [
+      "panadería"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "padeiro",
+    "es": [
+      "panadero"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "pagamento na entrega",
+    "es": [
+      "pago contra entrega"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "pedido",
+    "es": [
+      "pedido"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "pedido atrasado",
+    "es": [
+      "pedido atrasado"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "pedido em preparo",
+    "es": [
+      "pedido en preparación"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "pedido saiu para entrega",
+    "es": [
+      "pedido en camino"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "preço por quilo",
+    "es": [
+      "precio por kilo"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "produto a granel",
+    "es": [
+      "producto a granel"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "produto importado",
+    "es": [
+      "producto importado"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "produto nacional",
+    "es": [
+      "producto nacional"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "produto orgânico",
+    "es": [
+      "producto orgánico"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "promoção",
+    "es": [
+      "oferta"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "reposição",
+    "es": [
+      "reposición"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "reserva",
+    "es": [
+      "reserva"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "reserva confirmada",
+    "es": [
+      "reserva confirmada"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "retirar no balcão",
+    "es": [
+      "retirar en mostrador"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "sacola reutilizável",
+    "es": [
+      "bolsa reutilizable"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "supermercado",
+    "es": [
+      "supermercado"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "taxa de entrega",
+    "es": [
+      "costo de envío"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "troco",
+    "es": [
+      "vuelto"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "validade",
+    "es": [
+      "vencimiento"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "validade vencida",
+    "es": [
+      "vencido"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "varejo",
+    "es": [
+      "minorista"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "atendente",
+    "es": [
+      "empleado"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "balcão de frios",
+    "es": [
+      "mostrador de fiambres"
+    ],
+    "cat": "mercado",
+    "dif": 3
+  },
+  {
+    "pt": "bandeja de isopor",
+    "es": [
+      "bandeja de telgopor"
+    ],
+    "cat": "mercado",
+    "dif": 3
+  },
+  {
+    "pt": "bebida gelada",
+    "es": [
+      "bebida fría"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "boleto",
+    "es": [
+      "boleta"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "cartão fidelidade",
+    "es": [
+      "tarjeta de puntos"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "cesta básica",
+    "es": [
+      "canasta básica"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "comida pronta",
+    "es": [
+      "comida lista"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "data de fabricação",
+    "es": [
+      "fecha de elaboración"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "desconto no cartão",
+    "es": [
+      "descuento con tarjeta"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "devolução",
+    "es": [
+      "devolución"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "estoque esgotado",
+    "es": [
+      "agotado"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "fiambre",
+    "es": [
+      "fiambre"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "gôndola",
+    "es": [
+      "góndola"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "loja de conveniência",
+    "es": [
+      "kiosco"
+    ],
+    "cat": "mercado",
+    "dif": 3
+  },
+  {
+    "pt": "mercearia",
+    "es": [
+      "almacén"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "nota fiscal",
+    "es": [
+      "factura"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "pedir o troco",
+    "es": [
+      "pedir el vuelto"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "produto vencido",
+    "es": [
+      "producto vencido"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "seção de laticínios",
+    "es": [
+      "sección de lácteos"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "A conta, por favor",
+    "es": [
+      "La cuenta, por favor"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Aceita cartão?",
+    "es": [
+      "¿Aceptan tarjeta?"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Aceita dólares?",
+    "es": [
+      "¿Aceptan dólares?"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Bom apetite",
+    "es": [
+      "Buen provecho"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Cara / amigo",
+    "es": [
+      "Che"
+    ],
+    "cat": "expressões",
+    "dif": 2
+  },
+  {
+    "pt": "Com bastante queijo",
+    "es": [
+      "Con mucho queso"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Está delicioso",
+    "es": [
+      "Está riquísimo"
+    ],
+    "cat": "expressões",
+    "dif": 2
+  },
+  {
+    "pt": "Estou com fome",
+    "es": [
+      "Tengo hambre"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Estou satisfeito",
+    "es": [
+      "Estoy satisfecho"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Excelente",
+    "es": [
+      "De diez"
+    ],
+    "cat": "expressões",
+    "dif": 3
+  },
+  {
+    "pt": "Isso está incrível",
+    "es": [
+      "Esto está zarpado"
+    ],
+    "cat": "expressões",
+    "dif": 3
+  },
+  {
+    "pt": "Mais gelo",
+    "es": [
+      "Más hielo"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Mais guardanapos",
+    "es": [
+      "Más servilletas"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Mais uma cerveja",
+    "es": [
+      "Otra birra"
+    ],
+    "cat": "expressões",
+    "dif": 2
+  },
+  {
+    "pt": "Muito bom",
+    "es": [
+      "Re bueno"
+    ],
+    "cat": "expressões",
+    "dif": 3
+  },
+  {
+    "pt": "O que você recomenda?",
+    "es": [
+      "¿Qué recomienda?"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Ok",
+    "es": [
+      "Dale"
+    ],
+    "cat": "expressões",
+    "dif": 3
+  },
+  {
+    "pt": "Onde fica o banheiro?",
+    "es": [
+      "¿Dónde queda el baño?"
+    ],
+    "cat": "expressões",
+    "dif": 2
+  },
+  {
+    "pt": "Para viagem",
+    "es": [
+      "Para llevar"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Pode repetir?",
+    "es": [
+      "¿Puede repetir?"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Quanto custa?",
+    "es": [
+      "¿Cuánto cuesta?"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Quero experimentar",
+    "es": [
+      "Quiero probar"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Saúde!",
+    "es": [
+      "¡Salud!"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Sem carne",
+    "es": [
+      "Sin carne"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Sem cebola",
+    "es": [
+      "Sin cebolla"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Sem glúten",
+    "es": [
+      "Sin gluten"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Sem lactose",
+    "es": [
+      "Sin lactosa"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Sem pimenta",
+    "es": [
+      "Sin pimienta"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Tem delivery?",
+    "es": [
+      "¿Tienen delivery?"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Tem wi-fi?",
+    "es": [
+      "¿Hay wifi?"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Traga o cardápio",
+    "es": [
+      "Traiga el menú"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Um saco de pipoca",
+    "es": [
+      "Un paquete de pochoclo"
+    ],
+    "cat": "expressões",
+    "dif": 3
+  },
+  {
+    "pt": "Uma casquinha com duas bolas",
+    "es": [
+      "Dos bochas en cucurucho"
+    ],
+    "cat": "expressões",
+    "dif": 3
+  },
+  {
+    "pt": "Vamos comer?",
+    "es": [
+      "¿Vamos a comer?"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Vou comer aqui",
+    "es": [
+      "Voy a comer acá"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Vou pagar no crédito",
+    "es": [
+      "Voy a pagar con crédito"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Vou pagar no débito",
+    "es": [
+      "Voy a pagar con débito"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Acabou o estoque",
+    "es": [
+      "Se agotó el stock"
+    ],
+    "cat": "expressões",
+    "dif": 2
+  },
+  {
+    "pt": "Aqui está",
+    "es": [
+      "Acá está"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Cadê o garçom?",
+    "es": [
+      "¿Dónde está el mozo?"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Com licença",
+    "es": [
+      "Con permiso"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Desculpe a demora",
+    "es": [
+      "Disculpá la demora"
+    ],
+    "cat": "expressões",
+    "dif": 2
+  },
+  {
+    "pt": "E aí, tudo bem?",
+    "es": [
+      "¿Todo bien?"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Espera um segundo",
+    "es": [
+      "Esperá un segundo"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Eu quero",
+    "es": [
+      "Yo quiero"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Faz favor",
+    "es": [
+      "Por favor"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Já escolheu?",
+    "es": [
+      "¿Ya eligió?"
+    ],
+    "cat": "expressões",
+    "dif": 2
+  },
+  {
+    "pt": "Me traz mais pão",
+    "es": [
+      "Traeme más pan"
+    ],
+    "cat": "expressões",
+    "dif": 2
+  },
+  {
+    "pt": "Não tem pimenta?",
+    "es": [
+      "¿No tiene pimienta?"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Para mim está bom",
+    "es": [
+      "Para mí está bien"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Posso ver o cardápio?",
+    "es": [
+      "¿Puedo ver el menú?"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Que horas fecha?",
+    "es": [
+      "¿A qué hora cierra?"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Quero repetir",
+    "es": [
+      "Quiero repetir"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Tem mesa livre?",
+    "es": [
+      "¿Hay mesa libre?"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Troca por outro?",
+    "es": [
+      "¿Lo cambia por otro?"
+    ],
+    "cat": "expressões",
+    "dif": 2
+  },
+  {
+    "pt": "Vou querer sobremesa",
+    "es": [
+      "Voy a querer postre"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "borracha",
+    "es": [
+      "goma"
+    ],
+    "cat": "falsas amigas",
+    "dif": 3,
+    "example": "No encontré la <em>goma</em> para borrar el dibujo."
+  },
+  {
+    "pt": "embaraçado",
+    "es": [
+      "avergonzado"
+    ],
+    "cat": "falsas amigas",
+    "dif": 3,
+    "example": "Me puse muy <em>avergonzado</em> cuando derramé el vino."
+  },
+  {
+    "pt": "polvo (animal)",
+    "es": [
+      "pulpo"
+    ],
+    "cat": "falsas amigas",
+    "dif": 3,
+    "example": "El <em>pulpo</em> a la parrilla es exquisito."
+  },
+  {
+    "pt": "caliente (quente)",
+    "es": [
+      "caliente"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "¡Cuidado, el plato está muy <em>caliente</em>!"
+  },
+  {
+    "pt": "borracho (bêbado)",
+    "es": [
+      "borracho"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Ese cliente llegó <em>borracho</em> al restaurante."
+  },
+  {
+    "pt": "embarazada (grávida)",
+    "es": [
+      "embarazada"
+    ],
+    "cat": "falsas amigas",
+    "dif": 3,
+    "example": "La cocinera está <em>embarazada</em> de seis meses."
+  },
+  {
+    "pt": "tirar (retirar)",
+    "es": [
+      "sacar"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "¿Podés <em>sacar</em> los platos de la mesa?"
+  },
+  {
+    "pt": "vaso sanitário",
+    "es": [
+      "inodoro"
+    ],
+    "cat": "falsas amigas",
+    "dif": 3,
+    "example": "El <em>inodoro</em> del baño del restaurante está sucio."
+  },
+  {
+    "pt": "colar (pescoço)",
+    "es": [
+      "collar"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "La moza usa un <em>collar</em> de plata."
+  },
+  {
+    "pt": "largo (amplo)",
+    "es": [
+      "ancho",
+      "amplio"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "El salón es muy <em>ancho</em>, entran muchas mesas."
+  },
+  {
+    "pt": "policia",
+    "es": [
+      "policía"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "La <em>policía</em> cerró el local por irregularidades."
+  },
+  {
+    "pt": "parentes",
+    "es": [
+      "familiares"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Vine a comer con mis <em>familiares</em>."
+  },
+  {
+    "pt": "propina (suborno)",
+    "es": [
+      "soborno"
+    ],
+    "cat": "falsas amigas",
+    "dif": 3,
+    "example": "Lo detuvieron por intentar un <em>soborno</em>."
+  },
+  {
+    "pt": "exquisito (delicioso em ES)",
+    "es": [
+      "exquisito"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Este bife está absolutamente <em>exquisito</em>."
+  },
+  {
+    "pt": "confiança",
+    "es": [
+      "confianza"
+    ],
+    "cat": "falsas amigas",
+    "dif": 1,
+    "example": "El chef tiene mucha <em>confianza</em> en su receta."
+  },
+  {
+    "pt": "polvo (pó)",
+    "es": [
+      "polvo"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Añadí <em>polvo</em> de cacao al postre."
+  },
+  {
+    "pt": "maçaneta",
+    "es": [
+      "manija"
+    ],
+    "cat": "falsas amigas",
+    "dif": 3,
+    "example": "La <em>manija</em> de la heladera está rota."
+  },
+  {
+    "pt": "aperitivo (entrada fria)",
+    "es": [
+      "entrada fría"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Pedimos una <em>entrada fría</em> de fiambres para empezar."
+  },
+  {
+    "pt": "bicho (inseto)",
+    "es": [
+      "bicho"
+    ],
+    "cat": "falsas amigas",
+    "dif": 1,
+    "example": "Encontraron un <em>bicho</em> en la ensalada."
+  },
+  {
+    "pt": "biscoito (galleta)",
+    "es": [
+      "galletita"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Trajo unas <em>galletitas</em> para el café."
+  },
+  {
+    "pt": "borrar (apagar)",
+    "es": [
+      "borrar"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Pudo <em>borrar</em> la mancha de la mesa."
+  },
+  {
+    "pt": "cana (prisão em PT)",
+    "es": [
+      "cana"
+    ],
+    "cat": "falsas amigas",
+    "dif": 3,
+    "example": "Le cayó la <em>cana</em> después de la pelea en el bar."
+  },
+  {
+    "pt": "cargo (encargo)",
+    "es": [
+      "cargo"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "El <em>cargo</em> de chef ejecutivo es muy exigente."
+  },
+  {
+    "pt": "carro (carrinho)",
+    "es": [
+      "changuito"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Llené el <em>changuito</em> en el super."
+  },
+  {
+    "pt": "cola (fila)",
+    "es": [
+      "cola"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Hay mucha <em>cola</em> en la caja del supermercado."
+  },
+  {
+    "pt": "embaraçoso",
+    "es": [
+      "vergonzoso"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Fue muy <em>vergonzoso</em> que se cayera la bandeja."
+  },
+  {
+    "pt": "esquisito (estranho em PT)",
+    "es": [
+      "raro"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Ese plato tiene un sabor muy <em>raro</em>."
+  },
+  {
+    "pt": "graça (humor)",
+    "es": [
+      "gracia"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "El mozo tenía mucha <em>gracia</em>, nos hizo reír toda la noche."
+  },
+  {
+    "pt": "largo (rua)",
+    "es": [
+      "plaza"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "El restaurante está frente a la <em>plaza</em>."
+  },
+  {
+    "pt": "legal (ótimo em PT)",
+    "es": [
+      "copado"
+    ],
+    "cat": "falsas amigas",
+    "dif": 3,
+    "example": "El lugar nuevo está muy <em>copado</em>, te va a gustar."
+  },
+  {
+    "pt": "loja",
+    "es": [
+      "local"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Abrieron un <em>local</em> nuevo de sushi en Palermo."
+  },
+  {
+    "pt": "óleo (azeite de oliva em PT)",
+    "es": [
+      "aceite de oliva"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Rociá con <em>aceite de oliva</em> antes de servir."
+  },
+  {
+    "pt": "pegar (tomar)",
+    "es": [
+      "agarrar"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Agarrá el plato con las dos manos, está caliente."
+  },
+  {
+    "pt": "sobrenome",
+    "es": [
+      "apellido"
+    ],
+    "cat": "falsas amigas",
+    "dif": 1,
+    "example": "¿Me dice su <em>apellido</em> para la reserva?"
+  },
+  {
+    "pt": "tarde (vespertino)",
+    "es": [
+      "tarde"
+    ],
+    "cat": "falsas amigas",
+    "dif": 1,
+    "example": "El almuerzo es a las dos de la <em>tarde</em>."
+  },
+  {
+    "pt": "salgado",
+    "es": [
+      "salado"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "doce",
+    "es": [
+      "dulce"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "picante",
+    "es": [
+      "picante"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "crocante",
+    "es": [
+      "crocante"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "macio",
+    "es": [
+      "tierno"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "gratinado",
+    "es": [
+      "gratinado"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "refogado",
+    "es": [
+      "rehogado"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "caramelizado",
+    "es": [
+      "caramelizado"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "aferventado",
+    "es": [
+      "blanqueado"
+    ],
+    "cat": "alimentos",
+    "dif": 3
+  },
+  {
+    "pt": "salada",
+    "es": [
+      "ensalada"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "tábua de frios",
+    "es": [
+      "tabla de fiambres"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "salada mista",
+    "es": [
+      "ensalada mixta"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "vinagrete (molho)",
+    "es": [
+      "salsa criolla",
+      "vinagreta"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "caldo de frango",
+    "es": [
+      "caldo de pollo"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "caldo de carne",
+    "es": [
+      "caldo de carne"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "porção para dois",
+    "es": [
+      "porción para dos"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "meia porção",
+    "es": [
+      "media porción"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "para compartilhar",
+    "es": [
+      "para compartir"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "prato frio",
+    "es": [
+      "plato frío"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "prato quente",
+    "es": [
+      "plato caliente"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "prato vegano",
+    "es": [
+      "plato vegano"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "prato sem glúten",
+    "es": [
+      "plato sin gluten"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "prato típico",
+    "es": [
+      "plato típico"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "menu executivo",
+    "es": [
+      "menú ejecutivo"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "couvert",
+    "es": [
+      "cubierto"
+    ],
+    "cat": "alimentos",
+    "dif": 3
+  },
+  {
+    "pt": "condimento",
+    "es": [
+      "condimento"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "especiaria",
+    "es": [
+      "especia"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "ervas frescas",
+    "es": [
+      "hierbas frescas"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "escaldado",
+    "es": [
+      "escaldado"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "sal grosso",
+    "es": [
+      "sal gruesa"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "azeite extravirgem",
+    "es": [
+      "aceite de oliva extra virgen"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "suculento",
+    "es": [
+      "jugoso"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "cardápio degustação",
+    "es": [
+      "menú degustación"
+    ],
+    "cat": "alimentos",
+    "dif": 3
+  },
+  {
+    "pt": "crouton",
+    "es": [
+      "crutón"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "salada caesar",
+    "es": [
+      "ensalada caesar"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "queijo fundido",
+    "es": [
+      "queso fundido"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "prato sem lactose",
+    "es": [
+      "plato sin lactosa"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "cozimento lento",
+    "es": [
+      "cocción lenta"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "carne desossada",
+    "es": [
+      "carne deshuesada"
+    ],
+    "cat": "alimentos",
+    "dif": 2
+  },
+  {
+    "pt": "redução",
+    "es": [
+      "reducción"
+    ],
+    "cat": "alimentos",
+    "dif": 3
+  },
+  {
+    "pt": "vitamina de fruta",
+    "es": [
+      "licuado de fruta"
+    ],
+    "cat": "bebidas",
+    "dif": 3
+  },
+  {
+    "pt": "suco de laranja",
+    "es": [
+      "jugo de naranja"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "suco de maçã",
+    "es": [
+      "jugo de manzana"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "suco de limão",
+    "es": [
+      "jugo de limón"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "suco de uva",
+    "es": [
+      "jugo de uva"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "água tônica",
+    "es": [
+      "agua tónica"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "leite com barra de chocolate",
+    "es": [
+      "submarino"
+    ],
+    "cat": "bebidas",
+    "dif": 3
+  },
+  {
+    "pt": "tereré",
+    "es": [
+      "tereré"
+    ],
+    "cat": "bebidas",
+    "dif": 2
+  },
+  {
+    "pt": "cerveja sem álcool",
+    "es": [
+      "cerveza sin alcohol"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "vinho da casa",
+    "es": [
+      "vino de la casa"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "café coado",
+    "es": [
+      "café de filtro"
+    ],
+    "cat": "bebidas",
+    "dif": 2
+  },
+  {
+    "pt": "café curto",
+    "es": [
+      "café corto"
+    ],
+    "cat": "bebidas",
+    "dif": 2
+  },
+  {
+    "pt": "café longo",
+    "es": [
+      "café largo"
+    ],
+    "cat": "bebidas",
+    "dif": 2
+  },
+  {
+    "pt": "cuba libre",
+    "es": [
+      "cuba libre"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "negroni",
+    "es": [
+      "negroni"
+    ],
+    "cat": "bebidas",
+    "dif": 2
+  },
+  {
+    "pt": "bebida quente",
+    "es": [
+      "bebida caliente"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "leite quente",
+    "es": [
+      "leche caliente"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "bebida alcoólica",
+    "es": [
+      "bebida alcohólica"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "long drink",
+    "es": [
+      "trago largo"
+    ],
+    "cat": "bebidas",
+    "dif": 2
+  },
+  {
+    "pt": "cerveja de trigo",
+    "es": [
+      "cerveza de trigo"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "gancia",
+    "es": [
+      "gancia"
+    ],
+    "cat": "bebidas",
+    "dif": 2
+  },
+  {
+    "pt": "aperol spritz",
+    "es": [
+      "aperol spritz"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "vinho quente",
+    "es": [
+      "vino caliente"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "ponche de frutas",
+    "es": [
+      "ponche de frutas"
+    ],
+    "cat": "bebidas",
+    "dif": 2
+  },
+  {
+    "pt": "infusão de ervas",
+    "es": [
+      "infusión de hierbas"
+    ],
+    "cat": "bebidas",
+    "dif": 2
+  },
+  {
+    "pt": "mojito",
+    "es": [
+      "mojito"
+    ],
+    "cat": "bebidas",
+    "dif": 1
+  },
+  {
+    "pt": "ovo frito",
+    "es": [
+      "huevo frito"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "ovo mexido",
+    "es": [
+      "huevo revuelto"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "ovo cozido",
+    "es": [
+      "huevo duro"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "ovo pochê",
+    "es": [
+      "huevo poché"
+    ],
+    "cat": "carnes",
+    "dif": 2
+  },
+  {
+    "pt": "filé de peixe",
+    "es": [
+      "filete de pescado"
+    ],
+    "cat": "carnes",
+    "dif": 1
+  },
+  {
+    "pt": "toranja",
+    "es": [
+      "pomelo"
+    ],
+    "cat": "frutas",
+    "dif": 3
+  },
+  {
+    "pt": "lima",
+    "es": [
+      "lima"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "carambola",
+    "es": [
+      "carambola"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "graviola",
+    "es": [
+      "guanábana"
+    ],
+    "cat": "frutas",
+    "dif": 3
+  },
+  {
+    "pt": "jabuticaba",
+    "es": [
+      "jabuticaba"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "marmelo",
+    "es": [
+      "membrillo"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "figo da índia",
+    "es": [
+      "tuna"
+    ],
+    "cat": "frutas",
+    "dif": 3
+  },
+  {
+    "pt": "cereja silvestre",
+    "es": [
+      "guinda"
+    ],
+    "cat": "frutas",
+    "dif": 3
+  },
+  {
+    "pt": "noz pecã",
+    "es": [
+      "nuez pecan"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "noz de macadâmia",
+    "es": [
+      "nuez de macadamia"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "polpa de fruta",
+    "es": [
+      "pulpa de fruta"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "pêssego em calda",
+    "es": [
+      "durazno en almíbar"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "uva sem semente",
+    "es": [
+      "uva sin semillas"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "suco de abacaxi",
+    "es": [
+      "jugo de ananá"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "mix de frutas secas",
+    "es": [
+      "mix de frutas secas"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "banana prata",
+    "es": [
+      "banana chica"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "maçã verde",
+    "es": [
+      "manzana verde"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "maçã vermelha",
+    "es": [
+      "manzana roja"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "pera williams",
+    "es": [
+      "pera williams"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "amora preta",
+    "es": [
+      "mora negra"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "frutas tropicais",
+    "es": [
+      "frutas tropicales"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "frutas cristalizadas",
+    "es": [
+      "frutas abrillantadas"
+    ],
+    "cat": "frutas",
+    "dif": 3
+  },
+  {
+    "pt": "geleia de frutas",
+    "es": [
+      "mermelada de frutas"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "cupuaçu",
+    "es": [
+      "cupuazú"
+    ],
+    "cat": "frutas",
+    "dif": 3
+  },
+  {
+    "pt": "laranja-pera",
+    "es": [
+      "naranja pera"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "caju torrado",
+    "es": [
+      "anacardo tostado"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "uva moscatel",
+    "es": [
+      "uva moscatel"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "damasco seco",
+    "es": [
+      "damasco seco"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "pinhão assado",
+    "es": [
+      "piñón asado"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "framboesa congelada",
+    "es": [
+      "frambuesa congelada"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "manga em fatias",
+    "es": [
+      "mango en rodajas"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "maracujá azedo",
+    "es": [
+      "maracuyá ácido"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "goiabada",
+    "es": [
+      "dulce de guayaba",
+      "pasta de guayaba"
+    ],
+    "cat": "frutas",
+    "dif": 3
+  },
+  {
+    "pt": "compota de frutas",
+    "es": [
+      "compota de frutas"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "fruta do conde",
+    "es": [
+      "chirimoya"
+    ],
+    "cat": "frutas",
+    "dif": 3
+  },
+  {
+    "pt": "açaí",
+    "es": [
+      "açaí"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "castanha do pará",
+    "es": [
+      "nuez de Brasil",
+      "castaña de Brasil"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "melancia gelada",
+    "es": [
+      "sandía fría"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "abacaxi grelhado",
+    "es": [
+      "ananá a la parrilla"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "kiwi fatiado",
+    "es": [
+      "kiwi en rodajas"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "banana caramelizada",
+    "es": [
+      "banana caramelizada"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "mix de berries",
+    "es": [
+      "mix de berries"
+    ],
+    "cat": "frutas",
+    "dif": 1
+  },
+  {
+    "pt": "lima taiti",
+    "es": [
+      "lima tahití"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "melão cantaloupe",
+    "es": [
+      "melón cantaloupe"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "toranja gelada",
+    "es": [
+      "pomelo frío"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "pão doce",
+    "es": [
+      "pan dulce"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "pão de centeio",
+    "es": [
+      "pan de centeno"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "pão sírio",
+    "es": [
+      "pan árabe"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "pão sem glúten",
+    "es": [
+      "pan sin gluten"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "bolo de chocolate",
+    "es": [
+      "torta de chocolate"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "bolo de cenoura",
+    "es": [
+      "torta de zanahoria"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "bolo de banana",
+    "es": [
+      "torta de banana"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "creme de confeiteiro",
+    "es": [
+      "crema pastelera"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "creme de manteiga",
+    "es": [
+      "crema de manteca"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "farinha integral",
+    "es": [
+      "harina integral"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "farinha de trigo",
+    "es": [
+      "harina de trigo"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "torta de limão",
+    "es": [
+      "tarta de limón"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "torta de maçã",
+    "es": [
+      "tarta de manzana"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "massa folhada",
+    "es": [
+      "masa de hojaldre"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "massa podre",
+    "es": [
+      "masa quebrada"
+    ],
+    "cat": "padaria",
+    "dif": 3
+  },
+  {
+    "pt": "merengue italiano",
+    "es": [
+      "merengue italiano"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "massa de pizza",
+    "es": [
+      "masa de pizza"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "glacê",
+    "es": [
+      "glasé"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "fondant",
+    "es": [
+      "fondant"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "mini torta",
+    "es": [
+      "tortita"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "pão de leite",
+    "es": [
+      "pan de leche"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "cobertura de açúcar",
+    "es": [
+      "cobertura de azúcar"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "torta de ricota",
+    "es": [
+      "tarta de ricota"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "pão ciabatta",
+    "es": [
+      "ciabatta"
+    ],
+    "cat": "padaria",
+    "dif": 1
+  },
+  {
+    "pt": "empanada frita de maçã",
+    "es": [
+      "empanada frita de manzana"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "canhão recheado",
+    "es": [
+      "cañón relleno"
+    ],
+    "cat": "padaria",
+    "dif": 2
+  },
+  {
+    "pt": "pizza napolitana",
+    "es": [
+      "pizza napolitana"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "pizza al taglio",
+    "es": [
+      "pizza al corte"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "mini pizza",
+    "es": [
+      "pizzeta"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "pizza de presunto",
+    "es": [
+      "pizza de jamón"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "pizza de frango",
+    "es": [
+      "pizza de pollo"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "pão de alho",
+    "es": [
+      "pan al ajo"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "empanada de milho",
+    "es": [
+      "empanada de choclo"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "empanada de frango",
+    "es": [
+      "empanada de pollo"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "empanada de espinafre",
+    "es": [
+      "empanada de espinaca"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "medialunas de manteiga",
+    "es": [
+      "medialunas de manteca"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "clube sanduíche",
+    "es": [
+      "club sándwich"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "hambúrguer duplo",
+    "es": [
+      "hamburguesa doble"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "hambúrguer simples",
+    "es": [
+      "hamburguesa simple"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "pão de hambúrguer",
+    "es": [
+      "pan de hamburguesa"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "frango frito",
+    "es": [
+      "pollo frito"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "batata palito",
+    "es": [
+      "papas bastón"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "batata ondulada",
+    "es": [
+      "papas onduladas"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "batata recheada",
+    "es": [
+      "papa rellena"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "mostarda com mel",
+    "es": [
+      "mostaza miel"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "sorvete na taça",
+    "es": [
+      "helado en copa"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "crepe doce",
+    "es": [
+      "crepe dulce"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "crepe salgado",
+    "es": [
+      "crepe salado"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "quibe frito",
+    "es": [
+      "keppe frito",
+      "kebbe frito"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "lombo no pão",
+    "es": [
+      "sánguche de carré"
+    ],
+    "cat": "fast-food",
+    "dif": 3
+  },
+  {
+    "pt": "pizza brotinho",
+    "es": [
+      "pizza chica"
+    ],
+    "cat": "fast-food",
+    "dif": 3
+  },
+  {
+    "pt": "tostada com manteiga",
+    "es": [
+      "tostada con manteca"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "salgado de forno",
+    "es": [
+      "saladito al horno"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "cachorro-quente simples",
+    "es": [
+      "pancho simple"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "hambúrguer vegetariano",
+    "es": [
+      "hamburguesa vegetariana"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "pão na chapa",
+    "es": [
+      "pan a la plancha"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "pizza por quilo",
+    "es": [
+      "pizza por peso"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "sobremesa do dia",
+    "es": [
+      "postre del día"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "alitas ao forno",
+    "es": [
+      "alitas al horno"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "porção mista",
+    "es": [
+      "picada mixta"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "provoleta no pão",
+    "es": [
+      "provoleta al pan"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "milanesa completa",
+    "es": [
+      "milanesa completa"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "batata com cheddar",
+    "es": [
+      "papas con cheddar"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "pastelzinho",
+    "es": [
+      "pastelito"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "porção de frango",
+    "es": [
+      "plato de pollo"
+    ],
+    "cat": "fast-food",
+    "dif": 1
+  },
+  {
+    "pt": "pimentão amarelo",
+    "es": [
+      "morrón amarillo"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "pimentão vermelho",
+    "es": [
+      "morrón rojo"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "tomate pelado",
+    "es": [
+      "tomate pelado"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "tomate seco",
+    "es": [
+      "tomate seco"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "cebola roxa",
+    "es": [
+      "cebolla morada"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "vagem",
+    "es": [
+      "chaucha"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "alcaparra",
+    "es": [
+      "alcaparra"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "rabanete",
+    "es": [
+      "rábano"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "cebolinha verde",
+    "es": [
+      "cebolla de verdeo"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "tomate-pera",
+    "es": [
+      "tomate perita"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "abobrinha grelhada",
+    "es": [
+      "zucchini a la parrilla"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "alho assado",
+    "es": [
+      "ajo asado"
+    ],
+    "cat": "verduras",
+    "dif": 1
+  },
+  {
+    "pt": "salsa de iogurte",
+    "es": [
+      "salsa de yogur"
+    ],
+    "cat": "verduras",
+    "dif": 2
+  },
+  {
+    "pt": "porta-guardanapos",
+    "es": [
+      "servilletero"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "cesto de pão",
+    "es": [
+      "canasto de pan"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "garrafão de água",
+    "es": [
+      "bidón de agua"
+    ],
+    "cat": "utensílios",
+    "dif": 2
+  },
+  {
+    "pt": "peixaria",
+    "es": [
+      "pescadería"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "vinoteca",
+    "es": [
+      "vinoteca"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "casa de massas",
+    "es": [
+      "casa de pastas"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "comanda",
+    "es": [
+      "comanda"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "rotisseria",
+    "es": [
+      "rotisería"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "adega",
+    "es": [
+      "bodega"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "sorveteria",
+    "es": [
+      "heladería"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "cantina",
+    "es": [
+      "cantina"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "restaurante",
+    "es": [
+      "restaurante"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "boteco",
+    "es": [
+      "bodegón"
+    ],
+    "cat": "mercado",
+    "dif": 3
+  },
+  {
+    "pt": "churrascaria",
+    "es": [
+      "parrilla"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "embalagem a vácuo",
+    "es": [
+      "envasado al vacío"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "self-service",
+    "es": [
+      "autoservicio"
+    ],
+    "cat": "mercado",
+    "dif": 2
+  },
+  {
+    "pt": "produto fresco",
+    "es": [
+      "producto fresco"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "produto congelado",
+    "es": [
+      "producto congelado"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "meio quilo",
+    "es": [
+      "medio kilo"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "quilo e meio",
+    "es": [
+      "kilo y medio"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "kilo",
+    "es": [
+      "kilo"
+    ],
+    "cat": "mercado",
+    "dif": 1
+  },
+  {
+    "pt": "Tem mesa para quatro?",
+    "es": [
+      "¿Tienen mesa para cuatro?"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Vou pagar em dinheiro",
+    "es": [
+      "Voy a pagar en efectivo"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Dividir a conta",
+    "es": [
+      "Separar la cuenta",
+      "Dividir la cuenta"
+    ],
+    "cat": "expressões",
+    "dif": 2
+  },
+  {
+    "pt": "Tudo junto",
+    "es": [
+      "Todo junto"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Que delícia!",
+    "es": [
+      "¡Qué rico!"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Está frio",
+    "es": [
+      "Está frío"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Pode esquentar?",
+    "es": [
+      "¿Lo podés calentar?"
+    ],
+    "cat": "expressões",
+    "dif": 2
+  },
+  {
+    "pt": "Quero a mesma coisa",
+    "es": [
+      "Quiero lo mismo"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "É para presente",
+    "es": [
+      "Es para regalo"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Quanto tempo de espera?",
+    "es": [
+      "¿Cuánto tiempo de espera?"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Tem fila?",
+    "es": [
+      "¿Hay fila?"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Está aberto?",
+    "es": [
+      "¿Están abiertos?"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Que horas abre?",
+    "es": [
+      "¿A qué hora abren?"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Fazer uma reserva",
+    "es": [
+      "Hacer una reserva"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Para quantas pessoas?",
+    "es": [
+      "¿Para cuántas personas?"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Qual é o prato do dia?",
+    "es": [
+      "¿Cuál es el plato del día?"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Serve até que horas?",
+    "es": [
+      "¿Hasta qué hora sirven?"
+    ],
+    "cat": "expressões",
+    "dif": 2
+  },
+  {
+    "pt": "É muito picante",
+    "es": [
+      "Es muy picante"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Estou com pressa",
+    "es": [
+      "Estoy apurado"
+    ],
+    "cat": "expressões",
+    "dif": 2
+  },
+  {
+    "pt": "Conta separada",
+    "es": [
+      "Cuenta separada"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Uma conta só",
+    "es": [
+      "Una sola cuenta"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Sem açúcar",
+    "es": [
+      "Sin azúcar"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Está muito doce",
+    "es": [
+      "Está muy dulce"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Está muito amargo",
+    "es": [
+      "Está muy amargo"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Quero pedir",
+    "es": [
+      "Quiero pedir"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Vou querer",
+    "es": [
+      "Voy a querer"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Me dá um",
+    "es": [
+      "Dame uno"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Tem opção vegetariana?",
+    "es": [
+      "¿Tienen opción vegetariana?"
+    ],
+    "cat": "expressões",
+    "dif": 2
+  },
+  {
+    "pt": "Tem alguma promoção?",
+    "es": [
+      "¿Tienen alguna oferta?"
+    ],
+    "cat": "expressões",
+    "dif": 2
+  },
+  {
+    "pt": "Sem pressa",
+    "es": [
+      "Sin apuro"
+    ],
+    "cat": "expressões",
+    "dif": 2
+  },
+  {
+    "pt": "Está pronto o pedido?",
+    "es": [
+      "¿Está listo el pedido?"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Pode trazer mais pão?",
+    "es": [
+      "¿Me traés más pan?"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Muito bem feito",
+    "es": [
+      "Muy bien hecho"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Com certeza",
+    "es": [
+      "Por supuesto"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Está na conta",
+    "es": [
+      "Está en la cuenta"
+    ],
+    "cat": "expressões",
+    "dif": 2
+  },
+  {
+    "pt": "Sem presunto",
+    "es": [
+      "Sin jamón"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Com molho à parte",
+    "es": [
+      "Con la salsa aparte"
+    ],
+    "cat": "expressões",
+    "dif": 2
+  },
+  {
+    "pt": "Quero ver a carta de bebidas",
+    "es": [
+      "Quiero ver la carta de tragos"
+    ],
+    "cat": "expressões",
+    "dif": 2
+  },
+  {
+    "pt": "Está muito salgado",
+    "es": [
+      "Está muy salado"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Que bom!",
+    "es": [
+      "¡Qué bueno!"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "Ficamos esperando há muito",
+    "es": [
+      "Llevamos mucho tiempo esperando"
+    ],
+    "cat": "expressões",
+    "dif": 3
+  },
+  {
+    "pt": "Tem algo mais barato?",
+    "es": [
+      "¿Tienen algo más barato?"
+    ],
+    "cat": "expressões",
+    "dif": 2
+  },
+  {
+    "pt": "Sem molho",
+    "es": [
+      "Sin salsa"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "sobremesa (conversa pós-refeição em ES)",
+    "es": [
+      "sobremesa"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Después del asado nos quedamos en la <em>sobremesa</em> hasta la medianoche."
+  },
+  {
+    "pt": "bala (doce)",
+    "es": [
+      "caramelo"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "¿Querés un <em>caramelo</em> de postre?"
+  },
+  {
+    "pt": "copo (vidro para água)",
+    "es": [
+      "vaso"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Traeme un <em>vaso</em> de agua bien fría."
+  },
+  {
+    "pt": "geleia",
+    "es": [
+      "mermelada"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "La <em>mermelada</em> de frambuesa es la mejor del desayuno."
+  },
+  {
+    "pt": "taxa (confundida com 'taza')",
+    "es": [
+      "tasa"
+    ],
+    "cat": "falsas amigas",
+    "dif": 3,
+    "example": "La <em>tasa</em> del delivery cambió este mes."
+  },
+  {
+    "pt": "poltrona",
+    "es": [
+      "sillón"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "El <em>sillón</em> del salón de espera es muy cómodo."
+  },
+  {
+    "pt": "ameixa (não é 'almeja')",
+    "es": [
+      "ciruela"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "La mermelada de <em>ciruela</em> va muy bien con el queso."
+  },
+  {
+    "pt": "vitrine",
+    "es": [
+      "vidriera"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "La <em>vidriera</em> del restaurante muestra los platos del día."
+  },
+  {
+    "pt": "manteca (banha em PT, manteiga em ES-AR)",
+    "es": [
+      "manteca"
+    ],
+    "cat": "falsas amigas",
+    "dif": 3,
+    "example": "Untá las medialunas con <em>manteca</em>, que acá es la mantequilla."
+  },
+  {
+    "pt": "carro (automóvel em PT)",
+    "es": [
+      "auto"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Vine en <em>auto</em> hasta el restaurante."
+  },
+  {
+    "pt": "lagosta (pode ser gafanhoto em ES)",
+    "es": [
+      "langosta"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Pedimos una <em>langosta</em> a la plancha, estaba enorme."
+  },
+  {
+    "pt": "engraçado (não é 'engrasado')",
+    "es": [
+      "gracioso"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "El mozo era muy <em>gracioso</em>, nos hizo reír toda la noche."
+  },
+  {
+    "pt": "azar (má sorte em PT)",
+    "es": [
+      "mala suerte"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "¡Qué <em>mala suerte</em>, no había más asado!"
+  },
+  {
+    "pt": "pão (não confundir com 'paño')",
+    "es": [
+      "pan"
+    ],
+    "cat": "falsas amigas",
+    "dif": 1,
+    "example": "¿Me traés más <em>pan</em>?"
+  },
+  {
+    "pt": "assistir (ver, não 'atender')",
+    "es": [
+      "mirar"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Fui a <em>mirar</em> el partido en el bar del barrio."
+  },
+  {
+    "pt": "calçada",
+    "es": [
+      "vereda"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Las mesas en la <em>vereda</em> son muy buscadas en verano."
+  },
+  {
+    "pt": "apelido (alcunha)",
+    "es": [
+      "apodo"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "El cocinero es conocido por su <em>apodo</em>: el Rey del Asado."
+  },
+  {
+    "pt": "bolacha",
+    "es": [
+      "galletita"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Trajo unas <em>galletitas</em> de manteca con el café."
+  },
+  {
+    "pt": "fato (terno)",
+    "es": [
+      "traje"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "El maître atendía de <em>traje</em> y corbata."
+  },
+  {
+    "pt": "encomenda",
+    "es": [
+      "encargo"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Le hice un <em>encargo</em> al pastelero para el cumpleaños."
+  },
+  {
+    "pt": "quente (não é 'caliente'... é!)",
+    "es": [
+      "caliente"
+    ],
+    "cat": "falsas amigas",
+    "dif": 1,
+    "example": "¡Cuidado, el plato está muy <em>caliente</em>!"
+  },
+  {
+    "pt": "bilhete",
+    "es": [
+      "boleto"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Guardá el <em>boleto</em> del super para el reclamo."
+  },
+  {
+    "pt": "geladeira (não é 'refrigerador')",
+    "es": [
+      "heladera"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Guardá el sobrante en la <em>heladera</em>."
+  },
+  {
+    "pt": "preguiça (fiaca em lunfardo)",
+    "es": [
+      "fiaca"
+    ],
+    "cat": "falsas amigas",
+    "dif": 3,
+    "example": "Tengo mucha <em>fiaca</em> de cocinar, mejor pedimos delivery."
+  },
+  {
+    "pt": "coitado",
+    "es": [
+      "pobrecito"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "<em>Pobrecito</em>, le quemaron la milanesa."
+  },
+  {
+    "pt": "estranho (diferente)",
+    "es": [
+      "raro"
+    ],
+    "cat": "falsas amigas",
+    "dif": 1,
+    "example": "Ese sabor es muy <em>raro</em>, no lo reconozco."
+  },
+  {
+    "pt": "endereço",
+    "es": [
+      "dirección"
+    ],
+    "cat": "falsas amigas",
+    "dif": 1,
+    "example": "¿Me das la <em>dirección</em> del restaurante?"
+  },
+  {
+    "pt": "fechado",
+    "es": [
+      "cerrado"
+    ],
+    "cat": "falsas amigas",
+    "dif": 1,
+    "example": "El local estaba <em>cerrado</em> por reformas."
+  },
+  {
+    "pt": "aberto",
+    "es": [
+      "abierto"
+    ],
+    "cat": "falsas amigas",
+    "dif": 1,
+    "example": "La feria está <em>abierta</em> de lunes a sábado."
+  },
+  {
+    "pt": "gratuito",
+    "es": [
+      "gratis"
+    ],
+    "cat": "falsas amigas",
+    "dif": 1,
+    "example": "El postre es <em>gratis</em> para los cumpleañeros."
+  },
+  {
+    "pt": "lotado",
+    "es": [
+      "a pleno"
+    ],
+    "cat": "falsas amigas",
+    "dif": 3,
+    "example": "El bar estaba <em>a pleno</em> esa noche."
+  },
+  {
+    "pt": "saudade",
+    "es": [
+      "nostalgia"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Tengo <em>nostalgia</em> del asado de mi abuela."
+  },
+  {
+    "pt": "desculpa",
+    "es": [
+      "disculpa"
+    ],
+    "cat": "falsas amigas",
+    "dif": 1,
+    "example": "<em>Disculpá</em>, ¿este plato viene con guarnición?"
+  },
+  {
+    "pt": "franquia (restaurante)",
+    "es": [
+      "franquicia"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Ese local es una <em>franquicia</em> de Estados Unidos."
+  },
+  {
+    "pt": "qualidade",
+    "es": [
+      "calidad"
+    ],
+    "cat": "falsas amigas",
+    "dif": 1,
+    "example": "La <em>calidad</em> de los ingredientes hace la diferencia."
+  },
+  {
+    "pt": "tempero (condimento em PT)",
+    "es": [
+      "condimento"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "El <em>condimento</em> secreto del chef es el pimentón ahumado."
+  },
+  {
+    "pt": "despesa",
+    "es": [
+      "gasto"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "El <em>gasto</em> de la cena fue mayor de lo esperado."
+  },
+  {
+    "pt": "fraqueza",
+    "es": [
+      "debilidad"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Mi <em>debilidad</em> son los postres de dulce de leche."
+  },
+  {
+    "pt": "recibo",
+    "es": [
+      "recibo"
+    ],
+    "cat": "falsas amigas",
+    "dif": 1,
+    "example": "¿Me podría dar el <em>recibo</em> de la compra?"
+  },
+  {
+    "pt": "fome",
+    "es": [
+      "hambre"
+    ],
+    "cat": "falsas amigas",
+    "dif": 1,
+    "example": "Tengo mucha <em>hambre</em>, ¿hay algo rápido?"
+  },
+  {
+    "pt": "sede (de água)",
+    "es": [
+      "sed"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Tengo mucha <em>sed</em>, ¿me traés agua?"
+  },
+  {
+    "pt": "adega",
+    "es": [
+      "bodega"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "La <em>bodega</em> del restaurante tiene más de 300 etiquetas."
+  },
+  {
+    "pt": "cardápio de vinhos",
+    "es": [
+      "carta de vinos"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "¿Me traés la <em>carta de vinos</em>?"
+  },
+  {
+    "pt": "jeito (modo)",
+    "es": [
+      "manera"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Preparado de esa <em>manera</em>, el asado queda perfecto."
+  },
+  {
+    "pt": "lotação (capacidade)",
+    "es": [
+      "capacidad"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "El salón tiene <em>capacidad</em> para cien personas."
+  },
+  {
+    "pt": "viagem (não é 'viaje' de comida)",
+    "es": [
+      "llevar"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "¿Lo querés para <em>llevar</em> o lo comés acá?"
+  },
+  {
+    "pt": "boa (exclamação em PT)",
+    "es": [
+      "genial"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "¡<em>Genial</em>! Justo llegó el pedido."
+  },
+  {
+    "pt": "atravancado (cheio)",
+    "es": [
+      "lleno"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "El restaurante estaba <em>lleno</em>, tuvimos que esperar."
+  },
+  {
+    "pt": "gritar (não é 'gritar'... é igual!)",
+    "es": [
+      "gritar"
+    ],
+    "cat": "falsas amigas",
+    "dif": 1,
+    "example": "No <em>grites</em>, el mozo ya viene."
+  },
+  {
+    "pt": "policial",
+    "es": [
+      "policial"
+    ],
+    "cat": "falsas amigas",
+    "dif": 1,
+    "example": "Una inspección <em>policial</em> cerró el local por irregularidades."
+  },
+  {
+    "pt": "parede",
+    "es": [
+      "pared"
+    ],
+    "cat": "falsas amigas",
+    "dif": 1,
+    "example": "Las <em>paredes</em> del restaurante tienen fotos antiguas de Buenos Aires."
+  },
+  {
+    "pt": "estúdio (apto pequeno)",
+    "es": [
+      "monoambiente"
+    ],
+    "cat": "falsas amigas",
+    "dif": 3,
+    "example": "Vive en un <em>monoambiente</em> a dos cuadras del mercado."
+  },
+  {
+    "pt": "garagem",
+    "es": [
+      "garage"
+    ],
+    "cat": "falsas amigas",
+    "dif": 1,
+    "example": "El restaurante tiene <em>garage</em> para clientes."
+  },
+  {
+    "pt": "cardápio (não é 'cartão')",
+    "es": [
+      "menú"
+    ],
+    "cat": "falsas amigas",
+    "dif": 1,
+    "example": "¿Me traés el <em>menú</em>, por favor?"
+  },
+  {
+    "pt": "bêbado",
+    "es": [
+      "borracho"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "El cliente estaba muy <em>borracho</em> y no lo atendieron."
+  },
+  {
+    "pt": "cereja em calda",
+    "es": [
+      "cereza en almíbar"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "mentira (não é 'mentira'... é igual!)",
+    "es": [
+      "mentira"
+    ],
+    "cat": "falsas amigas",
+    "dif": 1,
+    "example": "¡No me digas eso, es una <em>mentira</em>! Este asado no puede estar listo tan rápido."
+  },
+  {
+    "pt": "em conserva",
+    "es": [
+      "en conserva"
+    ],
+    "cat": "alimentos",
+    "dif": 1
+  },
+  {
+    "pt": "água da torneira",
+    "es": [
+      "agua de la canilla"
+    ],
+    "cat": "bebidas",
+    "dif": 3
+  },
+  {
+    "pt": "Bom dia",
+    "es": [
+      "Buen día"
+    ],
+    "cat": "expressões",
+    "dif": 1
+  },
+  {
+    "pt": "fainá (massa de grão-de-bico)",
+    "es": [
+      "fainá"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "pizza de pedra",
+    "es": [
+      "pizza a la piedra"
+    ],
+    "cat": "fast-food",
+    "dif": 2
+  },
+  {
+    "pt": "abacaxi em calda",
+    "es": [
+      "ananá en almíbar"
+    ],
+    "cat": "frutas",
+    "dif": 2
+  },
+  {
+    "pt": "cadeira (não é 'cadera', quadril)",
+    "es": [
+      "silla"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Traé una <em>silla</em> más para la mesa."
+  },
+  {
+    "pt": "salada (em ES 'salada' = salgada)",
+    "es": [
+      "ensalada"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Pedí una <em>ensalada</em> mixta de entrada."
+  },
+  {
+    "pt": "escritório (não é 'escritorio')",
+    "es": [
+      "oficina"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Almorzamos en un bodegón cerca de la <em>oficina</em>."
+  },
+  {
+    "pt": "oficina (mecânica)",
+    "es": [
+      "taller"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Dejé el auto en el <em>taller</em> y fui a comer algo."
+  },
+  {
+    "pt": "vassoura (não é 'basura', lixo)",
+    "es": [
+      "escoba"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Pasá la <em>escoba</em> por la cocina, por favor."
+  },
+  {
+    "pt": "lixo",
+    "es": [
+      "basura"
+    ],
+    "cat": "falsas amigas",
+    "dif": 1,
+    "example": "Tirá las sobras a la <em>basura</em>."
+  },
+  {
+    "pt": "talher (não é 'taller', oficina)",
+    "es": [
+      "cubierto"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Falta un <em>cubierto</em> en esta mesa."
+  },
+  {
+    "pt": "careca (pelado em ES-AR)",
+    "es": [
+      "pelado"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "El <em>pelado</em> de la parrilla hace el mejor asado del barrio."
+  },
+  {
+    "pt": "salsinha (não é 'salsa', molho)",
+    "es": [
+      "perejil"
+    ],
+    "cat": "falsas amigas",
+    "dif": 2,
+    "example": "Picá un poco de <em>perejil</em> para el chimichurri."
+  }
+]
